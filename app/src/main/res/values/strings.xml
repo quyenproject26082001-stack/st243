@@ -8,11 +8,11 @@
     <string name="this_action_can_contain_ads">This action can contain ads</string>
     <string name="not_select_lang">Please select a language</string>
     <string name="next">NEXT</string>
-    <string name="language">LANGUAGE</string>
+    <string name="language"> LANGUAGE </string>
 
     <string name="title_1">CREATE YOUR ULTIMATE POP STAR IDOL</string>
-    <string name="title_2">MIX &amp; MATCH HIGH-END DESIGNER OUTFITS</string>
-    <string name="title_3">DESIGN YOUR GLOBAL SUPERSTAR PERSONAL</string>
+    <string name="title_2">MIX &amp; MATCH HIGH-END \nDESIGNER OUTFITS</string>
+    <string name="title_3">DESIGN YOUR GLOBAL \nSUPERSTAR PERSONAL</string>
 
     <string name="permission">PERMISSION</string>
     <string name="storage">\u00A0\u00A0STORAGE\u00A0\u00A0</string>

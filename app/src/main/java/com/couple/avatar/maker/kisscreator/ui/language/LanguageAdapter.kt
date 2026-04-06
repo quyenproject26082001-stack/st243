@@ -46,7 +46,7 @@ class LanguageAdapter(val context: Context) : BaseAdapter<LanguageModel, ItemLan
     ) {
         binding.apply {
             loadImage(root, item.flag, imvFlag, false)
-            tvLang.text = item.name
+            tvLang.text = "\u00A0${item.name}\u00A0"
 
             // Set text color based on selection state
             val textColor = if (item.activate) {
