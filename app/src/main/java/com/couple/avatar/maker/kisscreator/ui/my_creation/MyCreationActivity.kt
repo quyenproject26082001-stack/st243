@@ -175,46 +175,41 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
                     }
                 }
 
-                // Select All button
+                // Delete button
                 btnActionBarNextRight.tap {
-                    //handleSelectAllFromCurrentFragment()
-                        handleDownloadFromCurrentFragment()
-
-                }
-
-                btnActionBarNextRight1.tap{
-                    handleShareFromCurrentFragment()
-                }
-
-                // Delete All button
-                btnActionBarRight.tap {
                     handleDeleteSelectedFromCurrentFragment()
+                }
+
+                // Select All button
+                btnActionBarRight.tap {
+                    handleSelectAllFromCurrentFragment()
                 }
             }
 
             btnMyPixel.tap { viewModel.setTypeStatus(ValueKey.AVATAR_TYPE) }
             btnMyDesign.tap { viewModel.setTypeStatus(ValueKey.MY_DESIGN_TYPE) }
 
-            // WhatsApp, Telegram, Share, and Download buttons in lnlBottom
+            // WhatsApp, Telegram buttons in lnlBottom
             val layoutBottom = lnlBottom.getChildAt(0)
             layoutBottom.findViewById<View>(R.id.btnRight)?.tap(800) {
-                val paths = if (isInSelectionMode) getSelectedPathsFromCurrentFragment() else getAllPathsFromCurrentFragment()
-                if (viewModel.typeStatus.value == ValueKey.MY_DESIGN_TYPE) {
-                    if (paths.isEmpty()) { showToast(R.string.please_select_an_image); return@tap }
-                    checkStoragePermissionForDownload(paths)
-                } else {
-                    handleAddToWhatsApp(paths)
-                }
+                val paths = getAllPathsFromCurrentFragment()
+                handleAddToWhatsApp(paths)
             }
             layoutBottom.findViewById<View>(R.id.btnLeft)?.tap(800) {
-                val paths = if (isInSelectionMode) getSelectedPathsFromCurrentFragment() else getAllPathsFromCurrentFragment()
-                if (viewModel.typeStatus.value == ValueKey.MY_DESIGN_TYPE) {
-                    handleShare(paths)
-                } else {
-                    handleAddToTelegram(paths)
-                }
+                val paths = getAllPathsFromCurrentFragment()
+                handleAddToTelegram(paths)
             }
-            // Delete button in deleteSection         }
+
+            // Share/Download buttons in flBottomView (select mode)
+            bottomView.btnWhatsapp.tap(800) {
+                val paths = getSelectedPathsFromCurrentFragment()
+                handleShare(paths)
+            }
+            bottomView.btnTelegram.tap(800) {
+                val paths = getSelectedPathsFromCurrentFragment()
+                if (paths.isEmpty()) { showToast(R.string.please_select_an_image); return@tap }
+                checkStoragePermissionForDownload(paths)
+            }
         }
     }
 
@@ -273,11 +268,11 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
         if (isAllSelected) {
             doDeselect()
             isAllSelected = false
-            binding.actionBar.btnActionBarNextRight.setImageResource(R.drawable.ic_not_select_all)
+            binding.actionBar.btnActionBarRight.setImageResource(R.drawable.ic_not_select_all)
         } else {
             doSelect()
             isAllSelected = true
-            binding.actionBar.btnActionBarNextRight.setImageResource(R.drawable.ic_select_all)
+            binding.actionBar.btnActionBarRight.setImageResource(R.drawable.ic_select_all)
         }
     }
 
@@ -516,30 +511,38 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
         isInSelectionMode = true
         isAllSelected = false
         binding.actionBar.apply {
-            // Show select all and delete all buttons
-
-            btnActionBarRight.visible()
-        }
-        updateBottomButtonsVisibility()
-        binding.actionBar.apply {
             btnActionBarNextRight.visible()
-            btnActionBarNextRight1.visible()
+            btnActionBarNextRight.setImageResource(R.drawable.ic_delete_view)
+            btnActionBarRight.visible()
+            btnActionBarRight.setImageResource(R.drawable.ic_not_select_all)
+            btnActionBarNextRight1.gone()
         }
-
-        android.util.Log.d("MyCreationActivity", "enterSelectionMode called - showing buttons")
+        // Show share/download bottom view for both tabs
+        binding.flBottomView.visible()
+        // Avatar tab: keep lnlBottom (whatsapp/telegram) with 21dp bottom margin
+        // Design tab: hide lnlBottom (no whatsapp/telegram)
+        if (viewModel.typeStatus.value == ValueKey.AVATAR_TYPE) {
+            binding.lnlBottom.visible()
+            (binding.lnlBottom.layoutParams as? androidx.constraintlayout.widget.ConstraintLayout.LayoutParams)
+                ?.bottomMargin = (21 * resources.displayMetrics.density).toInt()
+            binding.lnlBottom.requestLayout()
+        } else {
+            binding.lnlBottom.gone()
+        }
     }
 
     fun exitSelectionMode() {
         isInSelectionMode = false
         isAllSelected = false
         binding.actionBar.apply {
-            // Hide select all and delete all buttons
             btnActionBarNextRight.gone()
             btnActionBarRight.gone()
         }
-
-        updateBottomButtonsVisibility()
-        android.util.Log.d("MyCreationActivity", "exitSelectionMode called - hiding buttons")
+        binding.flBottomView.gone()
+        binding.lnlBottom.visible()
+        (binding.lnlBottom.layoutParams as? androidx.constraintlayout.widget.ConstraintLayout.LayoutParams)
+            ?.bottomMargin = 0
+        binding.lnlBottom.requestLayout()
     }
 
     private fun updateBottomButtonsVisibility() {

@@ -123,7 +123,23 @@
 
     </FrameLayout>
 
-    <!--    lnlBottom-->
+    <!--    flBottomView (share/download - shown in select mode) -->
+    <FrameLayout
+        android:id="@+id/flBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="13dp"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include
+            android:id="@+id/bottomView"
+            layout="@layout/layout_bottom_view" />
+
+    </FrameLayout>
+
+    <!--    lnlBottom (whatsapp/telegram) -->
     <FrameLayout
         android:id="@+id/lnlBottom"
         android:layout_width="match_parent"
@@ -132,7 +148,8 @@
         android:paddingHorizontal="13dp"
         android:elevation="1dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toTopOf="@id/flBottomView"
+        app:layout_goneMarginBottom="0dp">
 
         <include layout="@layout/layout_bottom" />
 
