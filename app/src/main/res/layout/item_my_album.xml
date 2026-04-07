@@ -9,72 +9,60 @@
     android:clipChildren="false"
     android:clipToPadding="false">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardContainer"
+    <FrameLayout
+        android:id="@+id/root"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardCornerRadius="16dp"
-        app:strokeColor="@color/transparent"
-        app:cardElevation="0dp"
-        app:cardUseCompatPadding="false"
-        app:cardBackgroundColor="@android:color/transparent"
+        android:clipChildren="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_app_character_item"
+            android:background="@drawable/bg_img_character">
 
-            />
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/root"
-            android:layout_margin="3dp"
-            app:cardCornerRadius="13dp"
-            android:background="@color/transparent"
-            app:strokeColor="@color/transparent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
+            <com.couple.avatar.maker.kisscreator.core.custom.imageview.ShapeClipImageView
                 android:id="@+id/imvImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
+                android:layout_margin="11dp"
                 android:scaleType="centerCrop"
-                tools:src="@color/red_BA" />
+                tools:src="@color/dark" />
 
-            <!--btnDelete-->
-            <ImageView
-                android:id="@+id/btnDelete"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_delete_item" />
+        </FrameLayout>
 
-            <!--btnEdit-->
-            <ImageView
-                android:id="@+id/btnEdit"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_edit" />
+        <!--btnDelete-->
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|top"
+            android:layout_margin="0dp"
+            android:src="@drawable/ic_delete_item" />
 
-            <!--btnSelect-->
-            <ImageView
-                android:id="@+id/btnSelect"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_not_select"
-                android:visibility="gone" />
-        </com.google.android.material.card.MaterialCardView>
-    </com.google.android.material.card.MaterialCardView>
+        <!--btnEdit-->
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|top"
+            android:layout_margin="0dp"
+            android:src="@drawable/ic_edit" />
+
+        <!--btnSelect-->
+        <ImageView
+            android:id="@+id/btnSelect"
+            android:layout_width="29dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|top"
+            android:layout_margin="0dp"
+            android:src="@drawable/ic_not_select"
+            android:visibility="gone" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

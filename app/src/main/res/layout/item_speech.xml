@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="2.5dp"
-            android:background="@drawable/bg_stroke_sticker" />
+            android:background="@drawable/bg_stroke_speech" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -26,11 +26,11 @@
             app:strokeColor="@color/transparent"
             app:strokeWidth="0dp"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="18dp"
             app:cardElevation="0dp">
 
             <ImageView
-                android:id="@+id/imvSticker"
+                android:id="@+id/imvSpeech"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter" />

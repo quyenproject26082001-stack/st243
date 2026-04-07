@@ -21,7 +21,7 @@ class BackgroundColorAdapter :
         Log.d("BackgroundColorAdapter", "onBind position=$position, color=${String.format("#%06X", 0xFFFFFF and item.color)}, isSelected=${item.isSelected}, path=${item.path}")
 
         binding.apply {
-            vFocus.isVisible
+            vFocus.isVisible = true
             if (item.isSelected) {
                 vFocus.setBackgroundResource(R.drawable.bg_stroke_gradient_circle)
             } else {

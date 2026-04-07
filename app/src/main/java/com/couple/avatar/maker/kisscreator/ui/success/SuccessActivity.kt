@@ -86,13 +86,14 @@ class SuccessActivity : BaseActivity<ActivitySuccessBinding>() {
             actionBar.apply {
                 btnActionBarNextRight.tap {
                     showInterAll {
-                        startIntentWithClearTop(HomeActivity::class.java)
+                        viewModel.shareFiles(this@SuccessActivity)
                     }
                 }
                 btnActionBarLeft.tap {  handleBack()  }
 
                 btnActionBarRight.tap(2000){
-                    viewModel.shareFiles(this@SuccessActivity)
+                    startIntentWithClearTop(HomeActivity::class.java)
+
                 }
             }
 
@@ -116,10 +117,10 @@ class SuccessActivity : BaseActivity<ActivitySuccessBinding>() {
 
             btnActionBarLeft.visible()
             btnActionBarRight.visible()
-            btnActionBarRight.setBackgroundResource(R.drawable.ic_share)
+            btnActionBarRight.setBackgroundResource(R.drawable.ic_home)
             tvCenter.invisible()
             imgCenter.gone()
-                setImageActionBar(btnActionBarNextRight, R.drawable.ic_home)
+                setImageActionBar(btnActionBarNextRight, R.drawable.ic_share)
             btnActionBarNextRight.visible()
 
         }

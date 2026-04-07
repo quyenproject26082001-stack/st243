@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:background="@drawable/bg_16_solid_white">
+            android:background="@drawable/bg_dialog">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imvAvtRate"
@@ -32,7 +32,7 @@
                 android:freezesText="true"
                 android:gravity="center"
                 android:text="@string/zero_star_title"
-                android:textColor="@color/black"
+                android:textColor="@color/app"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
                 android:freezesText="true"
                 android:gravity="center"
                 android:text="@string/zero_star"
-                android:textColor="#A9B0BE"
+                android:textColor="#99242424"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +101,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:background="@drawable/bg_language_selected"
+                        android:background="@drawable/bg_rate"
                         android:text="@string/rate"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -112,13 +112,13 @@
                     android:id="@+id/btnCancel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
                     android:paddingVertical="15dp"
                     android:text="@string/exit"
                     android:layout_marginTop="-5dp"
                     android:textAllCaps="false"
-                    android:textColor="#A9B0BE"
+                    android:textColor="#D90C4D"
                     android:textSize="14sp" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

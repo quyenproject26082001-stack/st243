@@ -128,4 +128,6 @@
     <string name="instruction">INSTRUCTIONS</string>
     <string name="guide_cosplay">Les joueurs reçoivent une image de référence aléatoire et doivent recréer le personnage en choisissant des coiffures, tenues, couleurs et accessoires correspondants. Chaque bon choix augmente le score en pourcentage — plus le personnage ressemble à l\'image, plus le score final est élevé.</string>
     <string name="stop">ARRÊTER</string>
+    <string name="cancel">CANCEL</string>
+    <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
 </resources>

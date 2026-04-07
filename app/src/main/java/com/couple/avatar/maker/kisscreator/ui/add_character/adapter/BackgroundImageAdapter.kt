@@ -35,7 +35,7 @@ class BackgroundImageAdapter :
                 lnlAddItem.gone()
                 imvImage.visible()
                 // Load image with 8dp rounded corners
-                val cornerRadiusPx = (10 * root.context.resources.displayMetrics.density).toInt()
+                val cornerRadiusPx = (8 * root.context.resources.displayMetrics.density).toInt()
                 Glide.with(root)
                     .load(item.path)
                     .override(256, 256)

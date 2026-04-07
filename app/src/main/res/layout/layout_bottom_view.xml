@@ -20,13 +20,14 @@
             android:id="@+id/btnWhatsapp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="2dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="14dp"
             android:layout_weight="1"
             android:padding="2dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="36dp"
                 android:scaleType="fitXY"
                 app:cardBackgroundColor="@color/transparent"
                 app:cardCornerRadius="0dp"
@@ -67,9 +68,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
                     android:fontFamily="@font/luckiestguy_regular"
+                    android:shadowColor="@color/white"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
                     android:text="@string/share"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textColor="@color/app"
+                    android:textSize="18sp" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -79,13 +83,14 @@
             android:id="@+id/btnTelegram"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="2dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginStart="14dp"
             android:layout_weight="1"
             android:padding="2dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="36dp"
                 android:scaleType="fitXY"
                 app:cardBackgroundColor="@color/transparent"
                 app:cardCornerRadius="0dp"
@@ -125,9 +130,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
                     android:fontFamily="@font/luckiestguy_regular"
+                    android:shadowColor="@color/white"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
                     android:text="@string/download"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textColor="@color/app"
+                    android:textSize="18sp"
+              />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

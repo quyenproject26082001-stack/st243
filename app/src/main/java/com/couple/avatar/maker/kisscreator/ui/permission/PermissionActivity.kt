@@ -57,13 +57,13 @@ class PermissionActivity : BaseActivity<ActivityPermissionBinding>() {
        // binding.actionBar.tvCenter.select()
         val textRes = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) R.string.to_access_13 else R.string.to_access
 
-//        binding.txtPer.text = TextUtils.concat(
-//            createColoredText(R.string.allow, R.color.app),
-//            " ",
-//            createColoredText(R.string.app_name, R.color.app),
-//            " ",
-//            createColoredText(textRes, R.color.app)
-//        )
+        binding.txtPer.text = TextUtils.concat(
+            createColoredText(R.string.allow, R.color.app),
+            " ",
+            createColoredText(R.string.app_name, R.color.app),
+            " ",
+            createColoredText(textRes, R.color.app)
+        )
     }
 
     override fun viewListener() {

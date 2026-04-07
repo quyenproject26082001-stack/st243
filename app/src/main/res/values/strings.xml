@@ -49,7 +49,7 @@
 
     <string name="rate_us_0">You have not rated it yet!</string>
     <string name="rate">Rate</string>
-    <string name="exit">EXIT</string>
+    <string name="exit">Exit</string>
     <string name="have_rated">Thank you for rate our app</string>
     <string name="share">SHARE</string>
     <string name="delete">DELETE</string>
@@ -86,7 +86,7 @@
     <string name="add_to_whatsapp">Add to Whatsapp</string>
     <string name="add_to_telegram">Add to Telegram</string>
     <string name="my_avatar">My Avatar</string>
-    <string name="my_design">DESIGN</string>
+    <string name="my_design">MY DESIGN</string>
     <string name="my_album">My album</string>
     <string name="no_app_found_to_handle_this_action">No app found to handle this action</string>
     <string name="invalid_action_msg">Application not installed</string>
@@ -102,11 +102,11 @@
     <string name="add_image">ADD IMAGE</string>
     <string name="sticker">Sticker</string>
     <string name="speech_bubbles">Speech Bubbles</string>
-    <string name="text">Input text</string>
+    <string name="text">TEXT</string>
     <string name="type_your_content">Type your content...</string>
     <string name="font">Font</string>
     <string name="choose_color">Choose Color</string>
-    <string name="done">DONE</string>
+    <string name="done">SAVE</string>
     <string name="null_edt">Please enter text</string>
     <string name="input_text">Input text</string>
     <string name="hello_world">Type your content...</string>
@@ -120,7 +120,7 @@
     <string name="random">\u00A0\u00A0AVATAR RANDOM\u00A0\u00A0</string>
     <string name="creation">\u00A0\u00A0MY CREATION\u00A0\u00A0</string>
     <string name="back">BACK</string>
-    <string name="hello_world_hint">Hello World !!</string>
+    <string name="hello_world_hint">Type your content...</string>
     <string name="character">CHARACTER</string>
     <string name="edit">EDIT</string>
     <string name="click_the_random_button_below_to_see_what_your_character_is">Click the random button below to see what your character is!</string>
@@ -131,4 +131,6 @@
     <string name="instruction">INSTRUCTION</string>
     <string name="guide_cosplay">Players receive a random reference image and must recreate the character by choosing matching hairstyles, outfits, colors, and accessories. Each correct choice increases the percentage score—the closer the character matches the image, the higher the final score.</string>
     <string name="stop">STOP</string>
+    <string name="cancel">CANCEL</string>
+    <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
 </resources>

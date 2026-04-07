@@ -586,11 +586,14 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
     }
 
     private fun setupSelectedTab(textView: android.widget.TextView) {
-        textView.setTextColor(Color.WHITE)
+        textView.setTextColor(Color.parseColor("#D90C4D"))
+        textView.setShadowLayer(2f, 0f, 2f, Color.WHITE)
     }
 
     private fun setupUnselectedTab(textView: android.widget.TextView) {
-        textView.setTextColor(Color.WHITE)
+        textView.setTextColor(Color.parseColor("#FFFFFF"))
+        val strokePx = 2f * resources.displayMetrics.density
+        textView.setShadowLayer(strokePx, 0f, 0f, Color.parseColor("#D90C4D"))
     }
 
     // Public method to update select all icon based on selection state

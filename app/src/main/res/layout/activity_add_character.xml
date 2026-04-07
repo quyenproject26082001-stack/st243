@@ -57,13 +57,14 @@
     </FrameLayout>
 
 
-    <com.google.android.material.card.MaterialCardView
+    <FrameLayout
         android:id="@+id/cardSave"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         app:cardElevation="0dp"
+
         app:cardBackgroundColor="@color/transparent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +93,7 @@
                 />
         </FrameLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
 
 
 
@@ -111,7 +112,7 @@
             android:id="@+id/bg_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:background="@drawable/bg_bg" />
 
@@ -120,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/bg_bg"
             android:visibility="gone" />
 
@@ -130,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_marginHorizontal="58dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="16dp"
             android:background="@color/transparent"
             android:orientation="horizontal"
             android:visibility="gone"
@@ -236,7 +237,7 @@
                     android:letterSpacing="0.05"
                     android:shadowDy="3"
                     android:text="@string/color"
-                    android:textColor="#861629"
+                    android:textColor="#C13F74"
                     android:textSize="14sp" />
 
             </FrameLayout>
@@ -247,11 +248,11 @@
             android:id="@+id/lnlBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="62dp"
             android:layout_marginBottom="25dp"
             android:orientation="vertical"
             android:visibility="gone"
-            tools:visibility="gone">
+            tools:visibility="visible">
 
 
             <!--            rcvBackgroundImage-->
@@ -269,7 +270,7 @@
 
                 tools:itemCount="10"
                 tools:listitem="@layout/item_background_image"
-                tools:visibility="gone" />
+                tools:visibility="visible" />
 
             <!--            rcvBackgroundColor-->
             <androidx.recyclerview.widget.RecyclerView
@@ -307,7 +308,7 @@
                 android:gravity="center"
                 android:visibility="gone"
                 android:text="@string/sticker"
-                android:textColor="#861629"
+                android:textColor="#C13F74"
                 android:textSize="20sp" />
 
             <!--            rcvSticker-->
@@ -346,7 +347,7 @@
                 android:gravity="center"
                 android:visibility="gone"
                 android:text="@string/speech_bubbles"
-                android:textColor="#861629"
+                android:textColor="#C13F74"
                 android:textSize="20sp" />
 
             <!--            rcvSticker-->
@@ -361,7 +362,7 @@
 
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="5"
-                tools:listitem="@layout/item_sticker" />
+                tools:listitem="@layout/item_speech" />
         </LinearLayout>
 
         <!--        scvText-->
@@ -399,7 +400,7 @@
                         android:gravity="center"
                         android:visibility="gone"
                         android:text="@string/text"
-                        android:textColor="#861629"
+                        android:textColor="#C13F74"
                         android:textSize="20sp" />
 
                     <TextView
@@ -411,7 +412,7 @@
                         android:fontFamily="@font/luckiestguy_regular"
                         android:gravity="start"
                         android:text="@string/text"
-                        android:textColor="#861629"
+                        android:textColor="#C13F74"
                         android:textSize="18sp" />
                     <!--                    btnDoneText-->
                     <ImageView
@@ -421,7 +422,7 @@
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginTop="-2dp"
                         android:layout_marginEnd="16dp"
-                        android:tint="#861629"
+                        android:tint="#E20C7A"
                         android:src="@drawable/ic_done_background" />
                 </FrameLayout>
 
@@ -437,7 +438,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@drawable/bg_edit_text"
                     android:ellipsize="end"
-                    android:fontFamily="@font/londrina_solid_regular"
+                    android:fontFamily="@font/fredoka"
                     android:hint="@string/hello_world_hint"
                     android:imeOptions="actionDone"
                     android:inputType="text"
@@ -445,7 +446,7 @@
                     android:paddingHorizontal="16dp"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:textColorHint="#808080"
+                    android:textColorHint="#80868686"
                     android:textSize="16sp" />
 
 
@@ -458,7 +459,7 @@
                     android:fontFamily="@font/luckiestguy_regular"
                     android:gravity="start"
                     android:text="@string/font"
-                    android:textColor="#861629"
+                    android:textColor="#C13F74"
                     android:textSize="18sp" />
 
                 <!--            rcvFont-->
@@ -486,7 +487,7 @@
                     android:fontFamily="@font/luckiestguy_regular"
                     android:gravity="start"
                     android:text="@string/color_text"
-                    android:textColor="#861629"
+                    android:textColor="#C13F74"
                     android:textSize="18sp" />
 
                 <!--            rcvTextColor-->
@@ -517,8 +518,8 @@
         android:id="@+id/lnlBottom"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/bg_bottom"
         android:gravity="center"
         android:orientation="horizontal"

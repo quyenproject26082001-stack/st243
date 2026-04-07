@@ -22,11 +22,11 @@
     </FrameLayout>
 
     <!--    cvImage-->
-    <com.google.android.material.card.MaterialCardView
+    <FrameLayout
         android:id="@+id/cvImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="0dp"
         android:layout_marginBottom="16dp"
         android:visibility="visible"
         android:layout_marginTop="6dp"
@@ -47,8 +47,23 @@
             android:layout_height="match_parent"
             android:padding="2dp"
             android:scaleType="center" />
-    </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
 
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/cvImage"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:shadowRadius="2"
+        android:id="@+id/tvSuccess"
+        android:shadowDy="2"
+        android:fontFamily="@font/luckiestguy_regular"
+        android:text="@string/image_has_been_saved_successful"/>
 
 
 
@@ -61,7 +76,7 @@
         android:visibility="visible"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="120dp"
-        app:layout_constraintTop_toBottomOf="@id/cvImage"
+        app:layout_constraintTop_toBottomOf="@id/tvSuccess"
         >
 
         <include

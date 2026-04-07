@@ -2,7 +2,7 @@ package com.couple.avatar.maker.kisscreator.ui.my_creation.adapter
 
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.signature.ObjectKey
 import com.couple.avatar.maker.kisscreator.R
 import androidx.recyclerview.widget.RecyclerView
@@ -32,15 +32,16 @@ class MyDesignAdapter : BaseAdapter<MyAlbumModel, ItemMyDesignBinding>(ItemMyDes
 
     override fun onBind(binding: ItemMyDesignBinding, item: MyAlbumModel, position: Int) {
         binding.apply {
+            imvImage.maskDrawable = ContextCompat.getDrawable(root.context, R.drawable.mask_hexagon)
+
             // Optimized Glide loading with thumbnail, size override, and caching
             val file = File(item.path)
             Glide.with(root.context)
                 .load(file)
-                .thumbnail(0.1f) // Load 10% quality thumbnail first
-                .override(400, 400) // Resize to save memory
-                .transform(RoundedCorners(24)) // Match original design
+                .thumbnail(0.1f)
+                .override(400, 400)
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-                .signature(ObjectKey(file.lastModified())) // Cache invalidation
+                .signature(ObjectKey(file.lastModified()))
                 .into(imvImage)
 
             if (item.isShowSelection) {

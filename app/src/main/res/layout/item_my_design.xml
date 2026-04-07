@@ -8,14 +8,11 @@
     android:clipChildren="false"
     android:clipToPadding="false">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardContainer"
+    <FrameLayout
+        android:id="@+id/root"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardCornerRadius="16dp"
-        app:strokeColor="@color/transparent"
-        app:cardUseCompatPadding="false"
-        app:cardBackgroundColor="@android:color/transparent"
+        android:clipChildren="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,44 +22,36 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_app_character_item" />
+            android:background="@drawable/bg_img_character">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/root"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="3dp"
-            android:background="@color/transparent"
-            app:cardCornerRadius="13dp"
-            app:strokeColor="@color/transparent">
-
-            <!--imvImage-->
-            <ImageView
+            <com.couple.avatar.maker.kisscreator.core.custom.imageview.ShapeClipImageView
                 android:id="@+id/imvImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="11dp"
                 android:scaleType="centerCrop"
-                tools:src="@color/red_BA" />
+                tools:src="@color/dark" />
 
-            <!--btnDelete-->
-            <ImageView
-                android:id="@+id/btnDelete"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="start"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_delete_item" />
+        </FrameLayout>
 
-            <!--btnSelect-->
-            <ImageView
-                android:id="@+id/btnSelect"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_not_select" />
+        <!--btnDelete-->
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="28dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|top"
+            android:layout_margin="0dp"
+            android:src="@drawable/ic_delete_item" />
 
-        </com.google.android.material.card.MaterialCardView>
-    </com.google.android.material.card.MaterialCardView>
+        <!--btnSelect-->
+        <ImageView
+            android:id="@+id/btnSelect"
+            android:layout_width="28dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|top"
+            android:layout_margin="0dp"
+            android:src="@drawable/ic_not_select" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

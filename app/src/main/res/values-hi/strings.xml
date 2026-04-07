@@ -129,4 +129,6 @@
     <string name="instruction">निर्देश</string>
     <string name="guide_cosplay">खिलाड़ियों को एक यादृच्छिक संदर्भ छवि मिलती है और उन्हें मिलते-जुलते हेयरस्टाइल, पोशाक, रंग और सहायक वस्तुएं चुनकर पात्र को फिर से बनाना होता है। प्रत्येक सही विकल्प प्रतिशत स्कोर बढ़ाता है — पात्र जितना छवि से मेल खाता है, अंतिम स्कोर उतना ही अधिक होता है।</string>
     <string name="stop">रुकें</string>
+    <string name="cancel">CANCEL</string>
+    <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
 </resources>

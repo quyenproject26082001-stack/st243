@@ -314,6 +314,7 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="15dp"
             android:clipChildren="false"
+            android:paddingTop="10.5dp"
             android:layout_gravity="center_vertical"
             android:clipToPadding="false"
             android:layerType="hardware"

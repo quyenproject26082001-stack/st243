@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_list_creation"
+    tools:background="@drawable/bg_list_creation"
     android:paddingTop="28dp"
     android:clipToPadding="true"
     tools:context=".ui.my_creation.fragment.MyAvatarFragment">

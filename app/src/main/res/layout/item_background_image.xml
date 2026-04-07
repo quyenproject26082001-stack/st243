@@ -29,9 +29,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="4.5dp"
-            app:strokeColor="#CCCCCC"
-            app:strokeWidth="0.5dp"
-            app:cardCornerRadius="2dp"
+            app:strokeColor="@color/transparent"
+            app:strokeWidth="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:cardBackgroundColor="@color/transparent"
 
@@ -50,14 +50,14 @@
                 android:id="@+id/lnlAddItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#DA4E65"
+                android:background="#FFFFFF"
                 android:visibility="visible">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:padding="10dp"
 
                     android:src="@drawable/ic_add_image" />
@@ -70,8 +70,7 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="0.65" />
-
+                        android:layout_weight="0.95" />
                     <TextView
                         android:id="@+id/tvAddImg"
                         android:layout_width="match_parent"
@@ -87,7 +86,8 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="0.35" />
+                        android:layout_weight="0.25" />
+
 
                 </LinearLayout>
 

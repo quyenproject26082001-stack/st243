@@ -73,22 +73,14 @@ class BottomNavigationCustomizeAdapter(private val context: Context) :
             // Cancel any running animations to prevent jumps when recycling views
             cvContent.animate().cancel()
 
+            binding.main.setMargins(4.dp(context), 0, 4.dp(context), 0)
+
             if (item.isSelected) {
                 imvImage.setBackgroundColor(Color.TRANSPARENT)
                 cvContent.setBackgroundResource(R.drawable.bg_select_navi_shape)
-
-                // Use translationY for visual effect without affecting layout
-                cvContent.translationZ = 0f
-                cvContent.translationY = 0f
-
             } else {
-                // Use same bottom margin as selected to maintain consistent height
-                binding.main.setMargins(0, 15.dp(context), 8.dp(context), 15.dp(context))
-
                 imvImage.setBackgroundColor(Color.TRANSPARENT)
                 cvContent.setBackgroundResource(R.drawable.bg_uslt_navi_shape)
-                cvContent.translationZ = 0f
-                cvContent.translationY = 0f
             }
 
             // Layer 1: imvImage - shimmer fills full circle (0dp margin)

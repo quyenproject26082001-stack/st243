@@ -74,6 +74,7 @@ import com.couple.avatar.maker.kisscreator.dialog.YesNoDialog
 import com.couple.avatar.maker.kisscreator.listener.listenerdraw.OnDrawListener
 import com.couple.avatar.maker.kisscreator.ui.add_character.adapter.BackgroundColorAdapter
 import com.couple.avatar.maker.kisscreator.ui.add_character.adapter.BackgroundImageAdapter
+import com.couple.avatar.maker.kisscreator.ui.add_character.adapter.SpeechAdapter
 import com.couple.avatar.maker.kisscreator.ui.add_character.adapter.StickerAdapter
 import com.couple.avatar.maker.kisscreator.ui.add_character.adapter.TextColorAdapter
 import com.couple.avatar.maker.kisscreator.ui.add_character.adapter.TextFontAdapter
@@ -94,7 +95,7 @@ class AddCharacterActivity : BaseActivity<ActivityAddCharacterBinding>() {
     private val backgroundImageAdapter by lazy { BackgroundImageAdapter() }
     private val backgroundColorAdapter by lazy { BackgroundColorAdapter() }
     private val stickerAdapter by lazy { StickerAdapter() }
-    private val speechAdapter by lazy { StickerAdapter() }
+    private val speechAdapter by lazy { SpeechAdapter() }
     private val textFontAdapter by lazy { TextFontAdapter(this) }
     private val textColorAdapter by lazy { TextColorAdapter() }
 
@@ -137,6 +138,7 @@ class AddCharacterActivity : BaseActivity<ActivityAddCharacterBinding>() {
         binding.actionBar.btnActionBarLeft.visible()
         viewModel.layoutParams = binding.flFunction.layoutParams as ViewGroup.MarginLayoutParams
         viewModel.originalMarginBottom = viewModel.layoutParams.topMargin  // Capture initial topMargin
+        binding.actionBar.btnActionBarRight.visible()
         initRcv()
         initDrawView()
         initData()
@@ -313,7 +315,7 @@ class AddCharacterActivity : BaseActivity<ActivityAddCharacterBinding>() {
             actionBar.apply {
                 btnActionBarLeft.tap { confirmExit() }
                 btnActionBarCenter.tap { confirmReset() }
-                btnActionBarRightText.tap {
+                btnActionBarRight.tap {
                     handleSave()
                 }
             }

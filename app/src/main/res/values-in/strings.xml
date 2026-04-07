@@ -129,4 +129,6 @@
     <string name="instruction">PETUNJUK</string>
     <string name="guide_cosplay">Pemain menerima gambar referensi acak dan harus membuat ulang karakter dengan memilih gaya rambut, pakaian, warna, dan aksesori yang cocok. Setiap pilihan yang benar meningkatkan skor persentase — semakin dekat karakter dengan gambar, semakin tinggi skor akhirnya.</string>
     <string name="stop">BERHENTI</string>
+    <string name="cancel">CANCEL</string>
+    <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
 </resources>

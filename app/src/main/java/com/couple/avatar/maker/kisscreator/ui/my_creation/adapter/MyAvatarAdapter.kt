@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.ObjectKey
+import androidx.core.content.ContextCompat
 import com.couple.avatar.maker.kisscreator.R
 import com.couple.avatar.maker.kisscreator.core.base.BaseAdapter
 import com.couple.avatar.maker.kisscreator.core.extensions.gone
@@ -43,6 +44,8 @@ class MyAvatarAdapter(val context: Context) :
 
     override fun onBind(binding: ItemMyAlbumBinding, item: MyAlbumModel, position: Int) {
         binding.apply {
+            imvImage.maskDrawable = ContextCompat.getDrawable(context, R.drawable.mask_hexagon)
+
             // Optimized Glide loading with thumbnail, size override, and caching
             val file = File(item.path)
             Glide.with(context)

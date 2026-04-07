@@ -23,9 +23,12 @@ class TextColorAdapter : BaseAdapter<SelectedModel, ItemTextColorBinding>(ItemTe
         Log.d("TextColorAdapter", "onBind position=$position, color=${String.format("#%06X", 0xFFFFFF and item.color)}, isSelected=${item.isSelected}")
 
         binding.apply {
-            vFocus.isVisible = item.isSelected
-            // Ensure circular stroke for all positions (TextColorAdapter uses circles)
-            vFocus.setBackgroundResource(R.drawable.bg_stroke_gradient_circle_color_text)
+            vFocus.isVisible = true
+            if (item.isSelected) {
+                vFocus.setBackgroundResource(R.drawable.bg_stroke_gradient_circle_color_text)
+            } else {
+                vFocus.setBackgroundResource(R.drawable.bg_stroke_circle_unselected_text)
+            }
 
             if (position == 0) {
                 Log.d("TextColorAdapter", "Position 0: Clearing and loading img0text_color")
