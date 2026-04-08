@@ -70,6 +70,10 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
                 showInterAll {
                     startIntentWithClearTop(HomeActivity::class.java)
                 }
+
+            }
+            actionBar.btnActionBarLeft.tap{
+                handleBackLeftToRight()
             }
             includeLayoutBottom.btnWhatsapp.tap(800) {
                 showInterAll {
@@ -91,7 +95,9 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
         binding.actionBar.apply {
             btnActionBarRight.visible()
             btnActionBarRight.setImageResource(R.drawable.ic_home)
-            tvCenter.gone()
+            tvCenter.visible()
+            tvCenter.setText(R.string.cosplay)
+            btnActionBarLeft.visible()
         }
     }
 
@@ -100,11 +106,20 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
         binding.progressBar.scaleX = finalProgress / 100f
         binding.progressContainer.post {
             val containerW = binding.progressContainer.width
-            val thumbW = binding.tvProgress.width
+            val thumbW = binding.icThumb.width
             val maxX = (containerW - thumbW).toFloat().coerceAtLeast(0f)
-            binding.tvProgress.translationX = (finalProgress / 100f) * maxX
-            binding.tvProgress.text = "$finalProgress%"
+            val offsetPx = 5f * resources.displayMetrics.density
+            binding.icThumb.translationX = (finalProgress / 100f) * maxX - offsetPx
+            binding.tvProgress.text = "$finalProgress/100"
         }
+        val starRes = when {
+            finalProgress < 20  -> R.drawable.one_star_ss
+            finalProgress < 40  -> R.drawable.two_star_ss
+            finalProgress < 60  -> R.drawable.three_star_ss
+            finalProgress < 80  -> R.drawable.four_star_ss
+            else                -> R.drawable.five_star_ss
+        }
+        binding.starSS.setImageResource(starRes)
     }
 
     private fun checkStoragePermission() {

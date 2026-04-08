@@ -117,11 +117,12 @@ class SuccessActivity : BaseActivity<ActivitySuccessBinding>() {
 
             btnActionBarLeft.visible()
             btnActionBarRight.visible()
-            btnActionBarRight.setBackgroundResource(R.drawable.ic_home)
-            tvCenter.invisible()
+            btnActionBarRight.setImageResource(R.drawable.ic_home)
+            tvCenter.visible()
             imgCenter.gone()
                 setImageActionBar(btnActionBarNextRight, R.drawable.ic_share)
             btnActionBarNextRight.visible()
+
 
         }
     }

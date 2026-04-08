@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.view.LayoutInflater
-import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.lifecycle.Lifecycle
@@ -76,25 +75,16 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
     private fun setupUI() {
         binding.apply {
             actionBar.apply {
-                setImageActionBar(btnActionBarNextRight, R.drawable.ic_download_actionbar)
+                setImageActionBar(
+                    btnActionBarNextRight,
+                    if (viewModel.statusFrom == AVATAR_TYPE) R.drawable.ic_edit_view else R.drawable.ic_download_actionbar
+                )
                 setImageActionBar(btnActionBarNextRight1, R.drawable.ic_share_actionbar)
                 setImageActionBar(btnActionBarRight, R.drawable.ic_delete_view)
             }
             includeLayoutBottom.apply {
-                if (viewModel.statusFrom == ValueKey.AVATAR_TYPE) {
-                    btnTelegram.gone()
-                    tvShare.setText(R.string.edit)
-                    btnWhatsapp.apply {
-                        visible()
-                        imgBgBtnWhatsapp.setImageResource(R.drawable.bg_btn_edit)
-                        layoutParams = layoutParams.apply {
-                            width = ViewGroup.LayoutParams.MATCH_PARENT
-                        }
-                    }
-                } else {
-                    btnTelegram.visible()
-                    btnWhatsapp.visible()
-                }
+                btnTelegram.visible()
+                btnWhatsapp.visible()
             }
 
             // Set scaleType based on content type
@@ -136,18 +126,17 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
                     handleDelete()
                 }
                 btnActionBarNextRight.tap {
-                    checkStoragePermission()
+                    if (viewModel.statusFrom == AVATAR_TYPE) handleEditClick(viewModel.pathInternal.value)
+                    else checkStoragePermission()
                 }
                 btnActionBarNextRight1.tap {
                     viewModel.shareFiles(this@ViewActivity)
-
                 }
             }
 
 
             includeLayoutBottom.btnWhatsapp.tap(2000) {
-                if (viewModel.statusFrom == AVATAR_TYPE) handleEditClick(viewModel.pathInternal.value)
-                else viewModel.shareFiles(this@ViewActivity)
+                viewModel.shareFiles(this@ViewActivity)
             }
             includeLayoutBottom.btnTelegram.tap(2000) {
                 checkStoragePermission()
@@ -160,7 +149,10 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
             btnActionBarLeft.visible()
             btnActionBarRightText.gone()
             btnActionBarRight.visible()
-            if (viewModel.statusFrom == ValueKey.MY_DESIGN_TYPE) {
+            if (viewModel.statusFrom == ValueKey.AVATAR_TYPE) {
+                btnActionBarNextRight.visible()
+                btnActionBarNextRight1.gone()
+            } else if (viewModel.statusFrom == ValueKey.MY_DESIGN_TYPE) {
                 btnActionBarNextRight.gone()
                 btnActionBarNextRight1.gone()
             } else {

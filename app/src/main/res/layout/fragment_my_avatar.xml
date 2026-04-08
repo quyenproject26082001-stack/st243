@@ -14,7 +14,7 @@
         android:id="@+id/rcvMyAvatar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="11dp"
+        android:paddingHorizontal="4dp"
         android:clipChildren="true"
         android:clipToPadding="true"
         android:layout_marginTop="0dp"

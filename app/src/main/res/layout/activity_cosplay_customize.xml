@@ -114,17 +114,19 @@
         android:layout_marginEnd="16dp"
         android:visibility="visible"
         app:cardCornerRadius="4dp"
-        android:background="@drawable/bg_img_character"
+        android:background="@drawable/bg_img_cosplay_sample"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar"
         app:strokeColor="#861629">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/btnSamplePhoto"
-            android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
+            android:layout_margin="5dp"
             android:layout_gravity="center"
+            app:shapeAppearanceOverlay="@style/border_image_6"
             tools:src="@color/dark" />
     </FrameLayout>
 
@@ -160,7 +162,7 @@
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/bg_progress_container1"
         android:clipToOutline="true"
         app:layout_constraintTop_toTopOf="@id/layoutCustomLayerBackground"
@@ -196,6 +198,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:textColor="@color/app"
+        android:fontFamily="@font/fredoka"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/progressContainer"
         app:layout_constraintEnd_toEndOf="@id/progressContainer"
         app:layout_constraintStart_toStartOf="@id/progressContainer"
@@ -238,18 +242,20 @@
             tools:visibility="visible" />
 
         <!-- flColor -->
-        <FrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/flColor"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="2dp"
             android:background="@drawable/bg_rcv_color"
             app:layout_constrainedWidth="true"
+            android:foreground="@drawable/bg_rcv_color_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@id/btnColor"
             app:layout_constraintTop_toTopOf="parent">
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcvColor"
@@ -258,10 +264,28 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="10"
                 tools:listitem="@layout/item_color" />
-        </FrameLayout>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/rcvColor"
+                android:src="@drawable/ic_arrow_left"
+                android:visibility="gone"
+                android:id="@+id/ic_arrow_left"
+                android:paddingEnd="20dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- btnRandom -->
@@ -343,7 +367,7 @@
         android:focusable="true"
         android:visibility="gone">
 
-        <com.google.android.material.card.MaterialCardView
+        <FrameLayout
             android:id="@+id/containerBtnSamplePhotoShow"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -352,6 +376,7 @@
             android:elevation="5dp"
             android:visibility="visible"
             app:cardCornerRadius="4dp"
+            android:background="@drawable/bg_img_character"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -363,14 +388,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:elevation="5dp"
+                android:layout_margin="24dp"
                 android:scaleType="fitXY"
                 tools:src="@color/white" />
-        </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
 
         <TextView
             android:id="@+id/btnCloseImage"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="32dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/ic_close_image"
             app:layout_constraintEnd_toEndOf="parent"

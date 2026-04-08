@@ -65,8 +65,6 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
         lifecycleScope.launch { showLoading() }
         dataViewModel.ensureData(this)
         binding.cvImage.post {
-            val offset = binding.cvImage.height / 2
-            binding.bgCvimage.translationY = offset.toFloat()
         }
     }
 

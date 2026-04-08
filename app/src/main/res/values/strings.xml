@@ -25,9 +25,9 @@
     <string name="to_access">to access photos on your device</string>
     <string name="to_access_13">to access notification on your device</string>
 
-    <string name="rate_us">RATE US</string>
-    <string name="share_app">SHARE APP</string>
-    <string name="privacy_policy"><![CDATA[PRIVACY & POLICY]]></string>
+    <string name="rate_us">\u00A0\u00A0RATE US\u00A0\u00A0</string>
+    <string name="share_app">\u00A0\u00A0SHARE APP\u00A0\u00A0</string>
+    <string name="privacy_policy"><![CDATA[\u00A0\u00A0PRIVACY & POLICY\u00A0\u00A0]]></string>
 
     <string name="zero_star_title">Do you like the app?</string>
     <string name="zero_star">Let us know your experience</string>
@@ -66,7 +66,7 @@
     <string name="an_error_occurred">An error occurred, please try again later.</string>
     <string name="image_has_been_saved_successfully">The project has been saved successfully!</string>
     <string name="save">SAVE</string>
-    <string name="are_you_sure_want_to_delete_this_item">DO YOU WANT TO DELETE?</string>
+    <string name="are_you_sure_want_to_delete_this_item">ARE YOU SURE WANT TO DELETE THIS ITEM?</string>
     <string name="downloading">Downloading...</string>
     <string name="successfully">Successfully</string>
     <string name="download_failed_please_try_again_later">Download failed, please try again later!</string>
@@ -76,7 +76,7 @@
     <string name="delete_your_customize">Delete your customize</string>
     <string name="are_you_sure_you_want_to_delete_the_image">Are you sure you want to delete the image?</string>
     <string name="haven_t_saved_it_yet_do_you_want_to_exit">Haven’t saved it yet, are you sure to exit?</string>
-    <string name="change_your_whole_design_are_you_sure">DO YOU WANT TO RESET?</string>
+    <string name="change_your_whole_design_are_you_sure">DO YOU WANT TO RESET ALL?</string>
     <string name="character_maker">Pixel Maker</string>
     <string name="no_item_here">No Item Here</string>
     <string name="quick_maker">Quick Maker</string>
@@ -113,11 +113,12 @@
     <string name="loading">LOADING...</string>
     <string name="internet_required_for_more_characters">Internet required for more characters</string>
     <string name="my_work">My Work</string>
-    <string name="do_you_want_to_exit">THE CHARACTER HASN\'T BEEN SAVED, CAN YOU STILL EXIT?</string>
+    <string name="do_you_want_to_exit">HAVEN\'T SAVE IT YET, DO YOU WANT TO EXIT?</string>
     <string name="generate">RANDOM</string>
     <string name="play">\u0020AVATAR MAKER</string>
-    <string name="tv_cosplay">\u00A0\u00A0COSPLAY AVATAR\u00A0\u00A0</string>
+    <string name="tv_cosplay">\u00A0\u00A0COSPLAY AVATAR\u00A0</string>
     <string name="random">\u00A0\u00A0RANDOM\u00A0\u00A0</string>
+    <string name="avatar_random">\u00A0\u00A0AVATAR RANDOM\u00A0\u00A0</string>
     <string name="creation">\u00A0\u00A0MY CREATION\u00A0\u00A0</string>
     <string name="back">BACK</string>
     <string name="hello_world_hint">Type your content...</string>
@@ -126,12 +127,13 @@
     <string name="click_the_random_button_below_to_see_what_your_character_is">Click the random button below to see what your character is!</string>
     <string name="next_intro">Next</string>
     <string name="color_text">Color</string>
-    <string name="playcos">COS PLAY</string>
+    <string name="playcos">\u00A0\u00A0COS PLAY</string>
     <string name="try_again">TRY AGAIN</string>
     <string name="instruction">INSTRUCTION</string>
-    <string name="guide_cosplay"><![CDATA[<b><font color="#D90C4D">Cosplay Mode</font></b>, players are randomly given <b><font color="#D90C4D">one reference image</font></b> to follow. Your task is to recreate that character as accurately as possible by choosing the right <b><font color="#D90C4D">hairstyles, outfits, colors, and accessories</font></b>. Every correct match increases your <b><font color="#D90C4D">percentage score (%)</font></b>. The closer your character looks to the random image, the higher your final score will be. Pay attention to small details to achieve the best cosplay result.]]></string>
     <string name="stop">STOP</string>
     <string name="cancel">CANCEL</string>
     <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
     <string name="cosplay">COSPLAY</string>
+    <string name="guide_cosplay"><![CDATA[<b><font color="#D90C4D">Cosplay Mode</font></b>, players are randomly given <b><font color="#D90C4D">one reference image</font></b> to follow. Your task is to recreate that character as accurately as possible by choosing the right <b><font color="#D90C4D">hairstyles, outfits, colors, and accessories</font></b>. Every correct match increases your <b><font color="#D90C4D">percentage score (%)</font></b>. The closer your character looks to the random image, the higher your final score will be. Pay attention to small details to achieve the best cosplay result.]]></string>
+
 </resources>

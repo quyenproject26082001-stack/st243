@@ -1,5 +1,4 @@
 <resources>
-
     <string name="go_to_setting_message">O aplicativo precisa desta permissão</string>
     <string name="settings">CONFIGURAÇÕES</string>
     <string name="this_action_can_contain_ads">Esta ação pode conter anúncios</string>
@@ -7,14 +6,14 @@
     <string name="next">PRÓXIMO</string>
     <string name="language"> IDIOMA </string>
 
-    <string name="title_1">Crie seu próprio avatar como quiser</string>
-    <string name="title_2">Categorias Diversas e Únicas</string>
-    <string name="title_3">Grande Variedade de Itens</string>
+    <string name="title_1">CRIE SEU ÍDOLO POP STAR DEFINITIVO</string>
+    <string name="title_2">MISTURE &amp; COMBINE ROUPAS \nDE DESIGNER DE ALTA COSTURA</string>
+    <string name="title_3">PROJETE SUA PERSONALIDADE \nDE SUPERESTRELA GLOBAL</string>
 
     <string name="permission">PERMISSÃO</string>
-    <string name="storage">ARMAZENAMENTO</string>
+    <string name="storage">\u00A0\u00A0ARMAZENAMENTO\u00A0\u00A0</string>
     <string name="continue_per">Continuar</string>
-    <string name="notification">NOTIFICAÇÃO</string>
+    <string name="notification">\u00A0\u00A0NOTIFICAÇÃO\u00A0\u00A0</string>
     <string name="no_internet">Sem Internet</string>
     <string name="granted_notification">Permissão de notificação concedida</string>
     <string name="granted_storage">Permissão de armazenamento concedida</string>
@@ -22,31 +21,31 @@
     <string name="to_access">para acessar fotos no seu dispositivo</string>
     <string name="to_access_13">para acessar notificações no seu dispositivo</string>
 
-    <string name="rate_us">AVALIE-NOS</string>
-    <string name="share_app">COMPARTILHAR APP</string>
-    <string name="privacy_policy"><![CDATA[PRIVACIDADE & POLÍTICA]]></string>
+    <string name="rate_us">\u00A0\u00A0AVALIE-NOS\u00A0\u00A0</string>
+    <string name="share_app">\u00A0\u00A0COMPARTILHAR APP\u00A0\u00A0</string>
+    <string name="privacy_policy"><![CDATA[\u00A0\u00A0POLÍTICA DE PRIVACIDADE\u00A0\u00A0]]></string>
 
     <string name="zero_star_title">Você gosta do aplicativo?</string>
     <string name="zero_star">Conte-nos sua experiência</string>
 
-    <string name="one_star_title">Oh, não!</string>
-    <string name="one_star">Por favor, nos dê um feedback</string>
+    <string name="one_star_title">Ah, não!</string>
+    <string name="one_star">Por favor, dê-nos seu feedback</string>
 
-    <string name="two_star_title">Oh, não!</string>
-    <string name="two_star">Por favor, nos dê um feedback</string>
+    <string name="two_star_title">Ah, não!</string>
+    <string name="two_star">Por favor, dê-nos seu feedback</string>
 
-    <string name="three_star_title">Oh, não!</string>
-    <string name="three_star">Por favor, nos dê um feedback</string>
+    <string name="three_star_title">Ah, não!</string>
+    <string name="three_star">Por favor, dê-nos seu feedback</string>
 
-    <string name="four_star_title">Nós também te amamos!</string>
+    <string name="four_star_title">Nós também amamos você!</string>
     <string name="four_star">Obrigado pelo seu feedback</string>
 
-    <string name="five_star_title">Nós também te amamos!</string>
+    <string name="five_star_title">Nós também amamos você!</string>
     <string name="five_star">Obrigado pelo seu feedback</string>
 
     <string name="rate_us_0">Você ainda não avaliou!</string>
     <string name="rate">Avaliar</string>
-    <string name="exit">SAIR</string>
+    <string name="exit">Sair</string>
     <string name="have_rated">Obrigado por avaliar nosso aplicativo</string>
     <string name="share">COMPARTILHAR</string>
     <string name="delete">EXCLUIR</string>
@@ -56,79 +55,81 @@
     <string name="ok">Ok</string>
     <string name="wait_a_minute">POR FAVOR, AGUARDE UM MOMENTO</string>
     <string name="reset">REDEFINIR</string>
-    <string name="download_success">Download realizado com sucesso no álbum Couple Maker: Kiss Creator</string>
+    <string name="download_success">Download concluído com sucesso no álbum Couple Maker: Kiss Creator</string>
     <string name="please_check_your_internet">Por favor, verifique sua internet</string>
     <string name="please_select_an_image">Por favor, selecione uma imagem</string>
     <string name="error">Erro</string>
-    <string name="an_error_occurred">Ocorreu um erro, por favor tente novamente mais tarde.</string>
+    <string name="an_error_occurred">Ocorreu um erro, tente novamente mais tarde.</string>
     <string name="image_has_been_saved_successfully">O projeto foi salvo com sucesso!</string>
     <string name="save">SALVAR</string>
-    <string name="are_you_sure_want_to_delete_this_item">DESEJA EXCLUIR?</string>
+    <string name="are_you_sure_want_to_delete_this_item">TEM CERTEZA QUE DESEJA EXCLUIR ESTE ITEM?</string>
     <string name="downloading">Baixando...</string>
     <string name="successfully">Com sucesso</string>
-    <string name="download_failed_please_try_again_later">Falha no download, por favor tente novamente mais tarde!</string>
-    <string name="save_failed_please_try_again">Falha ao salvar, por favor tente novamente!</string>
-    <string name="delete_failed_please_try_again">Falha ao excluir, por favor tente novamente!</string>
+    <string name="download_failed_please_try_again_later">Falha no download, tente novamente mais tarde!</string>
+    <string name="save_failed_please_try_again">Falha ao salvar, tente novamente!</string>
+    <string name="delete_failed_please_try_again">Falha ao excluir, tente novamente!</string>
     <string name="my_creation">MINHA CRIAÇÃO</string>
     <string name="delete_your_customize">Excluir sua personalização</string>
     <string name="are_you_sure_you_want_to_delete_the_image">Tem certeza que deseja excluir a imagem?</string>
-    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Ainda não foi salvo, tem certeza que deseja sair?</string>
-    <string name="change_your_whole_design_are_you_sure">DESEJA REDEFINIR?</string>
+    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Ainda não salvou, tem certeza que deseja sair?</string>
+    <string name="change_your_whole_design_are_you_sure">DESEJA REDEFINIR TUDO?</string>
     <string name="character_maker">Pixel Maker</string>
-    <string name="no_item_here">Nenhum Item Aqui</string>
-    <string name="quick_maker">Quick Maker</string>
+    <string name="no_item_here">Nenhum item aqui</string>
+    <string name="quick_maker">Criador Rápido</string>
     <string name="my_character">Meu Pixel</string>
-    <string name="category">Pixel Maker</string>
+    <string name="category">CATEGORIA</string>
 
     <string name="add_to_whatsapp">Adicionar ao Whatsapp</string>
     <string name="add_to_telegram">Adicionar ao Telegram</string>
     <string name="my_avatar">Meu Avatar</string>
-    <string name="my_design">DESIGN</string>
+    <string name="my_design">MEU DESIGN</string>
     <string name="my_album">Meu álbum</string>
-    <string name="no_app_found_to_handle_this_action">Nenhum aplicativo encontrado para esta ação</string>
+    <string name="no_app_found_to_handle_this_action">Nenhum aplicativo encontrado para lidar com esta ação</string>
     <string name="invalid_action_msg">Aplicativo não instalado</string>
     <string name="invalid_action">Erro</string>
-    <string name="limit_3_items">É necessário pelo menos 3 itens para criar um sticker</string>
-    <string name="limit_30_items">Só é possível adicionar no máximo 30 itens</string>
-    <string name="create_package_name">Criar Nome do Pacote</string>
+    <string name="limit_3_items">São necessários pelo menos 3 itens para criar um adesivo</string>
+    <string name="limit_30_items">Apenas um máximo de 30 itens podem ser adicionados</string>
+    <string name="create_package_name">Criar nome do pacote</string>
     <string name="enter_your_package_name">Digite o nome do seu pacote</string>
     <string name="please_enter_your_package_name">Por favor, digite o nome do seu pacote!</string>
-    <string name="background">Plano de fundo</string>
+    <string name="background">Fundo</string>
     <string name="image">IMAGEM</string>
     <string name="color">COR</string>
-    <string name="add_image">Adicionar Imagem</string>
-    <string name="sticker">Sticker</string>
-    <string name="speech_bubbles">Balões de fala</string>
-    <string name="text">Inserir texto</string>
+    <string name="add_image">ADICIONAR IMAGEM</string>
+    <string name="sticker">Adesivo</string>
+    <string name="speech_bubbles">Balões de Fala</string>
+    <string name="text">TEXTO</string>
     <string name="type_your_content">Digite seu conteúdo...</string>
     <string name="font">Fonte</string>
-    <string name="choose_color">Escolher Cor</string>
-    <string name="done">CONCLUÍDO</string>
+    <string name="choose_color">Escolha a Cor</string>
+    <string name="done">SALVAR</string>
     <string name="null_edt">Por favor, insira o texto</string>
     <string name="input_text">Inserir texto</string>
     <string name="hello_world">Digite seu conteúdo...</string>
     <string name="loading">CARREGANDO...</string>
     <string name="internet_required_for_more_characters">Internet necessária para mais personagens</string>
     <string name="my_work">Meu Trabalho</string>
-    <string name="do_you_want_to_exit">O PERSONAGEM NÃO FOI SALVO, DESEJA MESMO SAIR?</string>
-    <string name="generate">Gerar Aleatório</string>
-    <string name="play">CRIADOR \nDE CASAIS</string>
-    <string name="tv_cosplay">COSPLAY</string>
-    <string name="random">ALEATÓRIO</string>
-    <string name="creation">CRIAÇÃO</string>
+    <string name="do_you_want_to_exit">AINDA NÃO SALVOU, DESEJA SAIR?</string>
+    <string name="generate">ALEATÓRIO</string>
+    <string name="play">\u0020AVATAR MAKER</string>
+    <string name="tv_cosplay">\u00A0\u00A0COSPLAY AVATAR\u00A0\u00A0</string>
+    <string name="random">\u00A0\u00A0ALEATÓRIO\u00A0\u00A0</string>
+    <string name="avatar_random">\u00A0\u00A0AVATAR ALEATÓRIO\u00A0\u00A0</string>
+    <string name="creation">\u00A0\u00A0MINHA CRIAÇÃO\u00A0\u00A0</string>
     <string name="back">VOLTAR</string>
-    <string name="hello_world_hint">Olá Mundo !!</string>
+    <string name="hello_world_hint">Digite seu conteúdo...</string>
     <string name="character">PERSONAGEM</string>
     <string name="edit">EDITAR</string>
     <string name="click_the_random_button_below_to_see_what_your_character_is">Clique no botão aleatório abaixo para ver qual é o seu personagem!</string>
     <string name="next_intro">Próximo</string>
     <string name="color_text">Cor</string>
-    <string name="playcos">JOGAR</string>
+    <string name="playcos">\u00A0\u00A0COS PLAY</string>
     <string name="try_again">TENTAR NOVAMENTE</string>
     <string name="instruction">INSTRUÇÃO</string>
-    <string name="guide_cosplay"><![CDATA[Os jogadores recebem <b><font color="#D90C4D">uma imagem de referência aleatória</font></b> e devem recriar o personagem escolhendo <b><font color="#D90C4D">penteados, roupas, cores e acessórios</font></b> correspondentes. Cada escolha correta aumenta a <b><font color="#D90C4D">pontuação percentual</font></b> — quanto mais o personagem se assemelhar à imagem, maior será a pontuação final.]]></string>
     <string name="stop">PARAR</string>
-    <string name="cancel">CANCEL</string>
-    <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="image_has_been_saved_successful">A IMAGEM FOI SALVA COM SUCESSO!</string>
     <string name="cosplay">COSPLAY</string>
+    <string name="guide_cosplay"><![CDATA[Os jogadores recebem <b><font color="#D90C4D">uma imagem de referência aleatória</font></b> e devem recriar o personagem escolhendo <b><font color="#D90C4D">penteados, roupas, cores e acessórios</font></b> correspondentes. Cada escolha correta aumenta a <b><font color="#D90C4D">pontuação percentual</font></b> — quanto mais o personagem se assemelhar à imagem, maior será a pontuação final.]]></string>
+
 </resources>

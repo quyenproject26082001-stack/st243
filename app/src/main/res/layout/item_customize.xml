@@ -51,9 +51,9 @@
             android:clickable="true"
             android:focusable="true"
             android:translationY="-2dp"
-            android:padding="16dp"
+            android:padding="13dp"
 
-            android:layout_margin="4dp"
+            android:layout_margin="1dp"
             android:scaleType="fitXY"
             app:tint="#DA4E65"
             android:src="@drawable/ic_none"
@@ -66,9 +66,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="true"
-            android:layout_margin="4dp"
+            android:layout_margin="1dp"
             android:focusable="true"
-            android:padding="16dp"
+            android:padding="13dp"
             app:tint="#DA4E65"
 
             android:translationY="-2dp"

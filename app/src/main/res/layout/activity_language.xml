@@ -34,7 +34,7 @@
         android:id="@+id/rcv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         android:overScrollMode="never"
         android:paddingHorizontal="20dp"
@@ -50,7 +50,7 @@
         style="@style/single_marquee"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="start|center_vertical"
         android:text="@string/language"
@@ -66,6 +66,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- LANGUAGE title (overlapping card top) -->
+    <com.tempttt.core.custom.text.DoubleStrokeTextView
+        android:id="@+id/tvLangSetting"
+        android:visibility="gone"
+        style="@style/single_marquee"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/luckiestguy_regular"
+        android:gravity="start|center_vertical"
+        android:text="@string/language"
+        android:textColor="@color/app"
+        android:textSize="24sp"
+        android:shadowDy="2"
+        android:shadowColor="#33000000"
+        android:shadowRadius="3"
+        app:outerStrokeColor="#FFFFFF"
+        app:outerStrokeWidth="3dp"
+        android:layout_marginStart="25dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/btnDoneLangSetting"
         android:layout_width="24dp"
@@ -73,14 +97,15 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/ic_done_lang_settings"
         android:visibility="invisible"
+        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toBottomOf="@id/tvLang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvLang" />
 
     <TextView
         android:id="@+id/btnBackLangSetting"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
         android:layout_marginStart="24dp"
         android:background="@drawable/ic_back_setting"
         android:visibility="invisible"

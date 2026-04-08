@@ -9,6 +9,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.lvt.ads.util.Admob
 import com.tempttt.R
 import com.tempttt.core.base.BaseActivity
+import com.tempttt.core.extensions.gone
 import com.tempttt.core.extensions.handleBackLeftToRight
 import com.tempttt.core.extensions.invisible
 import com.tempttt.core.extensions.select
@@ -40,7 +41,7 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
         viewModel.setFirstLanguage(intentValue == null)
         viewModel.loadLanguages(currentLang)
         binding.tvLang.select()
-
+        binding.tvLangSetting.select()
     }
 
     override fun dataObservable() {
@@ -51,10 +52,14 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
                         languageAdapter.isFirstLanguage = isFirst
                         if (isFirst) {
                             binding.btnDone.invisible()
+                            binding.tvLang.visible()
+                            binding.tvLangSetting.invisible()
                         } else {
                             binding.btnDone.invisible()
                             binding.btnBackLangSetting.visible()
                             binding.btnDoneLangSetting.visible()
+                            binding.tvLang.invisible()
+                            binding.tvLangSetting.visible()
                         }
                     }
                 }

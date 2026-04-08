@@ -108,6 +108,8 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
             btnCloseImage.tap(300) { hideOverlay() }
             btnMan.tap(300) { handleGenderSwitch(1) }
             btnWooman.tap(300) { handleGenderSwitch(2) }
+            btnColor.tap(300) { if (binding.flColor.visibility == View.VISIBLE) binding.flColor.invisible() else binding.flColor.visible() }
+            icArrowLeft.tap(300) { binding.flColor.invisible() }
             actionBar.apply {
                 btnActionBarLeft.tap { confirmExit() }
                 btnActionBarRight.tap(800) { navigateToSuccess() }
@@ -383,9 +385,10 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
             val thumbH = binding.icThumb.height.toFloat()
             val fillBoundary = containerH - clipH  // top của vùng fill (tính từ top container)
             // Bottom của thumb bám vào top của fill: center = fillBoundary - thumbH/2
-            val thumbCenter = (fillBoundary - thumbH / 2f).coerceIn(thumbH / 2f, containerH - thumbH / 2f)
+            val thumbCenter = (fillBoundary - thumbH / 4f).coerceIn(thumbH / 2f, containerH - thumbH / 2f)
             binding.icThumb.translationY = thumbCenter - containerH / 2f
             binding.tvThumbProgress.text = "$progress%"
+            if (progress == 100) navigateToSuccess()
         }
     }
 

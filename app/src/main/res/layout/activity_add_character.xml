@@ -129,13 +129,13 @@
         <LinearLayout
             android:id="@+id/sectionTab"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:layout_marginHorizontal="58dp"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="43dp"
             android:layout_marginTop="16dp"
             android:background="@color/transparent"
             android:orientation="horizontal"
             android:visibility="gone"
-            tools:visibility="visible">
+            tools:visibility="gone">
 
             <!--                btnBackgroundImage-->
             <FrameLayout
@@ -188,7 +188,7 @@
             </FrameLayout>
 
             <Space
-                android:layout_width="17dp"
+                android:layout_width="28dp"
                 android:layout_height="match_parent" />
             <!--                btnBackgroundColor-->
             <FrameLayout
@@ -270,7 +270,7 @@
 
                 tools:itemCount="10"
                 tools:listitem="@layout/item_background_image"
-                tools:visibility="visible" />
+                tools:visibility="gone" />
 
             <!--            rcvBackgroundColor-->
             <androidx.recyclerview.widget.RecyclerView
@@ -361,7 +361,7 @@
                 android:clipToPadding="false"
 
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="5"
+                app:spanCount="4"
                 tools:listitem="@layout/item_speech" />
         </LinearLayout>
 
@@ -377,7 +377,7 @@
             android:paddingTop="15dp"
             android:scrollbars="none"
             android:visibility="gone"
-            tools:visibility="gone">
+            tools:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -435,7 +435,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/bg_edit_text"
                     android:ellipsize="end"
                     android:fontFamily="@font/fredoka"
@@ -483,7 +483,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="-6dp"
+                    android:layout_marginTop="-16dp"
                     android:fontFamily="@font/luckiestguy_regular"
                     android:gravity="start"
                     android:text="@string/color_text"

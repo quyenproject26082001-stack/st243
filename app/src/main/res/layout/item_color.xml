@@ -6,7 +6,6 @@
     android:layout_gravity="center"
     android:layout_marginHorizontal="4dp">
 
-
     <ImageView
         android:id="@+id/imvFocus"
         android:layout_width="match_parent"
@@ -15,20 +14,11 @@
         android:padding="2dp"
         android:src="@drawable/bg_focus_color" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imvImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="0dp"
-        app:cardCornerRadius="99dp"
-        app:cardElevation="0dp">
-
-        <!--        imvColor-->
-        <ImageView
-            android:id="@+id/imvImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF" />
-    </androidx.cardview.widget.CardView>
-
+        android:background="#FFFFFF"
+        app:shapeAppearanceOverlay="@style/border_image_99" />
 
 </FrameLayout>

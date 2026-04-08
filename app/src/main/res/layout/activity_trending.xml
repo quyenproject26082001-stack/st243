@@ -18,15 +18,7 @@
             android:id="@+id/actionBar"
             layout="@layout/layout_actionbar" />
     </FrameLayout>
-    <ImageView
-        android:id="@+id/bg_cvimage"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
 
-        android:background="@drawable/bg_cus"
-        app:layout_constraintTop_toTopOf="@id/cvImage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 
      <!--    cvImage-->
     <FrameLayout
@@ -34,19 +26,21 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintVertical_bias=".3"
         android:layout_marginBottom="16dp"
         android:background="@drawable/bg_img_character"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar">
 
         <ImageView
             android:id="@+id/imvImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="11dp"
+            android:layout_margin="25dp"
             android:scaleType="center" />
 
         <ImageView

@@ -99,6 +99,8 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
         binding.actionBar.apply {
             btnActionBarNextRight.gone()
             btnActionBarRight.gone()
+            tvCenter.visible()
+            tvCenter.setText(R.string.my_creation)
         }
         binding.lnlBottom.visible()
         binding.lnlBottom.isSelected = true
@@ -315,7 +317,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
             btnActionBarNextRight.gone()
 
             // Delete All button - hidden initially, only shown in selection mode
-            btnActionBarRight.setImageResource(R.drawable.ic_delete_view)
+            btnActionBarRight.setImageResource(R.drawable.ic_delete_creation)
             btnActionBarRight.invisible()
         }
     }
@@ -512,20 +514,18 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
         isAllSelected = false
         binding.actionBar.apply {
             btnActionBarNextRight.visible()
-            btnActionBarNextRight.setImageResource(R.drawable.ic_delete_view)
+            btnActionBarNextRight.setImageResource(R.drawable.ic_delete_creation)
             btnActionBarRight.visible()
             btnActionBarRight.setImageResource(R.drawable.ic_not_select_all)
             btnActionBarNextRight1.gone()
         }
         // Show share/download bottom view for both tabs
         binding.flBottomView.visible()
-        // Avatar tab: keep lnlBottom (whatsapp/telegram) with 21dp bottom margin
+        // Avatar tab: keep lnlBottom (whatsapp/telegram), move closer to flBottomView
         // Design tab: hide lnlBottom (no whatsapp/telegram)
         if (viewModel.typeStatus.value == ValueKey.AVATAR_TYPE) {
             binding.lnlBottom.visible()
-            (binding.lnlBottom.layoutParams as? androidx.constraintlayout.widget.ConstraintLayout.LayoutParams)
-                ?.bottomMargin = (21 * resources.displayMetrics.density).toInt()
-            binding.lnlBottom.requestLayout()
+            binding.lnlBottom.translationY = (15 * resources.displayMetrics.density)
         } else {
             binding.lnlBottom.gone()
         }
@@ -545,10 +545,12 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
             else -> true
         }
         if (!currentlyEmpty) {
-            binding.lnlBottom.visible()
-            (binding.lnlBottom.layoutParams as? androidx.constraintlayout.widget.ConstraintLayout.LayoutParams)
-                ?.bottomMargin = 0
-            binding.lnlBottom.requestLayout()
+            if (viewModel.typeStatus.value == ValueKey.AVATAR_TYPE) {
+                binding.lnlBottom.visible()
+            } else {
+                binding.lnlBottom.invisible()
+            }
+            binding.lnlBottom.translationY = 0f
         }
     }
 

@@ -35,6 +35,7 @@ class PermissionActivity : BaseActivity<ActivityPermissionBinding>() {
 
     private var inter: InterstitialAd? = null
 
+
     override fun setViewBinding() = ActivityPermissionBinding.inflate(LayoutInflater.from(this))
 
     override fun initView() {
@@ -52,6 +53,7 @@ class PermissionActivity : BaseActivity<ActivityPermissionBinding>() {
             binding.btnStorage.gone()
         }
     }
+
 
     override fun initText() {
        // binding.actionBar.tvCenter.select()
@@ -122,6 +124,8 @@ class PermissionActivity : BaseActivity<ActivityPermissionBinding>() {
             android.util.Log.d("PermissionActivity", "handlePermissionRequest: requestPermission() called")
         }
     }
+
+
 
     private fun updatePermissionUI(granted: Boolean, isStorage: Boolean) {
         val imageView = if (isStorage) binding.swPermission else binding.swNotification

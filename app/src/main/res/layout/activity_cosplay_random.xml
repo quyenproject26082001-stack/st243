@@ -39,7 +39,7 @@
             android:id="@+id/imvImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="11dp"
+            android:layout_margin="25dp"
             android:scaleType="center" />
 
     </FrameLayout>
@@ -76,6 +76,7 @@
                 android:gravity="start"
                 android:text="@string/random"
                 android:textColor="@color/app"
+
                 android:shadowColor="@color/white"
                 android:shadowDy="2"
                 android:shadowRadius="2"
@@ -105,9 +106,9 @@
                 android:textColor="@color/app"
                 android:shadowColor="@color/white"
                 android:shadowDy="2"
-
                 android:layout_marginStart="50dp"
                 android:textSize="16sp"
+                android:shadowRadius="2"
                 android:visibility="visible" />
         </FrameLayout>
 
@@ -147,6 +148,8 @@
             android:textSize="16sp"
             style="@style/single_marquee"
             android:elevation="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:paddingHorizontal="10dp"
             app:layout_constraintTop_toTopOf="@id/bg_frame"
             android:layout_marginTop="23dp"
@@ -164,10 +167,13 @@
             android:paddingTop="0dp"
             android:text="@string/guide_cosplay"
             android:gravity="center"
+            android:letterSpacing=".05"
             android:paddingHorizontal="15dp"
             android:fontFamily="@font/luckiestguy_regular"
             android:textSize="16sp"
             android:textColor="#818181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/bg_frame"
 
@@ -178,7 +184,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="32dp"
             android:elevation="3dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginTop="29dp"
