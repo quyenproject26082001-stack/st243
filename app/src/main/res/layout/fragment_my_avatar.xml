@@ -39,6 +39,7 @@
 
         <ImageView
             android:layout_width="164dp"
+            android:visibility="gone"
             android:layout_height="180dp"
             android:adjustViewBounds="true"
             android:src="@drawable/img_no_item" />
@@ -50,11 +51,10 @@
             android:layout_height="37dp"
             android:fontFamily="@font/luckiestguy_regular"
             android:gravity="center"
-            android:background="@drawable/img_text_layout_no_item"
             android:paddingHorizontal="33dp"
             android:text="@string/no_item_here"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textColor="@color/app"
+            android:textSize="18sp"
             android:translationY="0dp" />
     </LinearLayout>
 

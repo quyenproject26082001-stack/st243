@@ -127,8 +127,9 @@
     <string name="playcos">SPIELEN</string>
     <string name="try_again">NOCHMAL VERSUCHEN</string>
     <string name="instruction">ANLEITUNG</string>
-    <string name="guide_cosplay">Die Spieler erhalten ein zufälliges Referenzbild und müssen den Charakter nachbilden, indem sie passende Frisuren, Outfits, Farben und Accessoires wählen. Jede richtige Wahl erhöht den Prozentwert – je näher der Charakter dem Bild entspricht, desto höher ist der endgültige Punktestand.</string>
+    <string name="guide_cosplay"><![CDATA[Die Spieler erhalten <b><font color="#D90C4D">ein zufälliges Referenzbild</font></b> und müssen den Charakter nachbilden, indem sie passende <b><font color="#D90C4D">Frisuren, Outfits, Farben und Accessoires</font></b> wählen. Jede richtige Wahl erhöht den <b><font color="#D90C4D">Prozentwert</font></b> – je näher der Charakter dem Bild entspricht, desto höher ist der endgültige Punktestand.]]></string>
     <string name="stop">STOPP</string>
     <string name="cancel">CANCEL</string>
     <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
+    <string name="cosplay">COSPLAY</string>
 </resources>

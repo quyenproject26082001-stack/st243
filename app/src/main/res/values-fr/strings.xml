@@ -126,8 +126,9 @@
     <string name="playcos">JOUER</string>
     <string name="try_again">RÉESSAYER</string>
     <string name="instruction">INSTRUCTIONS</string>
-    <string name="guide_cosplay">Les joueurs reçoivent une image de référence aléatoire et doivent recréer le personnage en choisissant des coiffures, tenues, couleurs et accessoires correspondants. Chaque bon choix augmente le score en pourcentage — plus le personnage ressemble à l\'image, plus le score final est élevé.</string>
+    <string name="guide_cosplay"><![CDATA[Les joueurs reçoivent <b><font color="#D90C4D">une image de référence aléatoire</font></b> et doivent recréer le personnage en choisissant des <b><font color="#D90C4D">coiffures, tenues, couleurs et accessoires</font></b> correspondants. Chaque bon choix augmente le <b><font color="#D90C4D">score en pourcentage</font></b> — plus le personnage ressemble à l\'image, plus le score final est élevé.]]></string>
     <string name="stop">ARRÊTER</string>
     <string name="cancel">CANCEL</string>
     <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
+    <string name="cosplay">COSPLAY</string>
 </resources>

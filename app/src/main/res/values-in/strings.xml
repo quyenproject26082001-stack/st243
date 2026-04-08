@@ -127,8 +127,9 @@
     <string name="playcos">MAINKAN</string>
     <string name="try_again">COBA LAGI</string>
     <string name="instruction">PETUNJUK</string>
-    <string name="guide_cosplay">Pemain menerima gambar referensi acak dan harus membuat ulang karakter dengan memilih gaya rambut, pakaian, warna, dan aksesori yang cocok. Setiap pilihan yang benar meningkatkan skor persentase — semakin dekat karakter dengan gambar, semakin tinggi skor akhirnya.</string>
+    <string name="guide_cosplay"><![CDATA[Pemain menerima <b><font color="#D90C4D">gambar referensi acak</font></b> dan harus membuat ulang karakter dengan memilih <b><font color="#D90C4D">gaya rambut, pakaian, warna, dan aksesori</font></b> yang cocok. Setiap pilihan yang benar meningkatkan <b><font color="#D90C4D">skor persentase</font></b> — semakin dekat karakter dengan gambar, semakin tinggi skor akhirnya.]]></string>
     <string name="stop">BERHENTI</string>
     <string name="cancel">CANCEL</string>
     <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
+    <string name="cosplay">COSPLAY</string>
 </resources>

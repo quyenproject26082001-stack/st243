@@ -46,6 +46,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -92,16 +94,16 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
         binding.apply {
             actionBar.btnActionBarLeft.tap { showInterAll { handleBackLeftToRight() } }
             btnGenerate.tap(0) { handleGenerate() }
-            actionBar.btnActionBarRightText.tap { handleEdit() }
+            actionBar.btnActionBarRight.tap { handleEdit() }
         }
     }
 
     override fun initActionBar() {
         binding.actionBar.apply {
-           tvCenter.invisible()
+           tvCenter.visible()
             btnActionBarLeft.visible()
-            if(hideGuide==true) btnActionBarRightText.visible()
-            tvRightText.setText(R.string.edit)
+            if(hideGuide==true) btnActionBarRight.visible()
+            tvCenter.setText(R.string.random)
         }
     }
 
@@ -213,30 +215,22 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
 
     private fun handleGenerate() {
         hideGuide = true
-        binding.guidRandom.gone()
         if (viewModel.randomList.isEmpty()) return
         if (isAnimating) return
         isAnimating = true
         binding.btnGenerate.visibility = View.INVISIBLE
-        binding.actionBar.btnActionBarRightText.visibility = View.INVISIBLE
+        binding.actionBar.btnActionBarRight.visibility = View.INVISIBLE
 
-        val totalDuration = 800L
 
         // Show GIF while generating
         Glide.with(this).asGif().load(R.drawable.gif).into(binding.imvImage)
 
         // Dice: spin 3 full rounds, decelerating like a real dice roll
-        val diceAnim = ObjectAnimator.ofFloat(binding.dices, "rotation", 0f, 1080f).apply {
-            duration = totalDuration
-            interpolator = DecelerateInterpolator(2f)
-            start()
-        }
+
 
         lifecycleScope.launch {
-            delay(totalDuration)
 
-            diceAnim.cancel()
-            binding.dices.rotation = 0f
+
 
             // Check internet sau khi delay xong, timeout 3s để tránh hang khi mất mạng
             val hasInternet = withContext(Dispatchers.IO) {
@@ -257,7 +251,7 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
             val finalModel = availableList.randomOrNull() ?: run {
                 isAnimating = false
                 binding.btnGenerate.visibility = View.VISIBLE
-                binding.actionBar.btnActionBarRightText.visibility = View.VISIBLE
+                binding.actionBar.btnActionBarRight.visibility = View.VISIBLE
                 return@launch
             }
 
@@ -265,7 +259,7 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
             renderSuggestion(finalModel) {
                 isAnimating = false
                 binding.btnGenerate.visibility = View.VISIBLE
-                binding.actionBar.btnActionBarRightText.visibility = View.VISIBLE
+                binding.actionBar.btnActionBarRight.visibility = View.VISIBLE
             }
         }
     }
@@ -299,12 +293,13 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
                 val width = bitmapDefault.width / 2
                 val height = bitmapDefault.height / 2
 
-                val listBitmap = ArrayList<Bitmap>()
-                paths.forEach { path ->
-                    listBitmap.add(
-                        Glide.with(this@TrendingActivity)
-                            .asBitmap().load(path).submit(width, height).get()
-                    )
+                val listBitmap = coroutineScope {
+                    paths.map { path ->
+                        async {
+                            Glide.with(this@TrendingActivity)
+                                .asBitmap().load(path).submit(width, height).get()
+                        }
+                    }.awaitAll()
                 }
 
                 val combinedBitmap = createBitmap(width, height)

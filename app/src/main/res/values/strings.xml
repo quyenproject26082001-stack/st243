@@ -114,10 +114,10 @@
     <string name="internet_required_for_more_characters">Internet required for more characters</string>
     <string name="my_work">My Work</string>
     <string name="do_you_want_to_exit">THE CHARACTER HASN\'T BEEN SAVED, CAN YOU STILL EXIT?</string>
-    <string name="generate">Generate Random</string>
+    <string name="generate">RANDOM</string>
     <string name="play">\u0020AVATAR MAKER</string>
     <string name="tv_cosplay">\u00A0\u00A0COSPLAY AVATAR\u00A0\u00A0</string>
-    <string name="random">\u00A0\u00A0AVATAR RANDOM\u00A0\u00A0</string>
+    <string name="random">\u00A0\u00A0RANDOM\u00A0\u00A0</string>
     <string name="creation">\u00A0\u00A0MY CREATION\u00A0\u00A0</string>
     <string name="back">BACK</string>
     <string name="hello_world_hint">Type your content...</string>
@@ -126,11 +126,12 @@
     <string name="click_the_random_button_below_to_see_what_your_character_is">Click the random button below to see what your character is!</string>
     <string name="next_intro">Next</string>
     <string name="color_text">Color</string>
-    <string name="playcos">PLAY</string>
+    <string name="playcos">COS PLAY</string>
     <string name="try_again">TRY AGAIN</string>
     <string name="instruction">INSTRUCTION</string>
-    <string name="guide_cosplay">Players receive a random reference image and must recreate the character by choosing matching hairstyles, outfits, colors, and accessories. Each correct choice increases the percentage score—the closer the character matches the image, the higher the final score.</string>
+    <string name="guide_cosplay"><![CDATA[<b><font color="#D90C4D">Cosplay Mode</font></b>, players are randomly given <b><font color="#D90C4D">one reference image</font></b> to follow. Your task is to recreate that character as accurately as possible by choosing the right <b><font color="#D90C4D">hairstyles, outfits, colors, and accessories</font></b>. Every correct match increases your <b><font color="#D90C4D">percentage score (%)</font></b>. The closer your character looks to the random image, the higher your final score will be. Pay attention to small details to achieve the best cosplay result.]]></string>
     <string name="stop">STOP</string>
     <string name="cancel">CANCEL</string>
     <string name="image_has_been_saved_successful">IMAGE HAS BEEN SAVED SUCCESSFULLY!</string>
+    <string name="cosplay">COSPLAY</string>
 </resources>

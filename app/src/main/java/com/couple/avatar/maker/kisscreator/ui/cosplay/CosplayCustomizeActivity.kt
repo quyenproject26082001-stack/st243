@@ -64,7 +64,9 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
     override fun initView() {
         initRcv()
         binding.tvCountDown.text = "10:00"
-        binding.progressBar.clipBounds = Rect(0, 0, 0, 0)
+        binding.progressContainer.post {
+            binding.progressBar.clipBounds = Rect(0, binding.progressContainer.height, binding.progressBar.width, binding.progressContainer.height)
+        }
         lifecycleScope.launch { showLoading() }
         dataViewModel.ensureData(this)
     }
@@ -328,7 +330,7 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
             binding.btnColor.gone()
             binding.flColor.visible()
         } else {
-            binding.color.invisible()
+            binding.color.gone()
             binding.flColor.invisible()
         }
     }
@@ -369,12 +371,14 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
         val progress = calculateProgress()
         currentProgress = progress
         binding.progressContainer.post {
-            val containerW = binding.progressContainer.width
-            val clipW = (containerW * progress / 100f).toInt()
-            binding.progressBar.clipBounds = Rect(0, 0, clipW, binding.progressBar.height)
-            val thumbW = binding.tvThumbProgress.width
-            val maxX = (containerW - thumbW).toFloat().coerceAtLeast(0f)
-            binding.tvThumbProgress.translationX = (progress / 100f) * maxX
+            val containerH = binding.progressContainer.height
+            val clipH = (containerH * progress / 100f).toInt()
+            // Fill from bottom to top
+            binding.progressBar.clipBounds = Rect(0, containerH - clipH, binding.progressBar.width, containerH)
+            // Move star thumb along Y axis (top = 100%, bottom = 0%)
+            val thumbH = binding.icThumb.height
+            val maxY = (containerH - thumbH).toFloat().coerceAtLeast(0f)
+            binding.icThumb.translationY = (1f - progress / 100f) * maxY
             binding.tvThumbProgress.text = "$progress%"
         }
     }

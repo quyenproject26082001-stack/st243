@@ -539,10 +539,17 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
             btnActionBarRight.gone()
         }
         binding.flBottomView.gone()
-        binding.lnlBottom.visible()
-        (binding.lnlBottom.layoutParams as? androidx.constraintlayout.widget.ConstraintLayout.LayoutParams)
-            ?.bottomMargin = 0
-        binding.lnlBottom.requestLayout()
+        val currentlyEmpty = when (viewModel.typeStatus.value) {
+            ValueKey.AVATAR_TYPE -> myAvatarFragment?.getAllPaths()?.isEmpty() ?: true
+            ValueKey.MY_DESIGN_TYPE -> myDesignFragment?.getAllPaths()?.isEmpty() ?: true
+            else -> true
+        }
+        if (!currentlyEmpty) {
+            binding.lnlBottom.visible()
+            (binding.lnlBottom.layoutParams as? androidx.constraintlayout.widget.ConstraintLayout.LayoutParams)
+                ?.bottomMargin = 0
+            binding.lnlBottom.requestLayout()
+        }
     }
 
     private fun updateBottomButtonsVisibility() {
