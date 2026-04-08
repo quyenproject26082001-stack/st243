@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.DashPathEffect
 import android.graphics.Matrix
@@ -73,6 +74,10 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
 
     private val borderPaint = Paint()
     private val stickerRect = RectF()
+    private val borderBitmap: Bitmap by lazy {
+        BitmapFactory.decodeResource(resources, R.drawable.bg_line_handlebox)
+    }
+    private val borderMatrix = Matrix()
 
     private val bitmapPoints = FloatArray(8)
     private val bounds = FloatArray(8)
@@ -690,10 +695,28 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
             val y4 = bitmapPoints[7]
 
             if (isShowBorder) {
-                canvas.drawLine(x1, y1, x2, y2, borderPaint)
-                canvas.drawLine(x1, y1, x3, y3, borderPaint)
-                canvas.drawLine(x2, y2, x4, y4, borderPaint)
-                canvas.drawLine(x4, y4, x3, y3, borderPaint)
+                val margin = 4 * resources.displayMetrics.density
+                val topLen = sqrt((x2 - x1).pow(2) + (y2 - y1).pow(2))
+                val leftLen = sqrt((x3 - x1).pow(2) + (y3 - y1).pow(2))
+                val rightX = (x2 - x1) / topLen
+                val rightY = (y2 - y1) / topLen
+                val downX = (x3 - x1) / leftLen
+                val downY = (y3 - y1) / leftLen
+                val srcPoints = floatArrayOf(
+                    0f, 0f,
+                    borderBitmap.width.toFloat(), 0f,
+                    0f, borderBitmap.height.toFloat()
+                )
+                val dstPoints = floatArrayOf(
+                    x1 - margin * rightX - margin * downX,
+                    y1 - margin * rightY - margin * downY,
+                    x2 + margin * rightX - margin * downX,
+                    y2 + margin * rightY - margin * downY,
+                    x3 - margin * rightX + margin * downX,
+                    y3 - margin * rightY + margin * downY
+                )
+                borderMatrix.setPolyToPoly(srcPoints, 0, dstPoints, 0, 3)
+                canvas.drawBitmap(borderBitmap, borderMatrix, null)
             }
 
             // draw icons

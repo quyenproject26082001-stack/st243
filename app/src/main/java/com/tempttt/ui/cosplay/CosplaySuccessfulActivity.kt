@@ -97,7 +97,6 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
             btnActionBarRight.setImageResource(R.drawable.ic_home)
             tvCenter.visible()
             tvCenter.setText(R.string.cosplay)
-            btnActionBarLeft.visible()
         }
     }
 
