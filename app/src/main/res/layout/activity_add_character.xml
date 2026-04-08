@@ -86,7 +86,7 @@
                 android:scaleType="centerCrop" />
 
             <!--        drawView-->
-            <com.couple.avatar.maker.kisscreator.core.custom.drawview.DrawView
+            <com.tempttt.core.custom.drawview.DrawView
                 android:id="@+id/drawView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -169,7 +169,7 @@
                     android:visibility="visible" />
 
                 <!--                tvBackgroundImage-->
-                <com.couple.avatar.maker.kisscreator.core.custom.text.OuterStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvBackgroundImage"
                     style="@style/single_marquee"
                     android:layout_width="match_parent"
@@ -225,7 +225,7 @@
                     tools:visibility="visible" />
 
                 <!--                tvBackgroundColor-->
-                <com.couple.avatar.maker.kisscreator.core.custom.text.OuterStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvBackgroundColor"
                     style="@style/single_marquee"
                     android:layout_width="match_parent"

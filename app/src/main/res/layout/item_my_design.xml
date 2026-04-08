@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/bg_img_character">
 
-            <com.couple.avatar.maker.kisscreator.core.custom.imageview.ShapeClipImageView
+            <com.tempttt.core.custom.imageview.ShapeClipImageView
                 android:id="@+id/imvImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

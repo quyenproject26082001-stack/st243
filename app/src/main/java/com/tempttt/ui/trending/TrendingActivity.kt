@@ -1,0 +1,397 @@
+package com.tempttt.ui.trending
+
+import android.app.ActivityOptions
+import android.content.Intent
+import android.graphics.Canvas
+import android.view.LayoutInflater
+import android.view.View
+import android.view.WindowManager
+import androidx.activity.viewModels
+import androidx.core.graphics.createBitmap
+import androidx.lifecycle.lifecycleScope
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
+import com.tempttt.R
+import com.tempttt.core.base.BaseActivity
+import com.tempttt.core.extensions.gone
+import com.tempttt.core.extensions.handleBackLeftToRight
+import com.tempttt.core.extensions.hideNavigation
+import com.tempttt.core.extensions.setImageActionBar
+import com.tempttt.core.extensions.setTextActionBar
+import com.tempttt.core.extensions.showInterAll
+import com.tempttt.core.extensions.tap
+import com.tempttt.core.extensions.visible
+import com.tempttt.core.helper.InternetHelper
+import com.tempttt.core.helper.MediaHelper
+import com.tempttt.core.utils.key.IntentKey
+import com.tempttt.core.utils.key.ValueKey
+import com.tempttt.core.utils.state.SaveState
+import com.tempttt.data.model.custom.SuggestionModel
+import com.tempttt.databinding.ActivityTrendingBinding
+import com.tempttt.dialog.YesNoDialog
+import com.tempttt.ui.customize.CustomizeCharacterActivity
+import com.tempttt.ui.customize.CustomizeCharacterViewModel
+import com.tempttt.ui.home.DataViewModel
+import com.tempttt.ui.random_character.RandomCharacterViewModel
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.TimeoutCancellationException
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeout
+
+class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
+
+    private val viewModel: RandomCharacterViewModel by viewModels()
+    private val dataViewModel: DataViewModel by viewModels()
+    private val customizeCharacterViewModel: CustomizeCharacterViewModel by viewModels()
+
+    private var currentSuggestion: SuggestionModel? = null
+    private var isAnimating = false
+
+    override fun setViewBinding(): ActivityTrendingBinding {
+        return ActivityTrendingBinding.inflate(LayoutInflater.from(this))
+    }
+
+    override fun initView() {
+        lifecycleScope.launch { showLoading() }
+        dataViewModel.ensureData(this)
+        binding.cvImage.post {
+            val offset = binding.cvImage.height / 2
+            binding.bgCvimage.translationY = offset.toFloat()
+        }
+    }
+
+    override fun dataObservable() {
+        lifecycleScope.launch {
+            dataViewModel.allData.collect { data ->
+                if (data.isNotEmpty()) {
+                    initData()
+                }
+            }
+        }
+    }
+
+    override fun viewListener() {
+        binding.apply {
+            actionBar.btnActionBarLeft.tap { showInterAll { handleBackLeftToRight() } }
+            btnGenerate.tap(0) { handleGenerate() }
+            actionBar.btnActionBarRight.tap { handleEdit() }
+        }
+    }
+
+    override fun initActionBar() {
+        binding.actionBar.apply {
+           tvCenter.visible()
+            btnActionBarLeft.visible()
+            btnActionBarRight.visible()
+            tvCenter.setText(R.string.random)
+        }
+    }
+
+    private fun initData() {
+        val handleExceptionCoroutine = CoroutineExceptionHandler { _, throwable ->
+            CoroutineScope(Dispatchers.Main).launch {
+                val dialogExit = YesNoDialog(
+                    this@TrendingActivity,
+                    R.string.error,
+                    R.string.an_error_occurred
+                )
+                dialogExit.show()
+                dialogExit.onNoClick = {
+                    dialogExit.dismiss()
+                    finish()
+                }
+                dialogExit.onYesClick = {
+                    dialogExit.dismiss()
+                    hideNavigation()
+                    finish()
+                }
+            }
+        }
+
+        CoroutineScope(SupervisorJob() + Dispatchers.Main + handleExceptionCoroutine).launch {
+            val t0 = System.currentTimeMillis()
+            android.util.Log.d("TIMING_TRENDING", "initData() START (allData.size=${dataViewModel.allData.value.size})")
+
+            val internetStart = System.currentTimeMillis()
+            val hasInternet = withContext(Dispatchers.IO) {
+                InternetHelper.isInternetAvailable(this@TrendingActivity)
+            }
+            android.util.Log.d("TIMING_TRENDING", "  [Step1] internetCheck: ${System.currentTimeMillis() - internetStart}ms | hasInternet=$hasInternet")
+
+            val filteredData = if (hasInternet) {
+                dataViewModel.allData.value
+            } else {
+                dataViewModel.allData.value.filter { !it.isFromAPI }
+            }
+            android.util.Log.d("TIMING_TRENDING", "  filteredData.size=${filteredData.size} (allData.size=${dataViewModel.allData.value.size}, hasInternet=$hasInternet)")
+            if (filteredData.isEmpty()) {
+                android.util.Log.w("TIMING_TRENDING", "  filteredData rỗng → return")
+                return@launch
+            }
+
+            suspend fun processCharacter(data: com.tempttt.data.model.custom.CustomizeModel) {
+                customizeCharacterViewModel.positionSelected =
+                    dataViewModel.allData.value.indexOf(data)
+                customizeCharacterViewModel.setDataCustomize(data)
+                customizeCharacterViewModel.updateAvatarPath(data.avatar)
+                customizeCharacterViewModel.resetDataList()
+                customizeCharacterViewModel.addValueToItemNavList()
+                customizeCharacterViewModel.setItemColorDefault()
+                val allNavList = data.layerList.mapIndexed { index, layer ->
+                    com.tempttt.data.model.custom.NavigationModel(
+                        imageNavigation = layer.imageNavigation,
+                        layerIndex = index
+                    )
+                }.toCollection(ArrayList())
+                allNavList.firstOrNull()?.isSelected = true
+                customizeCharacterViewModel.setBottomNavigationList(allNavList)
+                for (j in 0 until ValueKey.RANDOM_QUANTITY) {
+                    customizeCharacterViewModel.setClickRandomFullLayer()
+                    val suggestion = customizeCharacterViewModel.getSuggestionList()
+                    viewModel.updateRandomList(suggestion)
+                }
+            }
+
+            // Xử lý character đầu tiên → show ngay
+            val processFirstStart = System.currentTimeMillis()
+            withContext(Dispatchers.IO) {
+                try { processCharacter(filteredData[0]) } catch (e: Exception) { e.printStackTrace() }
+                viewModel.upsideDownList()
+            }
+            android.util.Log.d("TIMING_TRENDING", "  [Step2] processCharacter[0] (${filteredData[0].dataName}, isFromAPI=${filteredData[0].isFromAPI}): ${System.currentTimeMillis() - processFirstStart}ms | randomList.size=${viewModel.randomList.size}")
+
+            val renderStart = System.currentTimeMillis()
+            showRandomSuggestion {
+                android.util.Log.d("TIMING_TRENDING", "  [Step3] renderSuggestion DONE: ${System.currentTimeMillis() - renderStart}ms | tổng từ initData start: ${System.currentTimeMillis() - t0}ms")
+                lifecycleScope.launch { dismissLoading() }
+            }
+
+            // Xử lý phần còn lại ở background
+            if (filteredData.size > 1) {
+                val bgStart = System.currentTimeMillis()
+                withContext(Dispatchers.IO) {
+                    for (i in 1 until filteredData.size) {
+                        val charStart = System.currentTimeMillis()
+                        try { processCharacter(filteredData[i]) } catch (e: Exception) { e.printStackTrace() }
+                        android.util.Log.d("TIMING_TRENDING", "  [BG] processCharacter[$i] (${filteredData[i].dataName}): ${System.currentTimeMillis() - charStart}ms")
+                    }
+                    viewModel.upsideDownList()
+                }
+                android.util.Log.d("TIMING_TRENDING", "  [BG] tất cả characters còn lại: ${System.currentTimeMillis() - bgStart}ms | randomList.size=${viewModel.randomList.size}")
+            }
+            android.util.Log.d("TIMING_TRENDING", "initData() COMPLETE | tổng: ${System.currentTimeMillis() - t0}ms")
+        }
+    }
+
+    private fun showRandomSuggestion(onComplete: (() -> Unit)? = null) {
+        if (viewModel.randomList.isEmpty()) {
+            onComplete?.invoke()
+            return
+        }
+        val model = viewModel.randomList.random()
+        currentSuggestion = model
+        renderSuggestion(model, onComplete)
+    }
+
+    private fun handleGenerate() {
+        if (viewModel.randomList.isEmpty()) return
+        if (isAnimating) return
+        isAnimating = true
+        binding.btnGenerate.visibility = View.INVISIBLE
+
+        lifecycleScope.launch {
+            showLoading()
+
+            // Check internet, timeout 3s để tránh hang khi mất mạng
+            val hasInternet = withContext(Dispatchers.IO) {
+                try {
+                    withTimeout(3000) { InternetHelper.isInternetAvailable(this@TrendingActivity) }
+                } catch (e: TimeoutCancellationException) {
+                    false
+                }
+            }
+            val availableList = if (hasInternet) {
+                viewModel.randomList
+            } else {
+                viewModel.randomList.filter { model ->
+                    val character = dataViewModel.allData.value.firstOrNull { it.avatar == model.avatarPath }
+                    character?.isFromAPI != true
+                }
+            }
+            val finalModel = availableList.randomOrNull() ?: run {
+                dismissLoading()
+                isAnimating = false
+                binding.btnGenerate.visibility = View.VISIBLE
+                return@launch
+            }
+
+            currentSuggestion = finalModel
+            renderSuggestion(finalModel) {
+                lifecycleScope.launch { dismissLoading() }
+                isAnimating = false
+                binding.btnGenerate.visibility = View.VISIBLE
+            }
+        }
+    }
+
+    private fun renderSuggestion(model: SuggestionModel, onComplete: (() -> Unit)? = null) {
+        android.util.Log.d("TrendingDebug", "renderSuggestion() called | pathInternalRandom='${model.pathInternalRandom}' | pathSelectedList.size=${model.pathSelectedList.size} | avatarPath='${model.avatarPath}'")
+
+        if (model.pathInternalRandom.isNotEmpty()) {
+            android.util.Log.d("TrendingDebug", "  → pathInternalRandom không rỗng, load trực tiếp")
+            Glide.with(this)
+                .load(model.pathInternalRandom)
+                .listener(glideListener(onComplete))
+                .into(binding.imvImage)
+            return
+        }
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            try {
+                val paths = model.pathSelectedList.filter { it.isNotEmpty() }
+                android.util.Log.d("TrendingDebug", "  → pathInternalRandom rỗng, tính từ pathSelectedList")
+                android.util.Log.d("TrendingDebug", "     pathSelectedList raw (${model.pathSelectedList.size} item): ${model.pathSelectedList}")
+                android.util.Log.d("TrendingDebug", "     paths sau filter notEmpty (${paths.size} item): $paths")
+                if (paths.isEmpty()) {
+                    android.util.Log.w("TrendingDebug", "  !! paths.isEmpty() → onComplete gọi không có ảnh nào, GIF sẽ còn quay!")
+                    withContext(Dispatchers.Main) { onComplete?.invoke() }
+                    return@launch
+                }
+
+                val bitmapDefault = Glide.with(this@TrendingActivity)
+                    .asBitmap().load(paths.first()).submit().get()
+                val width = bitmapDefault.width / 2
+                val height = bitmapDefault.height / 2
+
+                val listBitmap = coroutineScope {
+                    paths.map { path ->
+                        async {
+                            Glide.with(this@TrendingActivity)
+                                .asBitmap().load(path).submit(width, height).get()
+                        }
+                    }.awaitAll()
+                }
+
+                val combinedBitmap = createBitmap(width, height)
+                val canvas = Canvas(combinedBitmap)
+                for (bitmap in listBitmap) {
+                    val left = (width - bitmap.width) / 2f
+                    val top = (height - bitmap.height) / 2f
+                    canvas.drawBitmap(bitmap, left, top, null)
+                }
+
+                MediaHelper.saveBitmapToInternalStorage(
+                    this@TrendingActivity,
+                    ValueKey.RANDOM_TEMP_ALBUM,
+                    combinedBitmap
+                ).collect { state ->
+                    android.util.Log.d("TrendingDebug", "  → saveBitmapToInternalStorage state: $state")
+                    if (state is SaveState.Success) {
+                        model.pathInternalRandom = state.path
+                        android.util.Log.d("TrendingDebug", "     Save thành công: path='${state.path}'")
+                    }
+                }
+
+                android.util.Log.d("TrendingDebug", "  → Sau save: pathInternalRandom='${model.pathInternalRandom}'")
+                withContext(Dispatchers.Main) {
+                    if (model.pathInternalRandom.isEmpty()) {
+                        android.util.Log.w("TrendingDebug", "  !! pathInternalRandom vẫn rỗng sau save → Glide.load('') sẽ fail, GIF còn quay!")
+                    }
+                    Glide.with(this@TrendingActivity)
+                        .load(model.pathInternalRandom)
+                        .listener(glideListener(onComplete))
+                        .into(binding.imvImage)
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("TrendingDebug", "  !! Exception trong renderSuggestion: ${e::class.simpleName}: ${e.message}", e)
+                withContext(Dispatchers.Main) { onComplete?.invoke() }
+            }
+        }
+    }
+
+    private fun glideListener(onComplete: (() -> Unit)?): RequestListener<android.graphics.drawable.Drawable> {
+        return object : RequestListener<android.graphics.drawable.Drawable> {
+            override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<android.graphics.drawable.Drawable>, isFirstResource: Boolean): Boolean {
+                android.util.Log.e("TrendingDebug", "  !! Glide.onLoadFailed: model='$model' | cause=${e?.causes?.joinToString { it.message ?: it::class.simpleName ?: "?" }}")
+                onComplete?.invoke()
+                return false
+            }
+            override fun onResourceReady(resource: android.graphics.drawable.Drawable, model: Any, target: Target<android.graphics.drawable.Drawable>?, dataSource: DataSource, isFirstResource: Boolean): Boolean {
+                android.util.Log.d("TrendingDebug", "  ✓ Glide.onResourceReady: model='$model' | source=$dataSource")
+                onComplete?.invoke()
+                return false
+            }
+        }
+    }
+
+    private fun handleEdit() {
+        val suggestion = currentSuggestion ?: return
+        customizeCharacterViewModel.positionSelected =
+            dataViewModel.allData.value.indexOfFirst { it.avatar == suggestion.avatarPath }
+        val selectedCharacter =
+            dataViewModel.allData.value.getOrNull(customizeCharacterViewModel.positionSelected)
+        viewModel.setIsDataAPI(selectedCharacter?.isFromAPI ?: false)
+        viewModel.checkDataInternet(this) {
+            lifecycleScope.launch {
+                showLoading()
+                withContext(Dispatchers.IO) {
+                    MediaHelper.writeModelToFile(
+                        this@TrendingActivity,
+                        ValueKey.SUGGESTION_FILE_INTERNAL,
+                        suggestion
+                    )
+                }
+                val intent = Intent(this@TrendingActivity, CustomizeCharacterActivity::class.java)
+                intent.putExtra(IntentKey.INTENT_KEY, customizeCharacterViewModel.positionSelected)
+                intent.putExtra(IntentKey.STATUS_FROM_KEY, ValueKey.SUGGESTION)
+                val option = ActivityOptions.makeCustomAnimation(
+                    this@TrendingActivity,
+                    R.anim.slide_out_left,
+                    R.anim.slide_in_right
+                )
+                dismissLoading()
+                showInterAll { startActivity(intent, option.toBundle()) }
+            }
+        }
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) {
+            applyUiCustomize()
+            hideNavigation(true)
+            window.decorView.removeCallbacks(reHideRunnable)
+            window.decorView.postDelayed(reHideRunnable, 2000)
+        } else {
+            window.decorView.removeCallbacks(reHideRunnable)
+        }
+    }
+
+    private val reHideRunnable = Runnable {
+        applyUiCustomize()
+        hideNavigation(true)
+    }
+
+    @Suppress("DEPRECATION")
+    private fun applyUiCustomize() {
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = android.graphics.Color.TRANSPARENT
+        window.navigationBarColor = android.graphics.Color.TRANSPARENT
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+    }
+}

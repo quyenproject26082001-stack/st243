@@ -32,18 +32,21 @@
                     android:layout_marginHorizontal="90dp"
                     android:layout_marginTop="2dp"
                     android:background="@color/transparent"
-                    android:fontFamily="@font/chewy_regular"
+                    android:fontFamily="@font/luckiestguy_regular"
                     android:gravity="center"
                     android:paddingVertical="5dp"
                     android:text="@string/delete"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:shadowColor="@color/white"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:textColor="@color/app"
+                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <!--            tvDescription-->
-                <TextView
+                <com.tempttt.core.custom.text.DoubleStrokeTextView
                     android:id="@+id/tvDescription"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -54,6 +57,8 @@
                     android:text="@string/do_you_want_to_exit"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
+                    app:outerStrokeWidth="1dp"
+                    app:outerStrokeColor="@color/app"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/llButtons"
@@ -81,8 +86,12 @@
                         android:gravity="center"
                         android:paddingVertical="6dp"
                         android:text="@string/no"
-                        android:textColor="#FFFFFF"
-                        android:textSize="16sp" />
+                        android:shadowColor="@color/white"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"
+                        android:textColor="@color/app"
+                        android:textSize="18sp"
+                   />
 
                     <!--                    btnYes-->
                     <TextView
@@ -95,8 +104,11 @@
                         android:gravity="center"
                         android:paddingVertical="9dp"
                         android:text="@string/yes"
-                        android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:shadowColor="@color/white"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"
+                        android:textColor="@color/app"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

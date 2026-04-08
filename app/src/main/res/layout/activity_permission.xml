@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@id/imgPermission"
         android:fontFamily="@font/londrina_solid_regular">
 
-        <com.couple.avatar.maker.kisscreator.core.custom.text.DoubleStrokeTextView
+        <com.tempttt.core.custom.text.DoubleStrokeTextView
             android:id="@+id/txtPer"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@id/btnNotification"
         android:background="@drawable/bg_frame_per">
 
-        <com.couple.avatar.maker.kisscreator.core.custom.text.DoubleStrokeTextView
+        <com.tempttt.core.custom.text.DoubleStrokeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -112,7 +112,7 @@
         android:layout_marginHorizontal="23dp"
         android:background="@drawable/bg_frame_per">
 
-        <com.couple.avatar.maker.kisscreator.core.custom.text.DoubleStrokeTextView
+        <com.tempttt.core.custom.text.DoubleStrokeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -145,7 +145,7 @@
 
 
     <!-- tvPermission badge — đặt sau cardContainer để render đè lên top card -->
-    <com.couple.avatar.maker.kisscreator.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.DoubleStrokeTextView
         android:id="@+id/tvPermission"
         android:layout_width="0dp"
         android:layout_height="56dp"

@@ -22,18 +22,18 @@ println("BUILD_ENV = " + env)
 //               inter_per   : "REAL_INTER"]
 
 android {
-    namespace 'com.couple.avatar.maker.kisscreator'
+    namespace 'com.tempttt'
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.couple.avatar.maker.kisscreator"
+        applicationId "com.tempttt"
         minSdk 24
         targetSdk 36
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "ST225_V${versionName}_${formattedDate}"
+        archivesBaseName = "ST243_Avatar_Maker_Celebrities_V${versionName}_${formattedDate}"
 
     }
     signingConfigs {

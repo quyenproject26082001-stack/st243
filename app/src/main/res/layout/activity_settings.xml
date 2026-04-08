@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.couple.avatar.maker.kisscreator.ui.SettingsActivity">
+    tools:context="com.tempttt.ui.SettingsActivity">
 
     <ImageView
         android:id="@+id/imgBackground"
@@ -29,7 +29,7 @@
 
 
     <!-- LANGUAGE title (overlapping card top) -->
-    <com.couple.avatar.maker.kisscreator.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.DoubleStrokeTextView
         android:id="@+id/tvSetting"
         android:layout_width="0dp"
         android:layout_height="52dp"
@@ -87,7 +87,7 @@
                         android:src="@drawable/ic_lang_set" />
                 </FrameLayout>
 
-                <com.couple.avatar.maker.kisscreator.core.custom.text.OuterStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -140,7 +140,7 @@
                         android:src="@drawable/ic_rate_set" />
                 </FrameLayout>
 
-                <com.couple.avatar.maker.kisscreator.core.custom.text.OuterStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
@@ -193,7 +193,7 @@
                         android:src="@drawable/ic_share_set" />
                 </FrameLayout>
 
-                <com.couple.avatar.maker.kisscreator.core.custom.text.OuterStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
@@ -245,7 +245,7 @@
                         android:src="@drawable/ic_policy_set" />
                 </FrameLayout>
 
-                <com.couple.avatar.maker.kisscreator.core.custom.text.OuterStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
