@@ -64,7 +64,7 @@
     <string name="save">ENREGISTRER</string>
     <string name="are_you_sure_want_to_delete_this_item">ÊTES-VOUS SÛR DE VOULOIR SUPPRIMER CET ÉLÉMENT ?</string>
     <string name="downloading">Téléchargement...</string>
-    <string name="successfully">Réussi</string>
+    <string name="successfully">RÉUSSI</string>
     <string name="download_failed_please_try_again_later">Téléchargement échoué, veuillez réessayer plus tard !</string>
     <string name="save_failed_please_try_again">Échec de l\'enregistrement, veuillez réessayer !</string>
     <string name="delete_failed_please_try_again">Échec de la suppression, veuillez réessayer !</string>

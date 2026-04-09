@@ -146,23 +146,24 @@
 
 
     <!-- tvPermission badge — đặt sau cardContainer để render đè lên top card -->
-    <com.tempttt.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.OuterStrokeTextView
         android:id="@+id/tvPermission"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginTop="56dp"
-        android:textColor="@color/app"
         android:textSize="24sp"
         android:layout_marginStart="15.5dp"
-        android:shadowDy="2"
-        android:shadowColor="#33000000"
-        android:shadowRadius="3"
-        app:outerStrokeColor="#FFFFFF"
-        app:outerStrokeWidth="3dp"
+
         android:elevation="4dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="center"
         android:text="@string/permission"
+        android:textColor="@color/app"
+        android:shadowRadius="4"
+        android:shadowDy="4"
+        android:shadowColor="@color/white"
+        app:outerStrokeWidth="1dp"
+        app:outerStrokeColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

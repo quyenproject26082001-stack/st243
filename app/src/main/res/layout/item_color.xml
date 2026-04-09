@@ -14,11 +14,9 @@
         android:padding="2dp"
         android:src="@drawable/bg_focus_color" />
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:id="@+id/imvImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        app:shapeAppearanceOverlay="@style/border_image_99" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>

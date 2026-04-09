@@ -1,10 +1,10 @@
 package com.tempttt.ui.add_character.adapter
 
+import android.graphics.drawable.GradientDrawable
 import android.util.Log
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.tempttt.R
 import com.tempttt.core.base.BaseAdapter
 import com.tempttt.core.extensions.tap
@@ -31,39 +31,22 @@ class BackgroundColorAdapter :
 
 
             if (position == 0) {
-                Log.d("BackgroundColorAdapter", "Position 0: Clearing and loading img.png")
-                // First clear Glide to stop any pending loads
+                Log.d("BackgroundColorAdapter", "Position 0: Loading img with CircleCrop")
                 Glide.with(root.context).clear(imvColor)
-                // Clear any existing drawable
-                imvColor.setImageDrawable(null)
-                // Clear background completely
                 imvColor.background = null
-                // Set background to transparent
-                imvColor.setBackgroundColor(android.graphics.Color.TRANSPARENT)
-
-                // Also clear the parent MaterialCardView's background color
-                val cardView = imvColor.parent as? com.google.android.material.card.MaterialCardView
-                cardView?.setCardBackgroundColor(android.graphics.Color.TRANSPARENT)
-
-                Log.d("BackgroundColorAdapter", "Position 0: Background set to TRANSPARENT (ImageView and CardView), about to load image")
-                // Now load the image
-                val radiusPx = (4 * root.context.resources.displayMetrics.density).toInt()
                 Glide.with(root.context)
                     .load(R.drawable.img)
-                    .apply(RequestOptions.bitmapTransform(RoundedCorners(radiusPx)))
+                    .transform(CircleCrop())
                     .into(imvColor)
                 root.tap { onChooseColorClick.invoke() }
             } else {
                 Log.d("BackgroundColorAdapter", "Position $position: Setting color background")
-                // Clear Glide image and set background color on ImageView
                 Glide.with(root.context).clear(imvColor)
                 imvColor.setImageDrawable(null)
-                imvColor.setBackgroundColor(item.color)
-
-                // Ensure CardView background is also transparent for color positions
-                val cardView = imvColor.parent as? com.google.android.material.card.MaterialCardView
-                cardView?.setCardBackgroundColor(android.graphics.Color.TRANSPARENT)
-
+                imvColor.background = GradientDrawable().apply {
+                    shape = GradientDrawable.OVAL
+                    setColor(item.color)
+                }
                 root.tap { onBackgroundColorClick.invoke(item.color, position) }
             }
         }

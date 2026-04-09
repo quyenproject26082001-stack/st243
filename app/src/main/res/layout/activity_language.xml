@@ -45,47 +45,47 @@
 
 
     <!-- LANGUAGE title (overlapping card top) -->
-    <com.tempttt.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.OuterStrokeTextView
         android:id="@+id/tvLang"
         style="@style/single_marquee"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="start|center_vertical"
         android:text="@string/language"
-        android:textColor="@color/app"
         android:textSize="24sp"
-        android:shadowDy="2"
-        android:shadowColor="#33000000"
-        android:shadowRadius="3"
-        app:outerStrokeColor="#FFFFFF"
-        app:outerStrokeWidth="3dp"
-        android:layout_marginStart="25dp"
 
+        android:layout_marginStart="25dp"
+        android:textColor="@color/app"
+        android:shadowRadius="4"
+        android:shadowDy="4"
+        android:shadowColor="@color/white"
+        app:outerStrokeWidth="1dp"
+        app:outerStrokeColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- LANGUAGE title (overlapping card top) -->
-    <com.tempttt.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.OuterStrokeTextView
         android:id="@+id/tvLangSetting"
         android:visibility="gone"
         style="@style/single_marquee"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="start|center_vertical"
         android:text="@string/language"
-        android:textColor="@color/app"
         android:textSize="24sp"
-        android:shadowDy="2"
-        android:shadowColor="#33000000"
-        android:shadowRadius="3"
-        app:outerStrokeColor="#FFFFFF"
-        app:outerStrokeWidth="3dp"
-        android:layout_marginStart="25dp"
 
+        android:layout_marginStart="25dp"
+        android:textColor="@color/app"
+        android:shadowRadius="4"
+        android:shadowDy="4"
+        android:shadowColor="@color/white"
+        app:outerStrokeWidth="1dp"
+        app:outerStrokeColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

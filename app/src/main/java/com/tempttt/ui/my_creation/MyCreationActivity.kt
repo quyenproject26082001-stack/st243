@@ -12,6 +12,7 @@ import android.graphics.Shader
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.PopupWindow
 import androidx.activity.viewModels
@@ -515,6 +516,8 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
         binding.actionBar.apply {
             btnActionBarNextRight.visible()
             btnActionBarNextRight.setImageResource(R.drawable.ic_delete_creation)
+            (btnActionBarNextRight.layoutParams as? ViewGroup.MarginLayoutParams)?.bottomMargin =
+                (4 * resources.displayMetrics.density).toInt()
             btnActionBarRight.visible()
             btnActionBarRight.setImageResource(R.drawable.ic_not_select_all)
             btnActionBarNextRight1.gone()
@@ -612,9 +615,9 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
     fun updateSelectAllIcon(allSelected: Boolean) {
         isAllSelected = allSelected
         if (allSelected) {
-           // binding.actionBar.btnActionBarNextRight.setImageResource(R.drawable.ic_select_all)
+            binding.actionBar.btnActionBarRight.setImageResource(R.drawable.ic_select_all)
         } else {
-           // binding.actionBar.btnActionBarNextRight.setImageResource(R.drawable.ic_not_select_all)
+            binding.actionBar.btnActionBarRight.setImageResource(R.drawable.ic_not_select_all)
         }
     }
 }

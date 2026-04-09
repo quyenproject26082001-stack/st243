@@ -64,7 +64,7 @@
     <string name="save">SIMPAN</string>
     <string name="are_you_sure_want_to_delete_this_item">APAKAH ANDA YAKIN INGIN MENGHAPUS ITEM INI?</string>
     <string name="downloading">Mengunduh...</string>
-    <string name="successfully">Berhasil</string>
+    <string name="successfully">BERHASIL</string>
     <string name="download_failed_please_try_again_later">Unduhan gagal, silakan coba lagi nanti!</string>
     <string name="save_failed_please_try_again">Simpan gagal, silakan coba lagi!</string>
     <string name="delete_failed_please_try_again">Hapus gagal, silakan coba lagi!</string>

@@ -102,7 +102,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnActionBarLeft" />
 
     <!--    tvCenter-->
-    <com.tempttt.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.OuterStrokeTextView
     android:id="@+id/tvCenter"
         style="@style/single_marquee"
         android:layout_width="200dp"
@@ -111,15 +111,15 @@
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="center"
         android:text="@string/language"
-        android:textColor="@color/app"
-        android:shadowDy="2"
-        android:shadowColor="#33000000"
-        android:shadowRadius="3"
-        app:outerStrokeColor="#FFFFFF"
-        app:outerStrokeWidth="3dp"
         android:textSize="24sp"
         android:visibility="gone"
         tools:visibility="gone"
+        android:textColor="@color/app"
+        android:shadowRadius="4"
+        android:shadowDy="4"
+        android:shadowColor="@color/white"
+        app:outerStrokeWidth="1dp"
+        app:outerStrokeColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnActionBarLeft"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,7 +171,7 @@
     <!--    btnActionBarCenterRight-->
     <ImageView
         android:id="@+id/btnActionBarCenterRight"
-        android:layout_width="32dp"
+        android:layout_width="36dp"
         android:layout_height="32dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:visibility="gone"

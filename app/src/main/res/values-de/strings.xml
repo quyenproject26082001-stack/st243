@@ -64,7 +64,7 @@
     <string name="save">SPEICHERN</string>
     <string name="are_you_sure_want_to_delete_this_item">SIND SIE SICHER, DASS SIE DIESES ELEMENT LÖSCHEN MÖCHTEN?</string>
     <string name="downloading">Wird heruntergeladen...</string>
-    <string name="successfully">Erfolgreich</string>
+    <string name="successfully">ERFOLGREINCH</string>
     <string name="download_failed_please_try_again_later">Download fehlgeschlagen, bitte versuchen Sie es später erneut!</string>
     <string name="save_failed_please_try_again">Speichern fehlgeschlagen, bitte versuchen Sie es erneut!</string>
     <string name="delete_failed_please_try_again">Löschen fehlgeschlagen, bitte versuchen Sie es erneut!</string>

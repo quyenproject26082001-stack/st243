@@ -29,19 +29,23 @@
 
 
     <!-- LANGUAGE title (overlapping card top) -->
-    <com.tempttt.core.custom.text.DoubleStrokeTextView
+    <com.tempttt.core.custom.text.OuterStrokeTextView
         android:id="@+id/tvSetting"
         android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         style="@style/single_marquee"
         android:layout_marginTop="52dp"
         android:elevation="1dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="center"
         android:text="@string/settings"
-        android:textColor="@color/app"
+
         android:textSize="24sp"
-        app:outerStrokeWidth="2dp"
+        android:textColor="@color/app"
+        android:shadowRadius="4"
+        android:shadowDy="4"
+        android:shadowColor="@color/white"
+        app:outerStrokeWidth="1dp"
         app:outerStrokeColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

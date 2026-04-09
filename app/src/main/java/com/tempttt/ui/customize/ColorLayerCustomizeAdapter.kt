@@ -1,6 +1,7 @@
 package com.tempttt.ui.customize
 
 import android.content.Context
+import android.graphics.drawable.GradientDrawable
 import androidx.core.graphics.toColorInt
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +15,10 @@ class ColorLayerCustomizeAdapter(val context: Context) :
     var onItemClick: ((Int) -> Unit) = {}
     override fun onBind(binding: ItemColorBinding, item: ItemColorModel, position: Int) {
         binding.apply {
-            imvImage.setBackgroundColor(item.color.toColorInt())
+            imvImage.background = GradientDrawable().apply {
+                shape = GradientDrawable.OVAL
+                setColor(item.color.toColorInt())
+            }
             imvFocus.isVisible = item.isSelected
             root.tap {
                 val rv = root.parent as? RecyclerView ?: return@tap

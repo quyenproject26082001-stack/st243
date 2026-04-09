@@ -47,10 +47,11 @@
         <!--btnEdit-->
         <ImageView
             android:id="@+id/btnEdit"
-            android:layout_width="30dp"
-            android:layout_height="25dp"
+            android:layout_width="31dp"
+            android:layout_height="26dp"
             android:layout_gravity="start|top"
             android:layout_margin="0dp"
+            android:visibility="gone"
             android:src="@drawable/ic_edit" />
 
         <!--btnSelect-->

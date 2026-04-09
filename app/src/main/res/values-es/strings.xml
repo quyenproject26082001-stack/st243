@@ -64,7 +64,7 @@
     <string name="save">GUARDAR</string>
     <string name="are_you_sure_want_to_delete_this_item">¿ESTÁS SEGURO DE QUE QUIERES ELIMINAR ESTE ELEMENTO?</string>
     <string name="downloading">Descargando...</string>
-    <string name="successfully">Exitosamente</string>
+    <string name="successfully">EXITOSAMENTE</string>
     <string name="download_failed_please_try_again_later">¡La descarga falló, inténtelo de nuevo más tarde!</string>
     <string name="save_failed_please_try_again">¡Error al guardar, por favor inténtelo de nuevo!</string>
     <string name="delete_failed_please_try_again">¡Error al eliminar, por favor inténtelo de nuevo!</string>

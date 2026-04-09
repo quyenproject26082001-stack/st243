@@ -72,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <!--    btnFlip-->
     <ImageView
@@ -243,6 +243,7 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
+                android:layerType="hardware"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="10"
                 tools:listitem="@layout/item_color" />

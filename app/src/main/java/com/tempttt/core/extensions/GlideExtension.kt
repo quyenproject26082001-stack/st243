@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
@@ -139,6 +140,18 @@ fun ImageView.loadImageFromFile(path: String) {
     request.signature(ObjectKey(file.lastModified()))
 
     request.into(this)
+}
+
+fun loadImageCircle(context: Context, path: String, imageView: ImageView) {
+    val shimmerDrawable = ShimmerDrawable().apply {
+        setShimmer(DataLocal.shimmer)
+    }
+    Glide.with(context)
+        .load(path)
+        .transform(CircleCrop())
+        .placeholder(shimmerDrawable)
+        .error(shimmerDrawable)
+        .into(imageView)
 }
 
 fun loadThumbnail(view: ImageView, url: String) {
