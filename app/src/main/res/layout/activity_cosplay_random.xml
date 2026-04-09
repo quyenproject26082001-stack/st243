@@ -106,7 +106,7 @@
                 android:textColor="@color/app"
                 android:shadowColor="@color/white"
                 android:shadowDy="2"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="35dp"
                 android:textSize="16sp"
                 android:shadowRadius="2"
                 android:visibility="visible" />
@@ -135,7 +135,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/containerGuide"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.4"
         android:layout_marginHorizontal="40dp"

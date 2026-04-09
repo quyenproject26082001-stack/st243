@@ -34,7 +34,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="33dp"
+                android:layout_height="36dp"
                 android:scaleType="fitXY"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="@color/transparent"
@@ -99,7 +99,7 @@
 
             <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="33dp"
+                android:layout_height="36dp"
                 android:scaleType="fitXY"
                 app:strokeColor="@color/transparent"
                 app:cardElevation="0dp"
