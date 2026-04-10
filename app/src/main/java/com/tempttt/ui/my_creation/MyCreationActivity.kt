@@ -607,7 +607,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
 
     private fun setupUnselectedTab(textView: android.widget.TextView) {
         textView.setTextColor(Color.parseColor("#FFFFFF"))
-        val strokePx = 2f * resources.displayMetrics.density
+        val strokePx = 1f * resources.displayMetrics.density
         textView.setShadowLayer(strokePx, 0f, 0f, Color.parseColor("#D90C4D"))
     }
 
