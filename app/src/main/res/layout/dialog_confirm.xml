@@ -46,7 +46,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <!--            tvDescription-->
-                <com.tempttt.core.custom.text.DoubleStrokeTextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvDescription"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -56,8 +56,11 @@
                     android:paddingHorizontal="24dp"
                     android:text="@string/do_you_want_to_exit"
                     android:textColor="#FFFFFF"
+                    android:shadowColor="@color/white"
+                    android:shadowRadius="2"
+                    android:shadowDy="2"
                     android:textSize="14sp"
-                    app:outerStrokeWidth="1dp"
+                    app:outerStrokeWidth=".5dp"
                     app:outerStrokeColor="@color/app"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

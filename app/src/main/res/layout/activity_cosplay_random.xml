@@ -145,7 +145,7 @@
             android:id="@+id/titleGuide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="24sp"
             style="@style/single_marquee"
             android:elevation="3dp"
             app:layout_constraintStart_toStartOf="parent"

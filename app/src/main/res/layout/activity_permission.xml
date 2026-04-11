@@ -83,6 +83,7 @@
             android:shadowDy="5"
             android:shadowRadius="5"
             app:outerStrokeColor="@color/app"
+            app:outerStrokeWidth="2dp"
 
             android:fontFamily="@font/luckiestguy_regular"
             android:gravity="start"
@@ -176,6 +177,9 @@
         android:layout_marginBottom="120dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:gravity="center"
+        android:shadowRadius="2"
+        android:shadowColor="@color/white"
+        android:shadowDy="4"
         android:text="@string/continue_per"
         android:textColor="@color/app"
         android:textSize="16sp"

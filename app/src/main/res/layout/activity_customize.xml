@@ -240,13 +240,15 @@
                 android:id="@+id/rcvColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="start|center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
                 android:layerType="hardware"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="10"
-                tools:listitem="@layout/item_color" />
+                tools:listitem="@layout/item_color"
+
+                />
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -271,9 +273,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/color"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal"
         android:background="@drawable/bg_cus"
-        android:layout_marginTop="11dp"/>
+        android:layout_marginTop="61dp"/>
 
 
     <!--    rcvLayer-->
@@ -290,7 +292,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/bg_cus"
         app:spanCount="5"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         tools:itemCount="50"
         tools:listitem="@layout/item_customize" />
 

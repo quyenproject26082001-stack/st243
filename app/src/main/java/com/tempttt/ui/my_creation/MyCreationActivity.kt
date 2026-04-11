@@ -319,6 +319,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
 
             // Delete All button - hidden initially, only shown in selection mode
             btnActionBarRight.setImageResource(R.drawable.ic_delete_creation)
+            btnActionBarRight.translationY = 4 * resources.displayMetrics.density
             btnActionBarRight.invisible()
         }
     }
@@ -516,8 +517,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
         binding.actionBar.apply {
             btnActionBarNextRight.visible()
             btnActionBarNextRight.setImageResource(R.drawable.ic_delete_creation)
-            (btnActionBarNextRight.layoutParams as? ViewGroup.MarginLayoutParams)?.bottomMargin =
-                (4 * resources.displayMetrics.density).toInt()
+            btnActionBarNextRight.translationY = -2 * resources.displayMetrics.density
             btnActionBarRight.visible()
             btnActionBarRight.setImageResource(R.drawable.ic_not_select_all)
             btnActionBarNextRight1.gone()
@@ -602,7 +602,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
 
     private fun setupSelectedTab(textView: android.widget.TextView) {
         textView.setTextColor(Color.parseColor("#D90C4D"))
-        textView.setShadowLayer(2f, 0f, 2f, Color.WHITE)
+       // textView.setShadowLayer(2f, 0f, 2f, Color.WHITE)
     }
 
     private fun setupUnselectedTab(textView: android.widget.TextView) {

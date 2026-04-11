@@ -108,7 +108,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         binding.apply {
             tv1.text = strings(R.string.play)
             tv2.text = strings(R.string.tv_cosplay)
-            tv3.text = strings(R.string.random)
+            tv3.text = strings(R.string.avatar_random)
             tv4.text = strings(R.string.creation)
         }
     }

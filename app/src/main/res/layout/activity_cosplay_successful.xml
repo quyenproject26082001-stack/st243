@@ -83,7 +83,7 @@
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@id/btnMan"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/bg_progress" />
+            android:background="@drawable/bg_progress_h" />
 
     </com.google.android.material.card.MaterialCardView>
 

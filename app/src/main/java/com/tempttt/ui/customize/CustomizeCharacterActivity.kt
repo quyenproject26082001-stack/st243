@@ -727,6 +727,7 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
         lifecycleScope.launch(Dispatchers.IO) {
             withContext(Dispatchers.Main) {
                 binding.actionBar.btnActionBarRight.isEnabled = false
+                if (loadingDialog.isShowing.not()) loadingDialog.show()
             }
             val timeStart = System.currentTimeMillis()
             val isOutTurn = viewModel.setClickRandomFullLayer()
@@ -742,6 +743,7 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
                 if (isOutTurn) binding.btnRandom.invisible()
                 val timeEnd = System.currentTimeMillis()
                 delay(800)
+                if (loadingDialog.isShowing) loadingDialog.dismiss()
                 binding.actionBar.btnActionBarRight.isEnabled = true
             }
         }
