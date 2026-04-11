@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/containerBtnSamplePhoto"
+        app:layout_constraintBottom_toTopOf="@id/glHorizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar">
 
@@ -195,16 +195,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/color"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="0dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="0dp"
         android:background="@color/transparent"
         android:elevation="1dp"
-
+        android:orientation="horizontal"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="67dp"
+        android:layout_marginEnd="7dp"
         android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@id/btnRandom"
         app:layout_constraintStart_toStartOf="parent"
@@ -222,34 +222,63 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:visibility="visible" />
         <!--    flColor-->
-        <FrameLayout
-            android:id="@+id/flColor"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="2dp"
-            app:layout_constrainedWidth="true"
-            android:background="@drawable/bg_rcv_color"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toEndOf="@id/btnColor"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <!--        rcvColor-->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcvColor"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/flColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="0dp"
+            android:elevation="1dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/btnColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnColor"
+            app:layout_constraintTop_toTopOf="@+id/btnColor">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/relativeLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start|center_vertical"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:layerType="hardware"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:itemCount="10"
-                tools:listitem="@layout/item_color"
+                android:orientation="vertical"
+                app:cardBackgroundColor="#80F0F0F0"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#EB2994"
+                app:strokeWidth="2dp">
 
-                />
-        </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="8dp"
+                >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="4dp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/item_color" />
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -258,7 +287,7 @@
         android:layout_width="40dp"
         android:layout_height="38.8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="0dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_random"
         android:elevation="2dp"

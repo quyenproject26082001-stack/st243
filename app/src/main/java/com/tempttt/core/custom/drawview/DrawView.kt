@@ -77,6 +77,9 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
     private val borderBitmap: Bitmap by lazy {
         BitmapFactory.decodeResource(resources, R.drawable.bg_line_handlebox)
     }
+    private val borderBitmapText: Bitmap by lazy {
+        BitmapFactory.decodeResource(resources, R.drawable.bg_line_handlebox_text)
+    }
     private val borderMatrix = Matrix()
 
     private val bitmapPoints = FloatArray(8)
@@ -695,6 +698,7 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
             val y4 = bitmapPoints[7]
 
             if (isShowBorder) {
+                val activeBorderBitmap = if (handlingDraw!!.isText) borderBitmapText else borderBitmap
                 val margin = 4 * resources.displayMetrics.density
                 val topLen = sqrt((x2 - x1).pow(2) + (y2 - y1).pow(2))
                 val leftLen = sqrt((x3 - x1).pow(2) + (y3 - y1).pow(2))
@@ -704,8 +708,8 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
                 val downY = (y3 - y1) / leftLen
                 val srcPoints = floatArrayOf(
                     0f, 0f,
-                    borderBitmap.width.toFloat(), 0f,
-                    0f, borderBitmap.height.toFloat()
+                    activeBorderBitmap.width.toFloat(), 0f,
+                    0f, activeBorderBitmap.height.toFloat()
                 )
                 val dstPoints = floatArrayOf(
                     x1 - margin * rightX - margin * downX,
@@ -716,7 +720,7 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
                     y3 - margin * rightY + margin * downY
                 )
                 borderMatrix.setPolyToPoly(srcPoints, 0, dstPoints, 0, 3)
-                canvas.drawBitmap(borderBitmap, borderMatrix, null)
+                canvas.drawBitmap(activeBorderBitmap, borderMatrix, null)
             }
 
             // draw icons

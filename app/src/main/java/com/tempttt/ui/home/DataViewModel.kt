@@ -51,12 +51,26 @@ class DataViewModel() : ViewModel() {
                 if (isFirstRun) {
                     AssetHelper.getDataFromAsset(context)
                     Log.d("TIMING_TRENDING", "  [Asset] copy từ assets → internal: ${System.currentTimeMillis() - assetStart}ms")
+                    Log.d("nbhieu", "=== FIRST LAUNCH ===")
+                    Log.d("nbhieu", "Device: ${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL} (Android ${android.os.Build.VERSION.RELEASE}, SDK ${android.os.Build.VERSION.SDK_INT})")
+                    try {
+                        val pm = context.packageManager
+                        val pi = pm.getPackageInfo(context.packageName, 0)
+                        Log.d("nbhieu", "App: ${pi.packageName} v${pi.versionName} (${pi.longVersionCode})")
+                    } catch (e: Exception) {
+                        Log.e("nbhieu", "Could not read package info: ${e.message}")
+                    }
+                    Log.d("nbhieu", "Locale: ${java.util.Locale.getDefault()}")
+                    Log.d("nbhieu", "Timestamp: ${java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.getDefault()).format(java.util.Date())}")
                 }
 
                 val localStart = System.currentTimeMillis()
                 val totalData = MediaHelper.readListFromFile<CustomizeModel>(context, ValueKey.DATA_FILE_INTERNAL)
                     .toCollection(ArrayList())
                 Log.d("TIMING_TRENDING", "  [Local] đọc DATA_FILE_INTERNAL: ${System.currentTimeMillis() - localStart}ms | items=${totalData.size}")
+                if (isFirstRun) {
+                    Log.d("nbhieu", "Init asset data: ${totalData.size} characters loaded")
+                }
 
                 val apiCacheStart = System.currentTimeMillis()
                 var dataApi = MediaHelper.readListFromFile<CustomizeModel>(context, ValueKey.DATA_FILE_API_INTERNAL)

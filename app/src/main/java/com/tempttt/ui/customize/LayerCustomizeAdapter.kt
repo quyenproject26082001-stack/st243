@@ -1,11 +1,9 @@
 package com.tempttt.ui.customize
 
 import android.content.Context
-import android.graphics.Outline
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.ViewOutlineProvider
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -44,15 +42,6 @@ class LayerCustomizeAdapter(val context: Context) : ListAdapter<ItemNavCustomMod
                     "[$position] type=$itemType | isSelected=${item.isSelected} | path=${item.path} | colors=${item.listImageColor.size}"
                 )
 
-                // Apply rounded corners using ViewOutlineProvider (40dp radius like ShapeAppearanceOverlay.Pony.Rounded20)
-                val cornerRadius = 8f * context.resources.displayMetrics.density
-                imvImage.clipToOutline = true
-                imvImage.outlineProvider = object : ViewOutlineProvider() {
-                    override fun getOutline(view: View, outline: Outline) {
-                        outline.setRoundRect(0, 0, view.width, view.height, cornerRadius)
-                    }
-                }
-
                 if (item.isSelected) {
                     // Bring selected item to front with elevation
                     root.translationZ = 16f
@@ -88,7 +77,8 @@ class LayerCustomizeAdapter(val context: Context) : ListAdapter<ItemNavCustomMod
                         btnNone.gone()
                         imvImage.visible()
                         btnRandom.gone()
-                        Glide.with(root).load(item.thumb.ifEmpty { item.path }).placeholder(shimmerDrawable).into(imvImage)
+                        val cornerRadiusPx = (8f * context.resources.displayMetrics.density).toInt()
+                        Glide.with(root).load(item.thumb.ifEmpty { item.path }).placeholder(shimmerDrawable).transform(RoundedCorners(cornerRadiusPx)).into(imvImage)
                     }
                 }
 

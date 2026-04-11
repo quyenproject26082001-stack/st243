@@ -170,7 +170,7 @@ object AssetHelper {
 
                 // Nếu không có folder -> không có màu
                 val layer = if (AssetsKey.FIRST_IMAGE.any { it in folderOrImageSortedList[0] }) {
-                    getDataNoColor(character, folderOrImageSortedList, sortedLayer[i])
+                    getDataNoColor(character, folderOrImageSortedList, sortedLayer[i], thumbFiles)
                 } else {
                     getDataColor(assetManager, character, folderOrImageSortedList, sortedLayer[i], thumbFiles)
                 }
@@ -195,14 +195,15 @@ object AssetHelper {
         return customList
     }
 
-    private fun getDataNoColor(character: String, filesList: List<String>, folder: String): ArrayList<LayerModel> {
+    private fun getDataNoColor(character: String, filesList: List<String>, folder: String, thumbFiles: List<String> = emptyList()): ArrayList<LayerModel> {
         val layerPath = ArrayList<LayerModel>()
-        for (fileName in filesList) {
+        filesList.forEachIndexed { index, fileName ->
             layerPath.add(
                 LayerModel(
                     image = "${AssetsKey.DATA_ASSET}$character/$folder/$fileName",
                     isMoreColors = false,
-                    listColor = arrayListOf()
+                    listColor = arrayListOf(),
+                    thumb = thumbFiles.getOrElse(index) { "" }
                 )
             )
         }

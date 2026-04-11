@@ -1,0 +1,551 @@
+[
+  {
+    "folder": "1-21",
+    "x": 1,
+    "y": 21,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "2-20",
+    "x": 2,
+    "y": 20,
+    "colors": [
+      {
+        "code": "000000",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "715DFF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "7CFFE5",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "95FF72",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF49FF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF67AA",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FFB649",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FFFF00",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "3-1",
+    "x": 3,
+    "y": 1,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "4-2",
+    "x": 4,
+    "y": 2,
+    "colors": [
+      {
+        "code": "000000",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "3EFFA9",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "43FFFF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "697BFF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "93C47D",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "CCCCCC",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "D876FF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "F3F3F3",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF6969",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF7CFB",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF93C7",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FFFF9B",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "5-3",
+    "x": 5,
+    "y": 3,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "6-4",
+    "x": 6,
+    "y": 4,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "7-5",
+    "x": 7,
+    "y": 5,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "8-6",
+    "x": 8,
+    "y": 6,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "9-7",
+    "x": 9,
+    "y": 7,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "10-8",
+    "x": 10,
+    "y": 8,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "11-9",
+    "x": 11,
+    "y": 9,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "12-13",
+    "x": 12,
+    "y": 13,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "13-12",
+    "x": 13,
+    "y": 12,
+    "colors": [
+      {
+        "code": "000000",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png"
+        ]
+      },
+      {
+        "code": "001FC4",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "00BA00",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "00FFFF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "40BCA6",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "4A2400",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "9900FF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "C6C6C6",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF0000",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF00FF",
+        "items": [
+          "1.png"
+        ]
+      },
+      {
+        "code": "FF9E00",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "14-11",
+    "x": 14,
+    "y": 11,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "15-15",
+    "x": 15,
+    "y": 15,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "16-16",
+    "x": 16,
+    "y": 16,
+    "colors": [
+      {
+        "code": "3DA1FF",
+        "items": [
+          "1.png",
+          "2.png"
+        ]
+      },
+      {
+        "code": "D0D0D0",
+        "items": [
+          "1.png",
+          "2.png"
+        ]
+      },
+      {
+        "code": "FF00FF",
+        "items": [
+          "1.png",
+          "2.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "17-17",
+    "x": 17,
+    "y": 17,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "18-14",
+    "x": 18,
+    "y": 14,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "8.png",
+          "9.png",
+          "10.png",
+          "11.png",
+          "12.png",
+          "13.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "19-18",
+    "x": 19,
+    "y": 18,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "20-19",
+    "x": 20,
+    "y": 19,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "21-22",
+    "x": 21,
+    "y": 22,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "4.png",
+          "5.png",
+          "6.png",
+          "7.png",
+          "8.png",
+          "9.png",
+          "10.png",
+          "11.png",
+          "12.png",
+          "13.png",
+          "14.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "22-23",
+    "x": 22,
+    "y": 23,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "folder": "23-10",
+    "x": 23,
+    "y": 10,
+    "colors": [
+      {
+        "code": "FFFFFF",
+        "items": [
+          "1.png"
+        ]
+      }
+    ]
+  }
+]

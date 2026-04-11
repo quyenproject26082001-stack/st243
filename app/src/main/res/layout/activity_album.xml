@@ -86,7 +86,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <TextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvMyPride"
                     style="@style/single_marquee"
                     android:layout_width="match_parent"
@@ -95,7 +95,13 @@
                     android:gravity="center"
                     android:text="@string/character"
                     android:layout_marginEnd="17dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/app"
+                    app:outerStrokeColor="@color/white"
+                    app:outerStrokeWidth=".2dp"
+                    android:shadowDy="5"
+                    android:shadowColor="@color/white"
+                    android:shadowRadius="5"
+
                     android:textSize="14sp" />
 
             </FrameLayout>
@@ -107,7 +113,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <TextView
+                <com.tempttt.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvMyDesign"
                     style="@style/single_marquee"
                     android:layout_width="match_parent"
@@ -130,9 +136,9 @@
         android:id="@+id/flBottomView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="dp"
+        android:paddingHorizontal="0dp"
         android:elevation="2dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <include

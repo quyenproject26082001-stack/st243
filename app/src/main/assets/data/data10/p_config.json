@@ -1,0 +1,1595 @@
+{
+  "h": 600,
+  "w": 600,
+  "isVMem": 1,
+  "isVSec": 1,
+  "mkrType": 1,
+  "title": "Stardust!",
+  "desc": "⭐A stardust is the chubby little fan of Riro Ron! Riro Ron is a VTuber from the English branch of idol Corp! Here you can make your own cool stardust skin! And get hugged by Riro in the process, hehe.\r\n\r\n⭐Riro's YouTube channel: https://www.youtube.com/channel/UCGaN6JMiDHZSkPXt-82b6yQ\r\n⭐Riro's Twitter: https://twitter.com/RiroRonSTAR\r\n\r\n⭐Post your result on Twitter with the hashtag #iamStardust !!\r\n\r\n⭐ Feel free to share it in social media or use it as profile picture anywhere! Personal use only. Commercial use not allowed.",
+  "pList": [
+    {
+      "pId": 1,
+      "pType": 1,
+      "pNm": "base",
+      "isMenu": 0,
+      "thumbUrl": null,
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2088077",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2320103
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2088077/ii_CXqkJEv01NvzEUBQ.png",
+          "typeId": 1,
+          "originalItmId": 6815463
+        }
+      ],
+      "rules": [],
+      "defItmId": 6815463
+    },
+    {
+      "pId": 2,
+      "pType": 1,
+      "pNm": "base dust",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099266/p_NvbHbWGSAOe5xO4N.png",
+      "colorCnt": 12,
+      "canMv": 0,
+      "cpId": "l2099266",
+      "isRmv": 0,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332235
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099266/ii_qryv3wt6sHknxLVu.png",
+          "typeId": 1,
+          "originalItmId": 6849596
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849596
+    },
+    {
+      "pId": 3,
+      "pType": 1,
+      "pNm": "eyes",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099062/p_ebo2zeFEuJ0l5o2Q.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099062",
+      "isRmv": 0,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332019
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_2X7ZIJCHKNv2lMV4.png",
+          "typeId": 1,
+          "originalItmId": 6848929
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_O49jaAX0W84DhkO4.png",
+          "typeId": 1,
+          "originalItmId": 6848956
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_fynL5ZLV7GQIsSJI.png",
+          "typeId": 1,
+          "originalItmId": 6848967
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_wJRAljC28sYlfWGp.png",
+          "typeId": 1,
+          "originalItmId": 6848968
+        },
+        {
+          "itmId": 5,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_H51sZixA01HuMAQP.png",
+          "typeId": 1,
+          "originalItmId": 6848970
+        },
+        {
+          "itmId": 6,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_yXTuMjpAUrlIgmLf.png",
+          "typeId": 1,
+          "originalItmId": 6848971
+        },
+        {
+          "itmId": 7,
+          "thumbUrl": "/app/image_maker/2094732/2099062/ii_ghCtNHWS3x0rwN7h.png",
+          "typeId": 1,
+          "originalItmId": 6849014
+        }
+      ],
+      "rules": [],
+      "defItmId": 6848929
+    },
+    {
+      "pId": 4,
+      "pType": 1,
+      "pNm": "nose",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099077/p_m5ohQXqOnRXp45i4.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099077",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332034
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099077/ii_C5NRsErRJrCuAwRn.png",
+          "typeId": 1,
+          "originalItmId": 6848990
+        }
+      ],
+      "rules": [],
+      "defItmId": 6848990
+    },
+    {
+      "pId": 5,
+      "pType": 1,
+      "pNm": "mouth",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099078/p_tGYfV7Pp4JMClFPf.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099078",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332035
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_OmY768sT691DsJLe.png",
+          "typeId": 1,
+          "originalItmId": 6848994
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_5d0dn5fWjo1w6R5U.png",
+          "typeId": 1,
+          "originalItmId": 6848995
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_VdxyxcW0wWUrhyq8.png",
+          "typeId": 1,
+          "originalItmId": 6848996
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_x5pBKEtcdljHWOmO.png",
+          "typeId": 1,
+          "originalItmId": 6848997
+        },
+        {
+          "itmId": 5,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_X5sqt3TMNR8IFezb.png",
+          "typeId": 1,
+          "originalItmId": 6849001
+        },
+        {
+          "itmId": 6,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_bt1GMN4f9W3KUI1G.png",
+          "typeId": 1,
+          "originalItmId": 6849002
+        },
+        {
+          "itmId": 7,
+          "thumbUrl": "/app/image_maker/2094732/2099078/ii_yX8KV66W0cYqNgid.png",
+          "typeId": 1,
+          "originalItmId": 6849013
+        }
+      ],
+      "rules": [],
+      "defItmId": 6848994
+    },
+    {
+      "pId": 6,
+      "pType": 1,
+      "pNm": "eyebrows",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099086/p_LmJbtn4TQzoCXMke.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099086",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332044
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099086/ii_7iBa9R5VcBPa7MxB.png",
+          "typeId": 1,
+          "originalItmId": 6849028
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099086/ii_weH2Y5lUY9TpzWmv.png",
+          "typeId": 1,
+          "originalItmId": 6849034
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099086/ii_n1ystvfg6yOzWMlZ.png",
+          "typeId": 1,
+          "originalItmId": 6849035
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849028
+    },
+    {
+      "pId": 7,
+      "pType": 1,
+      "pNm": "riro clothes",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099096/p_eDZhjEF9xeqDTuQo.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099096",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332055
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099096/ii_TXTaQGYqOZU2uVEM.png",
+          "typeId": 1,
+          "originalItmId": 6849073
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099096/ii_uGlM156noP0JCQkg.png",
+          "typeId": 1,
+          "originalItmId": 6849074
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099096/ii_IvD476fcYNDVLwqN.png",
+          "typeId": 1,
+          "originalItmId": 6849075
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099096/ii_yrOHDJ0nxjyHIxR6.png",
+          "typeId": 1,
+          "originalItmId": 6849076
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849073
+    },
+    {
+      "pId": 8,
+      "pType": 1,
+      "pNm": "riro pants",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099104/p_bNsDnz866szAOn4S.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099104",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332065
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099104/ii_N0cyzzQYqv9fEd4i.png",
+          "typeId": 1,
+          "originalItmId": 6849085
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099104/ii_RZuHgs9GC1l7pF9C.png",
+          "typeId": 1,
+          "originalItmId": 6849086
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099104/ii_QF1Lfn4UoJtljEkg.png",
+          "typeId": 1,
+          "originalItmId": 6849087
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099104/ii_nMZcA2cdIY5wng1k.png",
+          "typeId": 1,
+          "originalItmId": 6849088
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849085
+    },
+    {
+      "pId": 9,
+      "pType": 1,
+      "pNm": "riro shoes",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099121/p_xnAq9mL4pJhdGfmq.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099121",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332082
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099121/ii_I5osGEmH2N9tEYIu.png",
+          "typeId": 1,
+          "originalItmId": 6849134
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849134
+    },
+    {
+      "pId": 10,
+      "pType": 1,
+      "pNm": "pins",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2100071/p_MqPrsJ4Fg5r141hM.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2100071",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2333104
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2100071/ii_GoZw0GCMjtbizCHX.png",
+          "typeId": 1,
+          "originalItmId": 6852517
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 11,
+      "pType": 1,
+      "pNm": "stardust button",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099125/p_1GHwaf9NH4T6qosm.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099125",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332086
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099125/ii_ZjIEGh8b9HHAV7Mo.png",
+          "typeId": 1,
+          "originalItmId": 6849150
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099125/ii_g7cRnmF32nb6cFiD.png",
+          "typeId": 1,
+          "originalItmId": 6849151
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849150
+    },
+    {
+      "pId": 12,
+      "pType": 1,
+      "pNm": "stardust eyes",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099141/p_svuyCdg1x9ws7aLD.png",
+      "colorCnt": 11,
+      "canMv": 0,
+      "cpId": "l2099141",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332102
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099141/ii_DyPSXkqOVZSqud8s.png",
+          "typeId": 1,
+          "originalItmId": 6849206
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099141/ii_x8N6eo6kADbszqxN.png",
+          "typeId": 1,
+          "originalItmId": 6849633
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099141/ii_6SIBBaVBXXvJIuvB.png",
+          "typeId": 1,
+          "originalItmId": 6849636
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849206
+    },
+    {
+      "pId": 13,
+      "pType": 1,
+      "pNm": "stardust mouth",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099151/p_nJQtzTW8ZK9PNox5.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099151",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332115
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099151/ii_mVEdsHw2eAAitPP4.png",
+          "typeId": 1,
+          "originalItmId": 6849281
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099151/ii_6hEOdHQAcfy4Tx7L.png",
+          "typeId": 1,
+          "originalItmId": 6849282
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099151/ii_CbAaAdkpRpGgEMA8.png",
+          "typeId": 1,
+          "originalItmId": 6849283
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099151/ii_dl2SHR8wJkwlxKnJ.png",
+          "typeId": 1,
+          "originalItmId": 6849432
+        },
+        {
+          "itmId": 5,
+          "thumbUrl": "/app/image_maker/2094732/2099151/ii_HgiIWDbsj3sHYtJD.png",
+          "typeId": 1,
+          "originalItmId": 6849637
+        }
+      ],
+      "rules": [],
+      "defItmId": 6849281
+    },
+    {
+      "pId": 14,
+      "pType": 1,
+      "pNm": "idol signs",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099154/p_IhhZBgnEAIq8zzoz.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099154",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332118
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_OxUy6Ku2Ncu2w5GC.png",
+          "typeId": 1,
+          "originalItmId": 6849287
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_WweS7mopEuyQIVQ1.png",
+          "typeId": 1,
+          "originalItmId": 6849313
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_FpYF2hBZS1Aitroi.png",
+          "typeId": 1,
+          "originalItmId": 6849314
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_vgqt6fOQRH4AWRFV.png",
+          "typeId": 1,
+          "originalItmId": 6849315
+        },
+        {
+          "itmId": 5,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_n0PO0F3a21zhAn1A.png",
+          "typeId": 1,
+          "originalItmId": 6849316
+        },
+        {
+          "itmId": 6,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_ETb6QqwEHQDnvVoF.png",
+          "typeId": 1,
+          "originalItmId": 6849317
+        },
+        {
+          "itmId": 7,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_mfJt9uwuBONVtudr.png",
+          "typeId": 1,
+          "originalItmId": 6849318
+        },
+        {
+          "itmId": 8,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_Ux80b7CcTX6iaFEf.png",
+          "typeId": 1,
+          "originalItmId": 6849319
+        },
+        {
+          "itmId": 9,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_U7au4XcPB9lTTQ4m.png",
+          "typeId": 1,
+          "originalItmId": 6849320
+        },
+        {
+          "itmId": 10,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_ERZBlRGdZrd9M5MV.png",
+          "typeId": 1,
+          "originalItmId": 6849321
+        },
+        {
+          "itmId": 11,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_EC7MSdAJpwfCvKuL.png",
+          "typeId": 1,
+          "originalItmId": 6849322
+        },
+        {
+          "itmId": 12,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_YNZqkj96JZyX1rue.png",
+          "typeId": 1,
+          "originalItmId": 6849323
+        },
+        {
+          "itmId": 13,
+          "thumbUrl": "/app/image_maker/2094732/2099154/ii_UtV4BjWPVKG1Nu27.png",
+          "typeId": 1,
+          "originalItmId": 6849324
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 15,
+      "pType": 1,
+      "pNm": "stardust blush",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099163/p_rdVaCZWoE4HjpnWA.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099163",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332128
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099163/ii_ECw2v4tHIOZ81YSZ.png",
+          "typeId": 1,
+          "originalItmId": 6849345
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 16,
+      "pType": 1,
+      "pNm": "tshirt",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099179/p_3nlenNxysWeOhzel.png",
+      "colorCnt": 3,
+      "canMv": 0,
+      "cpId": "l2099179",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332144
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099179/ii_a6y4DbW25z4RcAlU.png",
+          "typeId": 1,
+          "originalItmId": 6849384
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099179/ii_2NzuB01XXDgX79XK.png",
+          "typeId": 1,
+          "originalItmId": 6849559
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 17,
+      "pType": 1,
+      "pNm": "hat",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099183/p_AthYz86pzDnFrVbR.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099183",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332148
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099183/ii_MA4xS0nFXfaNuTpZ.png",
+          "typeId": 1,
+          "originalItmId": 6849394
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099183/ii_ykHNafJMjLuBhDq0.png",
+          "typeId": 1,
+          "originalItmId": 6849395
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099183/ii_t4o0NFjljqQjl8Ya.png",
+          "typeId": 1,
+          "originalItmId": 6849396
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099183/ii_JtL92Yn8CF2nXmyX.png",
+          "typeId": 1,
+          "originalItmId": 6849397
+        },
+        {
+          "itmId": 5,
+          "thumbUrl": "/app/image_maker/2094732/2099183/ii_AYkbcVD0SyCoxO2j.png",
+          "typeId": 1,
+          "originalItmId": 6849398
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 18,
+      "pType": 1,
+      "pNm": "handstuff",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099196/p_EubusHyqRgp8hnU4.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099196",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332161
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099196/ii_VoqVcpmuyiu6NdB9.png",
+          "typeId": 1,
+          "originalItmId": 6849425
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099196/ii_HsYm8WdMPR55a5Js.png",
+          "typeId": 1,
+          "originalItmId": 6849426
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099196/ii_1kheeKGgEbkFlMAk.png",
+          "typeId": 1,
+          "originalItmId": 6849427
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2099196/ii_cIzVPC6Df2MU7lxO.png",
+          "typeId": 1,
+          "originalItmId": 6849428
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 19,
+      "pType": 1,
+      "pNm": "glasses",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099203/p_ziF0hhRuwJb5zgkj.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099203",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2332169
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099203/ii_gj20O8myzGbln8HN.png",
+          "typeId": 1,
+          "originalItmId": 6849439
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2099203/ii_0plS0ivatkZATiTM.png",
+          "typeId": 1,
+          "originalItmId": 6849453
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2099203/ii_ZdwQxTmYpSrZKrJB.png",
+          "typeId": 1,
+          "originalItmId": 6849454
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 20,
+      "pType": 1,
+      "pNm": "backss",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099985/p_284sPX51PwrX2Wrj.png",
+      "colorCnt": 9,
+      "canMv": 0,
+      "cpId": "l2099985",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2333013
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099985/ii_oJfvr0WMoPJBWC3i.png",
+          "typeId": 1,
+          "originalItmId": 6852305
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 21,
+      "pType": 1,
+      "pNm": "white bg",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2099987/p_ottzdRTUsoMNazV5.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2099987",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2333015
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2099987/ii_U8oBuJSFhNX7MrAe.png",
+          "typeId": 1,
+          "originalItmId": 6852316
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 22,
+      "pType": 1,
+      "pNm": "textst",
+      "isMenu": 1,
+      "thumbUrl": "/app/image_maker/2094732/2100038/p_nqnNOuG2DndYWGUp.png",
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2100038",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2333069
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_nWccqDiY8w9fqeGe.png",
+          "typeId": 1,
+          "originalItmId": 6852437
+        },
+        {
+          "itmId": 2,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_ORQVseUHGlRZAgfX.png",
+          "typeId": 1,
+          "originalItmId": 6852438
+        },
+        {
+          "itmId": 3,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_ductG1oMxWd3ftqz.png",
+          "typeId": 1,
+          "originalItmId": 6852439
+        },
+        {
+          "itmId": 4,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_gFGHwTvTrVWWJDfK.png",
+          "typeId": 1,
+          "originalItmId": 6852440
+        },
+        {
+          "itmId": 5,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_LdANjcbUC6NJglgN.png",
+          "typeId": 1,
+          "originalItmId": 6852441
+        },
+        {
+          "itmId": 6,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_bD2tf26vWASUD3aA.png",
+          "typeId": 1,
+          "originalItmId": 6852442
+        },
+        {
+          "itmId": 7,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_N2ln6IuMxoTGn14Y.png",
+          "typeId": 1,
+          "originalItmId": 6852443
+        },
+        {
+          "itmId": 8,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_8GWr8OO4SMd2Bfy1.png",
+          "typeId": 1,
+          "originalItmId": 6852444
+        },
+        {
+          "itmId": 9,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_jfJhsrn99FNIHWBH.png",
+          "typeId": 1,
+          "originalItmId": 6852445
+        },
+        {
+          "itmId": 10,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_VdLkaRKuGy6urNL4.png",
+          "typeId": 1,
+          "originalItmId": 6852446
+        },
+        {
+          "itmId": 11,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_uB7ObtsTGLFF6D5Z.png",
+          "typeId": 1,
+          "originalItmId": 6852447
+        },
+        {
+          "itmId": 12,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_6ph9FAP1dOfxzQw9.png",
+          "typeId": 1,
+          "originalItmId": 6852448
+        },
+        {
+          "itmId": 13,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_tWkOGT4PLtVitZ4g.png",
+          "typeId": 1,
+          "originalItmId": 6852449
+        },
+        {
+          "itmId": 14,
+          "thumbUrl": "/app/image_maker/2094732/2100038/ii_G5oK38OlWET0rDrC.png",
+          "typeId": 1,
+          "originalItmId": 6852450
+        }
+      ],
+      "rules": [],
+      "defItmId": 0
+    },
+    {
+      "pId": 23,
+      "pType": 1,
+      "pNm": "waterwark",
+      "isMenu": 0,
+      "thumbUrl": null,
+      "colorCnt": 1,
+      "canMv": 0,
+      "cpId": "l2100042",
+      "isRmv": 1,
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "isMX": 0,
+      "isMY": 0,
+      "isRsiz": 0,
+      "isRota": 0,
+      "lyrs": [
+        2333073
+      ],
+      "items": [
+        {
+          "itmId": 1,
+          "thumbUrl": null,
+          "typeId": 1,
+          "originalItmId": 6852458
+        }
+      ],
+      "rules": [],
+      "defItmId": 6852458
+    }
+  ],
+  "cpList": {
+    "l2088077": [
+      {
+        "cId": 4569901,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099062": [
+      {
+        "cId": 4594404,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099077": [
+      {
+        "cId": 4594434,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099078": [
+      {
+        "cId": 4594435,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099086": [
+      {
+        "cId": 4594448,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099096": [
+      {
+        "cId": 4594459,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099104": [
+      {
+        "cId": 4594470,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099121": [
+      {
+        "cId": 4594487,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099125": [
+      {
+        "cId": 4594491,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099141": [
+      {
+        "cId": 4594524,
+        "cd": "#000000"
+      },
+      {
+        "cId": 4594530,
+        "cd": "#FF0000"
+      },
+      {
+        "cId": 4594532,
+        "cd": "#C6C6C6"
+      },
+      {
+        "cId": 4594533,
+        "cd": "#FF9E00"
+      },
+      {
+        "cId": 4594534,
+        "cd": "#00FFFF"
+      },
+      {
+        "cId": 4594535,
+        "cd": "#40BCA6"
+      },
+      {
+        "cId": 4594537,
+        "cd": "#9900FF"
+      },
+      {
+        "cId": 4594538,
+        "cd": "#FF00FF"
+      },
+      {
+        "cId": 4594539,
+        "cd": "#4A2400"
+      },
+      {
+        "cId": 4594541,
+        "cd": "#00BA00"
+      },
+      {
+        "cId": 4594542,
+        "cd": "#001FC4"
+      }
+    ],
+    "l2099151": [
+      {
+        "cId": 4594551,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099154": [
+      {
+        "cId": 4594554,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099163": [
+      {
+        "cId": 4594563,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099179": [
+      {
+        "cId": 4594595,
+        "cd": "#FF00FF"
+      },
+      {
+        "cId": 4594597,
+        "cd": "#D0D0D0"
+      },
+      {
+        "cId": 4594599,
+        "cd": "#3DA1FF"
+      }
+    ],
+    "l2099183": [
+      {
+        "cId": 4594606,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099196": [
+      {
+        "cId": 4594623,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099203": [
+      {
+        "cId": 4594632,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099266": [
+      {
+        "cId": 4594748,
+        "cd": "#FFFF9B"
+      },
+      {
+        "cId": 4594751,
+        "cd": "#93C47D"
+      },
+      {
+        "cId": 4594754,
+        "cd": "#3EFFA9"
+      },
+      {
+        "cId": 4594755,
+        "cd": "#43FFFF"
+      },
+      {
+        "cId": 4594756,
+        "cd": "#697BFF"
+      },
+      {
+        "cId": 4594757,
+        "cd": "#D876FF"
+      },
+      {
+        "cId": 4594758,
+        "cd": "#FF7CFB"
+      },
+      {
+        "cId": 4594759,
+        "cd": "#FF93C7"
+      },
+      {
+        "cId": 4594760,
+        "cd": "#FF6969"
+      },
+      {
+        "cId": 4594761,
+        "cd": "#CCCCCC"
+      },
+      {
+        "cId": 4594762,
+        "cd": "#F3F3F3"
+      },
+      {
+        "cId": 4594763,
+        "cd": "#000000"
+      }
+    ],
+    "l2099985": [
+      {
+        "cId": 4596338,
+        "cd": "#FF67AA"
+      },
+      {
+        "cId": 4596340,
+        "cd": "#FF49FF"
+      },
+      {
+        "cId": 4596341,
+        "cd": "#715DFF"
+      },
+      {
+        "cId": 4596342,
+        "cd": "#7CFFE5"
+      },
+      {
+        "cId": 4596343,
+        "cd": "#95FF72"
+      },
+      {
+        "cId": 4596344,
+        "cd": "#FFFF00"
+      },
+      {
+        "cId": 4596345,
+        "cd": "#FFB649"
+      },
+      {
+        "cId": 4596346,
+        "cd": "#000000"
+      },
+      {
+        "cId": 4596347,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2099987": [
+      {
+        "cId": 4596348,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2100038": [
+      {
+        "cId": 4596479,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2100042": [
+      {
+        "cId": 4596487,
+        "cd": "#FFFFFF"
+      }
+    ],
+    "l2100071": [
+      {
+        "cId": 4596557,
+        "cd": "#FFFFFF"
+      }
+    ]
+  },
+  "lyrList": {
+    "2320103": 3,
+    "2332019": 5,
+    "2332034": 6,
+    "2332035": 7,
+    "2332044": 8,
+    "2332055": 9,
+    "2332065": 10,
+    "2332082": 11,
+    "2332086": 14,
+    "2332102": 13,
+    "2332115": 12,
+    "2332118": 18,
+    "2332128": 15,
+    "2332144": 16,
+    "2332148": 17,
+    "2332161": 19,
+    "2332169": 20,
+    "2332235": 4,
+    "2333013": 2,
+    "2333015": 1,
+    "2333069": 21,
+    "2333073": 22,
+    "2333104": 23
+  },
+  "zeroConf": {
+    "2088077": {
+      "itmId": 6815463,
+      "cId": 4569901,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099062": {
+      "itmId": 6848929,
+      "cId": 4594404,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099077": {
+      "itmId": 6848990,
+      "cId": 4594434,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099078": {
+      "itmId": 6848994,
+      "cId": 4594435,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099086": {
+      "itmId": 6849028,
+      "cId": 4594448,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099096": {
+      "itmId": 6849073,
+      "cId": 4594459,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099104": {
+      "itmId": 6849085,
+      "cId": 4594470,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099121": {
+      "itmId": 6849134,
+      "cId": 4594487,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099125": {
+      "itmId": 6849150,
+      "cId": 4594491,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099141": {
+      "itmId": 6849206,
+      "cId": 4594524,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099151": {
+      "itmId": 6849281,
+      "cId": 4594551,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099154": {
+      "itmId": 0,
+      "cId": 4594554,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099163": {
+      "itmId": 0,
+      "cId": 4594563,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099179": {
+      "itmId": 0,
+      "cId": 4594595,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099183": {
+      "itmId": 0,
+      "cId": 4594606,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099196": {
+      "itmId": 0,
+      "cId": 4594623,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099203": {
+      "itmId": 0,
+      "cId": 4594632,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099266": {
+      "itmId": 6849596,
+      "cId": 4594748,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099985": {
+      "itmId": 0,
+      "cId": 4596338,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2099987": {
+      "itmId": 0,
+      "cId": 4596348,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2100038": {
+      "itmId": 0,
+      "cId": 4596479,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2100042": {
+      "itmId": 6852458,
+      "cId": 4596487,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    },
+    "2100071": {
+      "itmId": 0,
+      "cId": 4596557,
+      "xCnt": 0,
+      "yCnt": 0,
+      "spCnt": 0,
+      "sNo": 0,
+      "rotaCnt": 0
+    }
+  },
+  "ruleList": {}
+}

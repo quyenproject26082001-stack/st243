@@ -1,6 +1,7 @@
 package com.tempttt.ui.cosplay
 
 import android.annotation.SuppressLint
+import androidx.constraintlayout.widget.ConstraintSet
 import android.content.pm.PackageManager
 import android.os.Build
 import android.view.LayoutInflater
@@ -104,11 +105,20 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
         binding.progressBar.pivotX = 0f
         binding.progressBar.scaleX = finalProgress / 100f
         binding.progressContainer.post {
-            val containerW = binding.progressContainer.width
-            val thumbW = binding.icThumb.width
-            val maxX = (containerW - thumbW).toFloat().coerceAtLeast(0f)
-            val offsetPx = 5f * resources.displayMetrics.density
-            binding.icThumb.translationX = (finalProgress / 100f) * maxX - offsetPx
+            if (finalProgress == 100) {
+                binding.icThumb.translationX = 0f
+                val cs = ConstraintSet()
+                cs.clone(binding.main)
+                cs.connect(R.id.ic_thumb, ConstraintSet.START, R.id.progressContainer, ConstraintSet.END)
+                cs.connect(R.id.ic_thumb, ConstraintSet.END, R.id.progressContainer, ConstraintSet.END)
+                cs.applyTo(binding.main)
+            } else {
+                val containerW = binding.progressContainer.width
+                val thumbW = binding.icThumb.width
+                val maxX = (containerW - thumbW).toFloat().coerceAtLeast(0f)
+                val offsetPx = 5f * resources.displayMetrics.density
+                binding.icThumb.translationX = (finalProgress / 100f) * maxX - offsetPx
+            }
             binding.tvProgress.text = "$finalProgress/100"
         }
         val starRes = when {

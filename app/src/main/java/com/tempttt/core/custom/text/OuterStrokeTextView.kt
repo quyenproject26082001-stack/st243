@@ -119,12 +119,13 @@ class OuterStrokeTextView : AppCompatTextView {
         }
     }
     fun setupSelectedTab() {
-        outerStrokeWidth = 0f
+        outerStrokeWidth = 0.2f * resources.displayMetrics.density
+        outerStrokeColor = ContextCompat.getColor(context, R.color.white)
         invalidate()
     }
 
     fun setupUnselectedTab() {
-        outerStrokeWidth = 1f * resources.displayMetrics.density
+        outerStrokeWidth = 0.5f * resources.displayMetrics.density
         outerStrokeColor = ContextCompat.getColor(context, R.color.app)
         invalidate()
     }
