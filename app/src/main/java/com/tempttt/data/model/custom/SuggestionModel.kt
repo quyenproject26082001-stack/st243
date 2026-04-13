@@ -13,3 +13,13 @@ data class SuggestionModel (
     var pathInternalEdit: String = "",
     var isFlip: Boolean = false,
 )
+
+
+
+
+
+
+
+
+
+

@@ -13,7 +13,6 @@ import com.tempttt.R
 import com.tempttt.core.base.BaseActivity
 import com.tempttt.core.extensions.dLog
 import com.tempttt.core.extensions.eLog
-import com.tempttt.core.extensions.gone
 import com.tempttt.core.extensions.hideNavigation
 import com.tempttt.core.extensions.invisible
 import com.tempttt.core.extensions.loadNativeCollabAds
@@ -382,10 +381,10 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
                 R.drawable.ic_color to false
             }
             binding.btnColor.setImageResource(res)
-            binding.flColor.isVisible = status
+            if (status) binding.flColor.visible() else binding.flColor.invisible()
         } else {
             binding.color.invisible()
-            binding.btnColor.gone()
+            binding.btnColor.invisible()
             binding.flColor.invisible()
         }
     }

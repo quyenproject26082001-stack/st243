@@ -39,13 +39,13 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"
         android:visibility="visible"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="15dp"
         app:cardBackgroundColor="@color/white"
         app:layout_constraintDimensionRatio="1:1"
         app:strokeWidth="2dp"
         android:background="@drawable/bg_img_character"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutActionBar"
+        app:layout_constraintTop_toBottomOf="@id/starSS"
         app:strokeColor="#861629"
         app:cardCornerRadius="4dp"
         >
@@ -146,6 +146,7 @@
     </FrameLayout>
 
     <TextView
+        android:id="@+id/vsImg"
         android:layout_width="291dp"
         android:layout_height="284dp"
         android:background="@drawable/vs_img"

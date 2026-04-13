@@ -273,7 +273,7 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
-                android:layerType="software"
+                android:layerType="hardware"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginEnd="0dp"
