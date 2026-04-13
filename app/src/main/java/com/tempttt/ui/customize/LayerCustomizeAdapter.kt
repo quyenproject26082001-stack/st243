@@ -1,9 +1,14 @@
 package com.tempttt.ui.customize
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,12 +16,10 @@ import com.tempttt.R
 import com.tempttt.core.extensions.gone
 import com.tempttt.core.extensions.tap
 import com.tempttt.core.extensions.visible
-import com.tempttt.core.utils.DataLocal
 import com.tempttt.core.utils.key.AssetsKey
 import com.tempttt.data.model.custom.ItemNavCustomModel
 import com.tempttt.databinding.ItemCustomizeBinding
 import com.bumptech.glide.Glide
-import com.facebook.shimmer.ShimmerDrawable
 
 class LayerCustomizeAdapter(val context: Context) : ListAdapter<ItemNavCustomModel, LayerCustomizeAdapter.CustomizeViewHolder>(DiffCallback) {
 
@@ -27,10 +30,7 @@ class LayerCustomizeAdapter(val context: Context) : ListAdapter<ItemNavCustomMod
     inner class CustomizeViewHolder(val binding: ItemCustomizeBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: ItemNavCustomModel, position: Int) {
             binding.apply {
-                val shimmerDrawable = ShimmerDrawable().apply {
-                    setShimmer(DataLocal.shimmer)
-                    startShimmer()
-                }
+                val cornerRadiusPx = (8f * context.resources.displayMetrics.density).toInt()
 
                 val itemType = when (item.path) {
                     AssetsKey.NONE_LAYER -> "NONE"
@@ -67,18 +67,36 @@ class LayerCustomizeAdapter(val context: Context) : ListAdapter<ItemNavCustomMod
                         btnNone.visible()
                         btnRandom.gone()
                         imvImage.gone()
+                        sflShimmer.stopShimmer()
+                        sflShimmer.gone()
                     }
                     AssetsKey.RANDOM_LAYER -> {
                         btnNone.gone()
                         btnRandom.visible()
                         imvImage.gone()
+                        sflShimmer.stopShimmer()
+                        sflShimmer.gone()
                     }
                     else -> {
                         btnNone.gone()
                         imvImage.visible()
                         btnRandom.gone()
-                        val cornerRadiusPx = (8f * context.resources.displayMetrics.density).toInt()
-                        Glide.with(root).load(item.thumb.ifEmpty { item.path }).placeholder(shimmerDrawable).transform(RoundedCorners(cornerRadiusPx)).into(imvImage)
+                        sflShimmer.visible()
+                        sflShimmer.startShimmer()
+                        Glide.with(root)
+                            .load(item.thumb.ifEmpty { item.path })
+                            .transform(RoundedCorners(cornerRadiusPx))
+                            .listener(object : RequestListener<Drawable> {
+                                override fun onResourceReady(r: Drawable, m: Any, t: Target<Drawable?>?, d: DataSource, f: Boolean): Boolean {
+                                    sflShimmer.stopShimmer()
+                                    sflShimmer.gone()
+                                    return false
+                                }
+                                override fun onLoadFailed(e: GlideException?, m: Any?, t: Target<Drawable?>, f: Boolean): Boolean {
+                                    return false
+                                }
+                            })
+                            .into(imvImage)
                     }
                 }
 
