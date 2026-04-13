@@ -9,17 +9,11 @@ def isProd = env == "production"
 
 println("BUILD_ENV = " + env)
 
-//def adKeys = ["app_id",
-//              "inter_splash",
-//              "inter_per"]
-//
-//def testAds = [app_id      : "ca-app-pub-3940256099942544~3347511713",
-//               inter_splash: "ca-app-pub-3940256099942544/1033173712",
-//               inter_per   : "ca-app-pub-3940256099942544/1033173712"]
-//
-//def realAds = [app_id      : "REAL_APP_ID",
-//               inter_splash: "REAL_INTER",
-//               inter_per   : "REAL_INTER"]
+def adKeys = []
+
+def testAds = []
+
+def realAds = []
 
 android {
     namespace 'com.avatar.maker.celebrity'
@@ -53,15 +47,15 @@ android {
 
     buildTypes {
         debug {
-//            adKeys.each { key ->
-//                def value =  testAds[key]
-//
-//                if (value == null) {
-//                    throw new GradleException("❌ Missing ads key: " + key)
-//                }
-//
-//                resValue "string", key, value
-//            }
+            adKeys.each { key ->
+                def value =  testAds[key]
+
+                if (value == null) {
+                    throw new GradleException("❌ Missing ads key: " + key)
+                }
+
+                resValue "string", key, value
+            }
         }
 
         release {
@@ -70,15 +64,15 @@ android {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
-//            adKeys.each { key ->
-//                def value = isProd ? realAds[key] : testAds[key]
-//
-//                if (value == null) {
-//                    throw new GradleException("❌ Missing ads key: " + key)
-//                }
-//
-//                resValue "string", key, value
-//            }
+            adKeys.each { key ->
+                def value = isProd ? realAds[key] : testAds[key]
+
+                if (value == null) {
+                    throw new GradleException("❌ Missing ads key: " + key)
+                }
+
+                resValue "string", key, value
+            }
         }
     }
 
