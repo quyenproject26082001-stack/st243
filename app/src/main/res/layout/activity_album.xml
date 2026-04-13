@@ -86,7 +86,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <com.tempttt.core.custom.text.OuterStrokeTextView
+                <com.avatar.maker.celebrity.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvMyPride"
                     style="@style/single_marquee"
                     android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <com.tempttt.core.custom.text.OuterStrokeTextView
+                <com.avatar.maker.celebrity.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvMyDesign"
                     style="@style/single_marquee"
                     android:layout_width="match_parent"

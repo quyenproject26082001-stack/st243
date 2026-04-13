@@ -40,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!--            tvLang-->
-            <com.tempttt.core.custom.text.DoubleStrokeTextView
+            <com.avatar.maker.celebrity.core.custom.text.DoubleStrokeTextView
                 android:id="@+id/tvLang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

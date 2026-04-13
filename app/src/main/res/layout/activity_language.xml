@@ -45,7 +45,7 @@
 
 
     <!-- LANGUAGE title (overlapping card top) -->
-    <com.tempttt.core.custom.text.OuterStrokeTextView
+    <com.avatar.maker.celebrity.core.custom.text.OuterStrokeTextView
         android:id="@+id/tvLang"
         style="@style/single_marquee"
         android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- LANGUAGE title (overlapping card top) -->
-    <com.tempttt.core.custom.text.OuterStrokeTextView
+    <com.avatar.maker.celebrity.core.custom.text.OuterStrokeTextView
         android:id="@+id/tvLangSetting"
         android:visibility="gone"
         style="@style/single_marquee"

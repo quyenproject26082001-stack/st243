@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "827370351497",
-    "project_id": "st225-couplemakerkisscreator",
-    "storage_bucket": "st225-couplemakerkisscreator.firebasestorage.app"
+    "project_number": "111781444711",
+    "project_id": "st243-avatarmakercelebritis",
+    "storage_bucket": "st243-avatarmakercelebritis.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:827370351497:android:3f389e25b46f6ea3e6cf58",
+        "mobilesdk_app_id": "1:111781444711:android:70f08bf8483f3bc606a8c2",
         "android_client_info": {
-          "package_name": "com.tempttt"
+          "package_name": "com.avatar.maker.celebrity"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC1iMzY6yQW4hZylTHgZs8wYJgoErJeeSs"
+          "current_key": "AIzaSyBq4MTYyoMNbx4MioqlW9my-876Ydew2Jk"
         }
       ],
       "services": {

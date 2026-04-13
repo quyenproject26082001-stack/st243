@@ -32,7 +32,7 @@
 
 
                 <!--        sflShimmer-->
-                <com.tempttt.core.custom.imageview.ShapeClipImageView
+                <com.avatar.maker.celebrity.core.custom.imageview.ShapeClipImageView
                     android:id="@+id/imvImage"
                     android:layout_margin="11dp"
                     android:layout_width="match_parent"

@@ -46,7 +46,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <!--            tvDescription-->
-                <com.tempttt.core.custom.text.OuterStrokeTextView
+                <com.avatar.maker.celebrity.core.custom.text.OuterStrokeTextView
                     android:id="@+id/tvDescription"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

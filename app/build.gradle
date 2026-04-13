@@ -22,11 +22,11 @@ println("BUILD_ENV = " + env)
 //               inter_per   : "REAL_INTER"]
 
 android {
-    namespace 'com.tempttt'
+    namespace 'com.avatar.maker.celebrity'
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.tempttt"
+        applicationId "com.avatar.maker.celebrity"
         minSdk 24
         targetSdk 36
         versionCode 1

@@ -14,7 +14,6 @@ app/release/
 gradle-wrapper.jar
 
 # Local config (contains SDK paths, secrets)
-local.properties
 
 # IDE
 .idea/
