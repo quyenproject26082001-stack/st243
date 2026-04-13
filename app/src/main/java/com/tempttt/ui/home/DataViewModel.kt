@@ -188,6 +188,16 @@ class DataViewModel() : ViewModel() {
                 val positionNavigation = layerName[1].toInt() - 1
                 val type = if (layerName.size >= 3) layerName[2].toIntOrNull() ?: 0 else 0
                 val imageNavigation = "${baseDomain}${DomainKey.SUB_DOMAIN}/${data.name}/${dataLayer.parts}/${DomainKey.IMAGE_NAVIGATION}"
+                if (data.name == "data6") {
+                    Log.d("Data6Debug", "=== PART[$indexLayer] ===")
+                    Log.d("Data6Debug", "  parts       = ${dataLayer.parts}")
+                    Log.d("Data6Debug", "  position    = ${dataLayer.position}")
+                    Log.d("Data6Debug", "  quantity    = ${dataLayer.quantity}")
+                    Log.d("Data6Debug", "  colorArray  = '${dataLayer.colorArray}'")
+                    Log.d("Data6Debug", "  level       = ${dataLayer.level}")
+                    Log.d("Data6Debug", "  posCustom   = $positionCustom | posNav = $positionNavigation | type = $type")
+                    Log.d("Data6Debug", "  navURL      = $imageNavigation")
+                }
                 val layer = getDataLayer(baseDomain, dataLayer, dataLayer.parts)
 
                 val layerListModel = LayerListModel(
@@ -220,7 +230,11 @@ class DataViewModel() : ViewModel() {
     }
 
     private fun getDataLayer(baseDomain: String, partData: PartAPI, layer: String): ArrayList<LayerModel> {
-        return if (partData.colorArray != "" || partData.colorArray.isNotEmpty()) {
+        val hasColor = partData.colorArray != "" || partData.colorArray.isNotEmpty()
+        if (partData.position == "data6") {
+            Log.d("Data6Debug", "  hasColor    = $hasColor → ${if (hasColor) "getDataAPIColor" else "getDataAPINoColor"}")
+        }
+        return if (hasColor) {
             getDataAPIColor(baseDomain, partData, layer)
         } else {
             getDataAPINoColor(baseDomain, partData, layer)
@@ -229,12 +243,17 @@ class DataViewModel() : ViewModel() {
 
     private fun getDataAPINoColor(baseDomain: String, part: PartAPI, layer: String): ArrayList<LayerModel> {
         val actualQuantity = when (part.position) {
-            "data1", "data3", "data4", "data5" -> part.quantity / 2
+            "data300", "data100" -> part.quantity / 2
             else -> part.quantity
         }
         val layerPath = ArrayList<LayerModel>(actualQuantity)
         val prefix = "$baseDomain${DomainKey.SUB_DOMAIN}/${part.position}/${layer}/"
         val suffix = DomainKey.LAYER_EXTENSION
+        if (part.position == "data6") {
+            Log.d("Data6Debug", "  NoColor: quantity=${part.quantity} → actualQuantity=$actualQuantity")
+            Log.d("Data6Debug", "  NoColor: prefix=$prefix | suffix=$suffix")
+            Log.d("Data6Debug", "  NoColor: first URL = ${prefix}1${suffix}")
+        }
         for (i in 1..actualQuantity) {
             layerPath.add(
                 LayerModel(

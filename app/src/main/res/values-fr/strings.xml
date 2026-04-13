@@ -23,7 +23,7 @@
 
     <string name="rate_us">\u00A0\u00A0ÉVALUEZ-NOUS\u00A0\u00A0</string>
     <string name="share_app">\u00A0\u00A0PARTAGER L\'APP\u00A0\u00A0</string>
-    <string name="privacy_policy"><![CDATA[\u00A0\u00A0POLITIQUE DE CONFIDENTIALITÉ\u00A0\u00A0]]></string>
+    <string name="privacy_policy"><![CDATA[\u00A0\u00A0CONFIDENTIALITÉ\u00A0\u00A0]]></string>
 
     <string name="zero_star_title">Aimez-vous l\'application ?</string>
     <string name="zero_star">Dites-nous votre expérience</string>
@@ -111,7 +111,7 @@
     <string name="my_work">Mon Travail</string>
     <string name="do_you_want_to_exit">PAS ENCORE ENREGISTRÉ, VOULEZ-VOUS QUITTER ?</string>
     <string name="generate">ALÉATOIRE</string>
-    <string name="play">\u0020AVATAR MAKER</string>
+    <string name="play">\u0020CRÉATEUR D\'AVATAR</string>
     <string name="tv_cosplay">\u00A0\u00A0AVATAR COSPLAY\u00A0\u00A0</string>
     <string name="random">\u00A0\u00A0ALÉATOIRE\u00A0\u00A0</string>
     <string name="avatar_random">\u00A0\u00A0AVATAR ALÉATOIRE\u00A0\u00A0</string>
