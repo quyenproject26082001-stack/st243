@@ -319,6 +319,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityAlbumBinding>() {
 
             // Delete All button - hidden initially, only shown in selection mode
             btnActionBarRight.setImageResource(R.drawable.ic_delete_creation)
+            btnActionBarRight.translationX = -6 * resources.displayMetrics.density
             btnActionBarRight.translationY = 4 * resources.displayMetrics.density
             btnActionBarRight.invisible()
         }

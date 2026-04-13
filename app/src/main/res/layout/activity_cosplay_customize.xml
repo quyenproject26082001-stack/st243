@@ -131,7 +131,7 @@
             android:id="@+id/btnSamplePhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:layout_margin="5dp"
             android:layout_gravity="center"
             app:shapeAppearanceOverlay="@style/border_image_6"
@@ -400,7 +400,7 @@
                 android:layout_height="match_parent"
                 android:elevation="5dp"
                 android:layout_margin="24dp"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
                 tools:src="@color/white" />
         </FrameLayout>
 

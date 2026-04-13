@@ -287,14 +287,12 @@
         android:layout_width="40dp"
         android:layout_height="38.8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="4dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_random"
         android:elevation="2dp"
         android:visibility="visible"
-
-        app:layout_constraintTop_toTopOf="@id/color"
-        app:layout_constraintBottom_toBottomOf="@id/color"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView

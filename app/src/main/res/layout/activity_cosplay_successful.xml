@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="11dp"
-            android:scaleType="center" />
+            android:scaleType="fitCenter" />
     </FrameLayout>
 
 
@@ -138,7 +138,7 @@
             android:id="@+id/btnSamplePhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:padding="11dp"
             app:layout_constraintBottom_toTopOf="@id/btnMan"
             app:layout_constraintEnd_toEndOf="parent"
