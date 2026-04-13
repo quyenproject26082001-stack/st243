@@ -2,25 +2,9 @@
 .claude/
 
 # Android build
-build/
-app/build/
-app/release/
-*.apk
-*.aab
-*.aar
 
-# Gradle
-.gradle/
+
 
 # Local config (contains SDK paths, secrets)
 
-# IDE
-.idea/
-*.iml
-*.ipr
-*.iws
 
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
