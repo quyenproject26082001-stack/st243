@@ -31,6 +31,7 @@ import com.avatar.maker.celebrity.data.model.custom.SuggestionModel
 import com.avatar.maker.celebrity.databinding.ActivityCosplayRandomBinding
 import com.avatar.maker.celebrity.ui.customize.CustomizeCharacterViewModel
 import com.avatar.maker.celebrity.ui.home.DataViewModel
+import com.lvt.ads.util.Admob
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -76,7 +77,7 @@ class CosplayRandomActivity : BaseActivity<ActivityCosplayRandomBinding>() {
         binding.apply {
             btnGenerate.tap(800) { handleGenerate() }
             btnCosPlay.tap(800) { customizeViewModel.checkDataInternet(this@CosplayRandomActivity) { handlePlay() } }
-            actionBar.btnActionBarLeft.tap { handleBackLeftToRight() }
+            actionBar.btnActionBarLeft.tap { showInterAll {  handleBackLeftToRight() }}
             actionBar.btnActionBarRight.tap {
                 vOverlayGuide.visible()
                 containerGuide.visible()
@@ -166,6 +167,7 @@ class CosplayRandomActivity : BaseActivity<ActivityCosplayRandomBinding>() {
                     suggestion.pathInternalRandom = state.path
                     withContext(Dispatchers.Main) {
                         binding.imvImage.visibility = View.VISIBLE
+                        binding.guidRandom.gone()
                         Glide.with(this@CosplayRandomActivity)
                             .load(state.path).into(binding.imvImage)
                         setCosPlayButtonEnabled(true)
@@ -232,4 +234,24 @@ class CosplayRandomActivity : BaseActivity<ActivityCosplayRandomBinding>() {
                     View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
     }
+
+
+
+    fun initNativeCollab() {
+        Admob.getInstance().loadNativeCollapNotBanner(
+            this,
+            getString(R.string.native_cl_cosplay),
+            binding.flNativeCollab
+        )
+    }
+
+    override fun initAds() {
+        initNativeCollab()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        initNativeCollab()
+    }
+
 }

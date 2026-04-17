@@ -33,6 +33,7 @@ import com.avatar.maker.celebrity.ui.customize.ColorLayerCustomizeAdapter
 import com.avatar.maker.celebrity.ui.customize.CustomizeCharacterViewModel
 import com.avatar.maker.celebrity.ui.customize.LayerCustomizeAdapter
 import com.avatar.maker.celebrity.ui.home.DataViewModel
+import com.lvt.ads.util.Admob
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -450,13 +451,15 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
             val opt = ActivityOptions.makeCustomAnimation(
                 this@CosplayCustomizeActivity, R.anim.slide_in_right, R.anim.slide_out_left
             )
-            startActivity(intent, opt.toBundle())
-            finish()
+           showInterAll {   startActivity(intent, opt.toBundle())
+               finish()
+           }
         }
     }
 
     private fun confirmExit() {
-        showInterAll { handleBackLeftToRight() }
+
+      handleBackLeftToRight()
     }
 
     // ── Lifecycle ─────────────────────────────────────────────────────────────
@@ -500,5 +503,18 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
                     View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
                     View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
                     View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+    }
+
+    fun initNativeCollab() {
+        Admob.getInstance().loadNativeCollapNotBanner(this,getString(R.string.native_cl_cosplayPlay), binding.flNativeCollab)
+    }
+
+    override fun initAds() {
+        initNativeCollab()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        initNativeCollab()
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:background="@drawable/bg_list_creation"
-    android:paddingTop="28dp"
+    android:paddingTop="0dp"
     android:clipToPadding="true"
     tools:context=".ui.my_creation.fragment.MyAvatarFragment">
 

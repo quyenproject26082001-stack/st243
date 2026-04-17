@@ -12,7 +12,7 @@ import com.lvt.ads.event.AdmobEvent
 import com.lvt.ads.util.Admob
 import com.avatar.maker.celebrity.core.helper.UnitHelper
 
-private const val SHOW_ADS = false
+private const val SHOW_ADS = true
 
 fun Activity.showInterAll(onFinishInter: () -> Unit) {
     if (!SHOW_ADS) { onFinishInter.invoke(); return }

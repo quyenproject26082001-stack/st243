@@ -36,6 +36,7 @@ import com.avatar.maker.celebrity.ui.customize.CustomizeCharacterActivity
 import com.avatar.maker.celebrity.ui.customize.CustomizeCharacterViewModel
 import com.avatar.maker.celebrity.ui.home.DataViewModel
 import com.avatar.maker.celebrity.ui.random_character.RandomCharacterViewModel
+import com.lvt.ads.util.Admob
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -56,6 +57,9 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
 
     private var currentSuggestion: SuggestionModel? = null
     private var isAnimating = false
+
+    private var randomFrom2 = false
+
 
     override fun setViewBinding(): ActivityTrendingBinding {
         return ActivityTrendingBinding.inflate(LayoutInflater.from(this))
@@ -81,7 +85,14 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
     override fun viewListener() {
         binding.apply {
             actionBar.btnActionBarLeft.tap { showInterAll { handleBackLeftToRight() } }
-            btnGenerate.tap(0) { handleGenerate() }
+            btnGenerate.tap(0) {
+                if(randomFrom2==true){
+                    showInterAll { handleGenerate()}
+                }else{
+                    randomFrom2=true
+                    handleGenerate()
+                }
+            }
             actionBar.btnActionBarRight.tap { handleEdit() }
         }
     }
@@ -326,6 +337,7 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
             }
             override fun onResourceReady(resource: android.graphics.drawable.Drawable, model: Any, target: Target<android.graphics.drawable.Drawable>?, dataSource: DataSource, isFirstResource: Boolean): Boolean {
                 android.util.Log.d("TrendingDebug", "  ✓ Glide.onResourceReady: model='$model' | source=$dataSource")
+                binding.guidRandom.gone()
                 onComplete?.invoke()
                 return false
             }
@@ -392,4 +404,22 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
                     View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
                     View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
+
+
+
+    fun initNativeCollab() {
+        Admob.getInstance().loadNativeCollapNotBanner(this,getString(R.string.native_cl_random), binding.flNativeCollab)
+    }
+
+    override fun initAds() {
+        initNativeCollab()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        initNativeCollab()
+    }
+
+
+
 }

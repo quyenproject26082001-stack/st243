@@ -38,10 +38,10 @@
         app:dotsCornerRadius="8dp"
         app:dotsSize="8dp"
         app:dotsSpacing="3dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:dotsWidthFactor="2.5"
-        app:layout_constraintBottom_toBottomOf="@id/btnNext"
-        app:layout_constraintTop_toTopOf="@id/btnNext"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
         app:layout_constraintStart_toStartOf="parent"
         app:progressMode="false"
         app:selectedDotColor="@color/app" />
@@ -54,24 +54,25 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/luckiestguy_regular"
         android:padding="3dp"
-        android:layout_marginBottom="90dp"
+        android:gravity="center"
+        android:layout_marginBottom="-5dp"
         android:text="@string/next_intro"
         android:textColor="@color/app"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/native_ads"
         />
 
 
 <!--    &lt;!&ndash;    native_ads&ndash;&gt;-->
-<!--    <FrameLayout-->
-<!--        android:id="@+id/native_ads"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent">-->
+    <FrameLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-<!--        <include layout="@layout/ads_native_medium_btn_bottom_shimmer" />-->
+        <include layout="@layout/ads_native_medium_btn_bottom_shimmer" />
 
-<!--    </FrameLayout>-->
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

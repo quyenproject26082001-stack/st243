@@ -376,7 +376,7 @@ class CustomizeCharacterViewModel : ViewModel() {
 
     suspend fun setClickRandomFullLayer(): Boolean {
         countRandom++
-        val isOutTurn = countRandom == 300
+        val isOutTurn = countRandom == 3
 
         val colorCode = if (colorListMost.isNotEmpty()) colorListMost[(0..<colorListMost.size).random()] else "#123456"
         _bottomNavigationList.value.forEach { navModel ->

@@ -184,7 +184,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:paddingHorizontal="15dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -197,14 +197,14 @@
 
 
     <!--    &lt;!&ndash;    flNativeCollab&ndash;&gt;-->
-    <!--    <FrameLayout-->
-    <!--        android:id="@+id/flNativeCollab"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+        <FrameLayout
+            android:id="@+id/flNativeCollab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-    <!--        <include layout="@layout/ads_shimmer_collap_native" />-->
-    <!--    </FrameLayout>-->
+            <include layout="@layout/ads_shimmer_collap_native" />
+        </FrameLayout>
 
 
     <!--    &lt;!&ndash;    flNativeCollab&ndash;&gt;-->

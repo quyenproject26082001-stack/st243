@@ -85,14 +85,14 @@ class SuccessActivity : BaseActivity<ActivitySuccessBinding>() {
         binding.apply {
             actionBar.apply {
                 btnActionBarNextRight.tap {
-                    showInterAll {
+
                         viewModel.shareFiles(this@SuccessActivity)
-                    }
+
                 }
                 btnActionBarLeft.tap {  handleBack()  }
 
                 btnActionBarRight.tap(2000){
-                    startIntentWithClearTop(HomeActivity::class.java)
+                    showInterAll {  startIntentWithClearTop(HomeActivity::class.java)}
 
                 }
             }
@@ -174,16 +174,16 @@ class SuccessActivity : BaseActivity<ActivitySuccessBinding>() {
         }
     }
 
-//    override fun initAds() {
-//        initNativeCollab()
-//    }
-//
-//    fun initNativeCollab() {
-//
-//        loadNativeCollabAds(R.string.native_cl_success, binding.flNativeCollab)
-//
-//
-//    }
+    override fun initAds() {
+        initNativeCollab()
+    }
+
+    fun initNativeCollab() {
+
+        Admob.getInstance().loadNativeAd(this@SuccessActivity, getString(R.string.native_success), binding.nativeAds, R.layout.ads_native_big_btn_top)
+
+
+    }
 
     @android.annotation.SuppressLint("MissingSuperCall")
     override fun onBackPressed() {

@@ -26,14 +26,14 @@
     </FrameLayout>
 
 <!--    &lt;!&ndash;    native_ads&ndash;&gt;-->
-<!--    <FrameLayout-->
-<!--        android:id="@+id/native_ads"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/layoutActionBar">-->
+    <FrameLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutActionBar">
 
-<!--        <include layout="@layout/ads_native_collap_banner_shimmer" />-->
-<!--    </FrameLayout>-->
+        <include layout="@layout/ads_native_collap_banner_shimmer" />
+    </FrameLayout>
 
     <!-- rcvMyAlbum -->
     <androidx.recyclerview.widget.RecyclerView
@@ -47,17 +47,17 @@
         android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutActionBar"
+        app:layout_constraintTop_toBottomOf="@id/native_ads"
         app:spanCount="2"
         tools:listitem="@layout/item_choose_avatar" />
 
 
 <!--    &lt;!&ndash;    flNativeCollab&ndash;&gt;-->
-<!--    <FrameLayout-->
-<!--        android:id="@+id/flNativeCollab"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+    <FrameLayout
+        android:id="@+id/flNativeCollab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-<!--    </FrameLayout>-->
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

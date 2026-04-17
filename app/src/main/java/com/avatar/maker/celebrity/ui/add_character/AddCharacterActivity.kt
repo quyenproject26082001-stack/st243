@@ -980,17 +980,17 @@ class AddCharacterActivity : BaseActivity<ActivityAddCharacterBinding>() {
         // This method should not be called if the OnBackPressedCallback is working properly
     }
 
-//    fun initNativeCollab() {
-//        Admob.getInstance().loadNativeCollapNotBanner(this,getString(R.string.native_cl_bg), binding.flNativeCollab)
-//    }
-//
-//    override fun initAds() {
-//        initNativeCollab()
-//    }
+    fun initNativeCollab() {
+        Admob.getInstance().loadNativeCollapNotBanner(this,getString(R.string.native_cl_bg), binding.flNativeCollab)
+    }
+
+    override fun initAds() {
+        initNativeCollab()
+    }
 
     override fun onRestart() {
         super.onRestart()
-       // initNativeCollab()
+       initNativeCollab()
     }
 
     // Custom Input View Functions

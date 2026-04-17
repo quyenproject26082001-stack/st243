@@ -20,6 +20,7 @@ import com.avatar.maker.celebrity.core.extensions.hideNavigation
 import com.avatar.maker.celebrity.core.extensions.invisible
 import com.avatar.maker.celebrity.core.extensions.loadImage
 import com.avatar.maker.celebrity.core.extensions.loadImageFromFile
+import com.avatar.maker.celebrity.core.extensions.loadNativeCollabAds
 import com.avatar.maker.celebrity.core.extensions.requestPermission
 import com.avatar.maker.celebrity.core.extensions.select
 import com.avatar.maker.celebrity.core.extensions.setImageActionBar
@@ -121,7 +122,7 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
     override fun viewListener() {
         binding.apply {
             actionBar.apply {
-                btnActionBarLeft.tap { handleBack() }
+                btnActionBarLeft.tap { showInterAll {  handleBack() }}
                 btnActionBarRight.tap {
                     handleDelete()
                 }
@@ -274,16 +275,16 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
         }
     }
 
-//    override fun initAds() {
-//        initNativeCollab()
-//    }
-//
-//    fun initNativeCollab() {
-//
-//        loadNativeCollabAds(R.string.native_cl_detail, binding.flNativeCollab)
-//
-//
-//    }
+    override fun initAds() {
+        initNativeCollab()
+    }
+
+    fun initNativeCollab() {
+
+        loadNativeCollabAds(R.string.native_cl_detail, binding.flNativeCollab)
+
+
+    }
 
     @android.annotation.SuppressLint("MissingSuperCall")
     override fun onBackPressed() {

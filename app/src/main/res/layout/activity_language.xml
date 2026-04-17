@@ -33,12 +33,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         android:overScrollMode="never"
         android:paddingHorizontal="20dp"
-        android:paddingBottom="36dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/native_ads"
         app:layout_constraintTop_toBottomOf="@id/tvLang"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_language" />
@@ -112,6 +113,20 @@
         app:layout_constraintBottom_toBottomOf="@id/tvLang"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvLang" />
+
+
+    <FrameLayout
+        android:id="@+id/native_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <include layout="@layout/ads_native_big_btn_bottom_shimmer" />
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

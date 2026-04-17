@@ -53,7 +53,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
             btnSettings.tap(800) { startIntentRightToLeft(SettingsActivity::class.java) }
             btnRandom.tap(800) { startIntentRightToLeft(TrendingActivity::class.java) }
             btnMyCreation.tap(800) { showInterAll { startIntentRightToLeft(MyCreationActivity::class.java) } }
-            btnCosPlay.tap(800) { showInterAll { startIntentRightToLeft(CosplayRandomActivity::class.java) } }
+            btnCosPlay.tap(800) { startIntentRightToLeft(CosplayRandomActivity::class.java) }
             btnPlay.tap(800) { startIntentRightToLeft(com.avatar.maker.celebrity.ui.choose_character.ChooseCharacterActivity::class.java) }
 
         }
@@ -118,7 +118,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         deleteTempFolder()
         LanguageHelper.setLocale(this)
         updateText()
-        //initNativeCollab()
+        initNativeCollab()
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {

@@ -184,23 +184,23 @@ class ChooseCharacterActivity : BaseActivity<ActivityChooseCharacterBinding>() {
         }
     }
 
-//    fun initNativeCollab() {
-//        Admob.getInstance().loadNativeCollapNotBanner(this,getString(R.string.native_cl_category), binding.flNativeCollab)
-//    }
-//
-//    override fun initAds() {
-//        initNativeCollab()
-//        Admob.getInstance().loadNativeAd(
-//            this,
-//            getString(R.string.native_category),
-//            binding.nativeAds,
-//            R.layout.ads_native_banner
-//        )
-//    }
+    fun initNativeCollab() {
+        Admob.getInstance().loadNativeCollapNotBanner(this,getString(R.string.native_cl_category), binding.flNativeCollab)
+    }
+
+    override fun initAds() {
+        initNativeCollab()
+        Admob.getInstance().loadNativeAd(
+            this,
+            getString(R.string.native_category),
+            binding.nativeAds,
+            R.layout.ads_native_banner
+        )
+    }
 
     override fun onRestart() {
         super.onRestart()
-        //initNativeCollab()
+       initNativeCollab()
     }
 
 }

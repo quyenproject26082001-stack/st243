@@ -16,6 +16,7 @@ import com.avatar.maker.celebrity.core.extensions.goToSettings
 import com.avatar.maker.celebrity.core.extensions.gone
 import com.avatar.maker.celebrity.core.extensions.handleBackLeftToRight
 import com.avatar.maker.celebrity.core.extensions.loadImage
+import com.avatar.maker.celebrity.core.extensions.loadNativeCollabAds
 import com.avatar.maker.celebrity.core.extensions.requestPermission
 import com.avatar.maker.celebrity.core.extensions.showInterAll
 import com.avatar.maker.celebrity.core.extensions.startIntentWithClearTop
@@ -28,6 +29,7 @@ import com.avatar.maker.celebrity.databinding.ActivityCosplaySuccessfulBinding
 import com.avatar.maker.celebrity.ui.home.HomeActivity
 import com.avatar.maker.celebrity.ui.permission.PermissionViewModel
 import com.avatar.maker.celebrity.ui.success.SuccessViewModel
+import com.lvt.ads.util.Admob
 import kotlinx.coroutines.launch
 
 class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>() {
@@ -182,4 +184,19 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
     override fun onBackPressed() {
         handleBackLeftToRight()
     }
+
+
+    fun initNativeCollab() {
+        loadNativeCollabAds(R.string.native_cl_cosplayDone, binding.flNativeCollab)    }
+
+    override fun initAds() {
+        initNativeCollab()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+    }
+
+
+
 }
