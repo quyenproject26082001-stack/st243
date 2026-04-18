@@ -179,11 +179,8 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
             }
             android.util.Log.d("TIMING_TRENDING", "  [Step2] processCharacter[0] (${filteredData[0].dataName}, isFromAPI=${filteredData[0].isFromAPI}): ${System.currentTimeMillis() - processFirstStart}ms | randomList.size=${viewModel.randomList.size}")
 
-            val renderStart = System.currentTimeMillis()
-            showRandomSuggestion {
-                android.util.Log.d("TIMING_TRENDING", "  [Step3] renderSuggestion DONE: ${System.currentTimeMillis() - renderStart}ms | tổng từ initData start: ${System.currentTimeMillis() - t0}ms")
-                lifecycleScope.launch { dismissLoading() }
-            }
+            android.util.Log.d("TIMING_TRENDING", "  [Step3] processFirst DONE: ${System.currentTimeMillis() - t0}ms")
+            lifecycleScope.launch { dismissLoading() }
 
             // Xử lý phần còn lại ở background
             if (filteredData.size > 1) {
